@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Model Info — Student Performance Predictor{% endblock %}
+{% block content %}
+  <h1>About the model</h1>
+  <p class="subtitle">
+    Several regression models were trained on a synthetic student dataset (2,000 records) and
+    compared with 5-fold cross-validation; the best performer was kept as the production model.
+    A separate classifier predicts pass/fail risk directly.
+  </p>
+
+  {% if metrics %}
+    <h2>Best regressor: {{ metrics.best_regressor }}</h2>
+    <div class="table-wrap">
+      <table class="metrics-table">
+        <thead>
+          <tr><th>Model</th><th>CV R²</th><th>Test R²</th><th>Test MAE</th><th>Test RMSE</th></tr>
+        </thead>
+        <tbody>
+          {% for name, m in metrics.regression_results.items() %}
+            <tr {% if name == metrics.best_regressor %}class="highlight-row"{% endif %}>
+              <td>{{ name }}</td>
+              <td>{{ "%.3f"|format(m.cv_r2_mean) }}</td>
+              <td>{{ "%.3f"|format(m.test_r2) }}</td>
+              <td>{{ "%.2f"|format(m.test_mae) }}</td>
+              <td>{{ "%.2f"|format(m.test_rmse) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Pass/fail classifier (Random Forest)</h2>
+    <p>Accuracy: {{ "%.1f"|format(metrics.classifier_metrics.accuracy * 100) }}% &nbsp;|&nbsp;
+       F1 score: {{ "%.3f"|format(metrics.classifier_metrics.f1) }}</p>
+    <p class="muted">Trained on {{ metrics.n_train }} students, tested on {{ metrics.n_test }}.</p>
+  {% else %}
+    <p>No trained model metrics found yet — run <code>python -m src.train_model</code>.</p>
+  {% endif %}
+
+  <h2>Feature importance</h2>
+  <img class="figure" src="{{ url_for('figures', filename='feature_importance.png') }}"
+       alt="Feature importance chart" onerror="this.style.display='none'">
+
+  <h2>Actual vs. predicted</h2>
+  <img class="figure" src="{{ url_for('figures', filename='actual_vs_predicted.png') }}"
+       alt="Actual vs predicted scatter plot" onerror="this.style.display='none'">
+{% endblock %}

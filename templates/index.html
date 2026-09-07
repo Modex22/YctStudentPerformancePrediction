@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Predict — Student Performance Predictor{% endblock %}
+{% block content %}
+  <h1>Predict a student's performance</h1>
+  <p class="subtitle">Fill in the details below to estimate a final exam score, letter grade and pass/fail risk.</p>
+
+  <form method="post" action="{{ url_for('predict') }}" class="predict-form">
+    <div class="form-grid">
+      {% for field in fields %}
+        <div class="form-field">
+          <label for="{{ field.name }}">{{ field.label }}</label>
+          {% if field.type == "select" %}
+            <select id="{{ field.name }}" name="{{ field.name }}" required>
+              {% for option in field.options %}
+                <option value="{{ option }}">{{ option }}</option>
+              {% endfor %}
+            </select>
+          {% else %}
+            <input
+              type="number"
+              id="{{ field.name }}"
+              name="{{ field.name }}"
+              min="{{ field.min }}"
+              max="{{ field.max }}"
+              step="{{ field.step or 1 }}"
+              value="{{ field.default }}"
+              required>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <button type="submit" class="btn-primary">Predict performance</button>
+  </form>
+{% endblock %}

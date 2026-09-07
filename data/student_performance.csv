@@ -1,0 +1,2001 @@
+age,gender,school_type,study_hours_per_week,attendance_percentage,previous_grade,sleep_hours,parental_education,family_income_level,internet_access,extracurricular_activities,part_time_job,tutoring_support,final_score,performance_category,pass_fail
+15,Female,Private,7.7,88.6,45.1,5.2,Bachelors,Low,Yes,No,No,No,46.2,At Risk,Fail
+21,Male,Public,4.5,96.4,24.0,6.5,High School,Medium,Yes,Yes,No,Yes,57.1,Average,Pass
+20,Male,Private,24.5,99.5,70.9,6.3,None,Medium,No,Yes,No,Yes,72.7,Good,Pass
+18,Male,Private,32.0,82.4,58.1,5.9,High School,High,No,Yes,No,Yes,83.4,Excellent,Pass
+18,Female,Public,11.7,86.9,59.6,7.1,High School,High,Yes,Yes,No,Yes,72.5,Good,Pass
+21,Male,Private,5.8,78.2,36.6,7.4,High School,Medium,Yes,No,No,No,50.3,Average,Pass
+15,Male,Public,0.0,86.3,45.5,7.4,High School,Low,Yes,Yes,No,No,45.5,At Risk,Fail
+20,Male,Public,13.3,83.8,54.8,5.5,High School,Low,Yes,Yes,Yes,Yes,42.3,At Risk,Fail
+16,Female,Public,12.8,80.7,51.9,4.7,Bachelors,High,Yes,No,No,Yes,59.7,Average,Pass
+15,Female,Private,10.4,81.7,63.8,7.1,Masters,Medium,Yes,Yes,No,No,68.0,Good,Pass
+19,Male,Public,16.5,85.4,70.8,6.1,Masters,Medium,Yes,No,Yes,No,77.2,Good,Pass
+22,Male,Public,17.8,76.5,96.0,9.2,Masters,High,Yes,Yes,Yes,No,86.4,Excellent,Pass
+20,Male,Public,17.3,77.1,61.7,9.2,Bachelors,High,Yes,Yes,No,Yes,76.5,Good,Pass
+21,Female,Public,12.8,100.0,78.7,9.4,Masters,Medium,Yes,Yes,No,No,77.2,Good,Pass
+20,Female,Public,7.3,100.0,49.6,5.6,Bachelors,High,Yes,Yes,No,Yes,72.2,Good,Pass
+21,Male,Public,19.7,65.5,36.9,7.5,Bachelors,Low,Yes,Yes,No,No,70.0,Good,Pass
+19,Male,Public,15.1,64.9,56.7,7.9,High School,Medium,No,No,No,No,58.5,Average,Pass
+16,Female,Public,21.2,68.5,38.0,7.8,High School,High,Yes,No,No,No,80.1,Excellent,Pass
+21,Female,Public,20.5,78.8,62.2,6.3,High School,Low,Yes,Yes,Yes,Yes,65.9,Good,Pass
+18,Male,Public,5.0,90.7,50.3,8.5,High School,Low,Yes,Yes,No,No,44.4,At Risk,Fail
+19,Male,Private,5.0,87.1,32.7,6.8,Masters,Medium,Yes,Yes,No,Yes,56.9,Average,Pass
+17,Female,Public,9.7,82.1,88.0,7.0,None,Medium,Yes,No,No,No,63.5,Average,Pass
+16,Female,Public,7.6,86.3,53.9,4.8,Bachelors,Low,Yes,Yes,Yes,Yes,33.9,At Risk,Fail
+22,Female,Public,20.3,71.7,37.4,7.6,Masters,Low,Yes,Yes,No,No,63.4,Average,Pass
+21,Male,Public,17.5,77.1,75.5,6.5,Bachelors,Low,Yes,No,No,Yes,76.7,Good,Pass
+20,Male,Public,22.7,79.8,51.1,7.4,None,Low,Yes,No,No,No,66.1,Good,Pass
+18,Female,Private,17.8,61.0,78.4,7.1,High School,High,Yes,No,No,No,69.0,Good,Pass
+21,Female,Public,16.5,66.1,51.0,7.0,High School,Medium,Yes,Yes,No,No,63.7,Average,Pass
+19,Female,Public,23.4,66.5,53.9,6.7,PhD,Medium,Yes,Yes,No,Yes,82.6,Excellent,Pass
+18,Male,Public,18.3,89.2,67.2,7.8,Bachelors,Low,Yes,Yes,No,No,79.9,Good,Pass
+18,Female,Public,15.5,82.9,70.9,6.5,Bachelors,Medium,Yes,No,Yes,No,65.7,Good,Pass
+16,Male,Public,25.4,87.3,73.5,4.9,Bachelors,Low,Yes,No,No,No,79.8,Good,Pass
+15,Male,Public,15.8,57.9,60.7,7.5,Bachelors,High,Yes,Yes,No,Yes,66.6,Good,Pass
+19,Female,Public,12.9,62.2,69.9,5.7,Bachelors,High,No,No,No,Yes,59.6,Average,Pass
+22,Female,Public,9.1,88.0,73.2,5.1,None,Medium,Yes,No,No,No,64.3,Average,Pass
+15,Female,Private,19.9,46.7,65.0,5.5,High School,High,Yes,No,No,No,57.3,Average,Pass
+21,Female,Private,23.7,94.7,59.9,7.2,None,Low,No,Yes,No,Yes,68.9,Good,Pass
+21,Male,Public,14.6,58.1,40.3,6.7,Bachelors,Low,No,Yes,No,No,43.3,At Risk,Fail
+17,Female,Public,24.2,90.1,71.0,4.0,Masters,Medium,Yes,Yes,Yes,Yes,67.1,Good,Pass
+20,Male,Private,1.2,69.3,62.6,6.3,Bachelors,Medium,No,No,No,No,45.8,At Risk,Fail
+16,Male,Public,14.6,92.6,55.8,8.3,Bachelors,High,Yes,Yes,Yes,No,75.2,Good,Pass
+21,Female,Private,14.7,100.0,81.2,6.2,Masters,Low,No,Yes,No,No,72.8,Good,Pass
+20,Female,Public,9.9,52.7,40.6,6.6,High School,Medium,Yes,No,No,No,45.6,At Risk,Fail
+17,Female,Private,31.7,88.3,86.7,8.2,None,Low,Yes,No,No,No,81.3,Excellent,Pass
+15,Male,Private,14.5,58.3,61.7,7.8,Masters,Low,No,No,Yes,No,51.0,Average,Pass
+22,Female,Public,12.1,85.1,66.8,8.1,Masters,Medium,Yes,No,No,No,61.4,Average,Pass
+18,Male,Public,15.2,77.5,56.1,3.2,Bachelors,High,No,No,No,No,44.3,At Risk,Fail
+22,Female,Public,1.0,81.6,37.0,9.1,High School,Medium,Yes,No,No,Yes,48.1,At Risk,Fail
+20,Female,Public,9.7,69.1,59.9,7.6,PhD,Medium,Yes,Yes,No,No,66.0,Good,Pass
+21,Female,Public,21.9,89.4,67.0,10.0,Masters,Low,No,Yes,No,Yes,73.8,Good,Pass
+21,Male,Private,10.6,62.6,72.1,5.8,Bachelors,Low,Yes,No,No,No,62.2,Average,Pass
+16,Male,Public,9.2,94.9,59.0,4.5,High School,Low,No,Yes,Yes,No,41.2,At Risk,Fail
+17,Male,Public,24.2,75.1,29.1,6.8,Bachelors,High,No,No,Yes,Yes,75.2,Good,Pass
+18,Female,Private,24.4,63.2,38.9,6.4,Masters,Low,Yes,No,No,Yes,64.4,Average,Pass
+18,Female,Public,18.6,99.1,92.8,7.6,Masters,Low,Yes,Yes,No,No,85.9,Excellent,Pass
+15,Male,Public,11.8,79.2,45.6,8.2,Bachelors,Medium,Yes,No,Yes,No,54.7,Average,Pass
+19,Female,Private,13.3,100.0,83.4,6.7,Bachelors,Medium,Yes,No,Yes,Yes,81.8,Excellent,Pass
+16,Female,Public,9.4,94.7,48.0,6.5,Bachelors,Medium,Yes,No,No,No,52.5,Average,Pass
+20,Male,Public,8.0,70.4,59.3,7.5,Bachelors,Low,Yes,No,Yes,No,61.7,Average,Pass
+20,Male,Public,7.7,79.0,71.4,6.5,High School,Medium,No,Yes,No,No,59.5,Average,Pass
+22,Female,Private,10.7,81.5,49.7,6.4,None,Medium,Yes,Yes,No,No,65.8,Good,Pass
+20,Female,Public,7.8,98.3,85.9,8.1,High School,Low,Yes,Yes,No,No,67.5,Good,Pass
+17,Male,Public,4.1,85.3,63.1,8.4,Masters,Medium,Yes,No,No,No,56.3,Average,Pass
+22,Female,Public,16.5,82.1,68.9,8.2,None,Low,Yes,Yes,Yes,No,67.0,Good,Pass
+18,Female,Public,16.6,77.6,58.0,6.6,None,High,Yes,No,Yes,No,69.1,Good,Pass
+17,Female,Private,26.9,79.4,71.9,4.0,Masters,High,Yes,Yes,Yes,No,68.7,Good,Pass
+22,Female,Public,10.3,95.7,85.7,6.6,Bachelors,Low,Yes,No,No,No,59.0,Average,Pass
+17,Female,Private,17.1,80.0,60.0,5.8,None,Medium,Yes,No,No,No,50.8,Average,Pass
+15,Male,Public,17.2,75.3,87.9,6.6,High School,Medium,No,Yes,Yes,Yes,73.2,Good,Pass
+18,Male,Public,13.2,73.2,52.8,5.9,Masters,High,No,No,No,Yes,72.4,Good,Pass
+21,Male,Private,20.2,73.4,73.5,6.8,High School,Medium,Yes,No,No,No,66.4,Good,Pass
+16,Female,Public,20.4,63.2,69.3,5.4,Bachelors,Medium,No,No,Yes,No,59.2,Average,Pass
+18,Male,Public,17.3,71.0,46.0,5.1,Bachelors,Low,No,No,Yes,No,44.9,At Risk,Fail
+16,Male,Private,13.2,98.0,65.2,8.4,High School,Low,Yes,No,No,No,77.2,Good,Pass
+20,Female,Public,12.5,77.5,62.1,5.5,Bachelors,Medium,No,No,No,No,69.7,Good,Pass
+18,Male,Public,5.4,88.5,49.2,6.8,High School,Medium,Yes,No,No,No,55.8,Average,Pass
+17,Male,Private,9.4,50.3,67.4,8.0,Bachelors,High,Yes,Yes,Yes,No,65.0,Good,Pass
+16,Male,Public,10.6,86.8,64.2,8.0,High School,High,Yes,No,No,No,72.0,Good,Pass
+19,Male,Public,7.1,78.1,60.9,7.8,None,Medium,No,Yes,Yes,No,39.8,At Risk,Fail
+20,Male,Public,18.1,74.2,61.0,7.2,High School,Medium,No,No,No,No,68.0,Good,Pass
+22,Female,Public,23.4,82.2,60.6,7.7,Masters,High,No,Yes,No,Yes,78.0,Good,Pass
+18,Male,Public,8.6,74.1,56.5,8.6,High School,High,No,No,No,Yes,55.0,Average,Pass
+16,Male,Private,17.0,54.5,64.1,7.4,High School,High,Yes,Yes,Yes,No,72.6,Good,Pass
+21,Female,Public,7.8,91.1,52.3,4.4,High School,High,Yes,Yes,Yes,Yes,49.8,At Risk,Fail
+20,Male,Private,12.9,82.9,100.0,6.1,Bachelors,Medium,Yes,Yes,No,Yes,88.0,Excellent,Pass
+20,Female,Public,10.2,76.2,40.9,7.7,High School,Medium,Yes,Yes,Yes,No,60.5,Average,Pass
+15,Female,Public,19.2,68.4,53.2,6.0,PhD,Medium,Yes,Yes,No,No,61.4,Average,Pass
+17,Female,Public,10.2,62.4,54.4,8.9,Bachelors,Low,No,No,Yes,No,31.5,At Risk,Fail
+21,Male,Private,22.1,82.7,92.6,6.7,Bachelors,Medium,Yes,Yes,Yes,Yes,95.5,Excellent,Pass
+21,Male,Public,13.3,99.4,42.2,6.9,Bachelors,Medium,Yes,Yes,No,No,74.5,Good,Pass
+18,Female,Public,10.5,82.4,68.4,8.3,None,Medium,No,Yes,Yes,No,55.4,Average,Pass
+21,Male,Private,6.2,63.4,65.7,6.6,PhD,Low,No,Yes,No,No,56.0,Average,Pass
+21,Female,Public,16.8,82.7,67.0,7.0,PhD,Medium,Yes,No,No,No,83.1,Excellent,Pass
+18,Male,Public,21.3,79.4,80.5,8.0,High School,Medium,Yes,Yes,Yes,No,83.0,Excellent,Pass
+22,Male,Private,16.9,90.4,80.2,4.9,Bachelors,Medium,Yes,No,No,No,68.5,Good,Pass
+17,Female,Public,30.7,87.3,55.2,6.4,High School,Low,Yes,No,No,No,85.7,Excellent,Pass
+16,Female,Public,25.0,44.2,64.9,7.9,Bachelors,Medium,Yes,No,No,No,72.2,Good,Pass
+20,Female,Public,12.8,86.5,34.0,6.9,Masters,Low,Yes,No,No,Yes,63.5,Average,Pass
+20,Female,Public,12.8,68.0,63.5,8.7,PhD,Low,Yes,Yes,No,Yes,69.8,Good,Pass
+16,Male,Public,18.3,62.9,50.1,4.8,High School,Medium,Yes,No,No,No,47.7,At Risk,Fail
+21,Female,Private,9.1,77.7,59.2,4.6,Bachelors,High,Yes,No,No,Yes,51.7,Average,Pass
+16,Female,Public,23.2,84.9,36.7,7.8,Bachelors,Medium,Yes,Yes,No,No,87.6,Excellent,Pass
+21,Male,Private,17.5,60.3,68.1,7.9,High School,Medium,Yes,No,No,Yes,64.7,Average,Pass
+15,Male,Private,16.8,88.5,36.6,6.5,Bachelors,High,Yes,Yes,Yes,No,68.7,Good,Pass
+21,Female,Public,19.8,89.2,64.2,7.3,Bachelors,Medium,Yes,No,Yes,No,78.6,Good,Pass
+21,Male,Private,27.1,80.6,43.6,7.8,Masters,High,Yes,No,Yes,No,80.0,Excellent,Pass
+21,Female,Private,16.2,69.6,49.3,5.7,PhD,Low,Yes,Yes,Yes,No,64.4,Average,Pass
+20,Male,Private,14.2,68.2,79.3,5.9,None,Medium,No,Yes,No,No,60.5,Average,Pass
+18,Male,Public,25.6,92.3,70.8,7.0,High School,Low,Yes,No,No,Yes,78.9,Good,Pass
+20,Male,Public,21.8,61.9,79.2,8.0,High School,Medium,Yes,Yes,Yes,No,77.3,Good,Pass
+17,Male,Public,12.8,92.8,85.4,5.3,High School,High,Yes,No,No,No,67.1,Good,Pass
+21,Female,Public,15.0,78.0,50.4,6.5,Bachelors,Medium,Yes,Yes,No,Yes,79.7,Good,Pass
+19,Female,Public,16.4,78.8,84.5,6.5,Masters,Medium,Yes,Yes,No,Yes,85.6,Excellent,Pass
+18,Female,Public,17.5,59.5,40.0,7.3,High School,Low,Yes,No,No,No,51.5,Average,Pass
+19,Female,Public,5.5,78.2,73.2,6.8,Bachelors,High,No,No,No,No,61.3,Average,Pass
+19,Male,Private,4.2,87.4,54.6,6.1,High School,Medium,Yes,No,No,No,45.6,At Risk,Fail
+15,Female,Public,8.8,64.0,48.0,8.4,High School,Low,Yes,No,Yes,Yes,49.4,At Risk,Fail
+16,Female,Public,8.2,86.0,71.2,6.1,Masters,High,Yes,Yes,Yes,No,65.7,Good,Pass
+16,Female,Public,10.5,81.1,76.2,6.4,Bachelors,Medium,No,No,No,No,57.7,Average,Pass
+15,Female,Public,19.4,72.3,75.7,4.7,High School,Medium,No,Yes,Yes,No,52.2,Average,Pass
+18,Female,Public,13.8,90.3,65.2,5.9,Masters,Low,Yes,Yes,Yes,No,80.2,Excellent,Pass
+20,Female,Public,16.4,53.6,64.0,7.5,Bachelors,Low,Yes,Yes,Yes,No,62.4,Average,Pass
+20,Female,Public,6.4,84.2,69.9,7.2,High School,High,No,No,No,No,55.7,Average,Pass
+18,Female,Public,11.8,99.4,66.6,7.6,Bachelors,Medium,No,Yes,No,No,64.7,Average,Pass
+21,Female,Public,19.1,97.3,70.1,7.5,Bachelors,High,Yes,Yes,No,No,88.2,Excellent,Pass
+19,Male,Public,19.2,84.7,65.1,9.5,High School,Low,No,No,No,Yes,59.2,Average,Pass
+15,Male,Public,9.9,76.4,74.6,5.8,Masters,Medium,Yes,Yes,No,No,60.1,Average,Pass
+21,Female,Public,16.1,72.4,37.6,4.7,Bachelors,Medium,Yes,No,No,No,51.0,Average,Pass
+19,Male,Public,30.4,76.4,60.0,5.4,Bachelors,Medium,Yes,Yes,No,No,81.5,Excellent,Pass
+20,Male,Public,14.9,86.5,41.2,5.9,Masters,Medium,Yes,Yes,Yes,No,59.4,Average,Pass
+19,Female,Public,10.1,70.3,66.2,5.5,Bachelors,Medium,No,No,Yes,No,44.7,At Risk,Fail
+19,Female,Private,13.8,89.1,86.6,6.9,High School,Medium,Yes,No,No,No,72.1,Good,Pass
+15,Female,Private,15.6,100.0,54.9,8.4,High School,High,Yes,No,No,No,68.9,Good,Pass
+19,Male,Private,13.9,79.3,63.9,8.8,High School,Low,Yes,No,No,Yes,60.1,Average,Pass
+21,Male,Public,14.8,63.9,73.3,7.5,High School,Medium,Yes,Yes,No,No,69.7,Good,Pass
+17,Female,Public,4.9,63.9,31.0,9.6,High School,Medium,Yes,No,No,No,49.8,At Risk,Fail
+19,Female,Public,8.3,89.3,54.2,6.3,Bachelors,Low,Yes,No,Yes,No,62.0,Average,Pass
+15,Male,Private,14.0,79.3,67.5,4.7,High School,Low,Yes,No,No,No,64.7,Average,Pass
+17,Female,Private,13.8,90.5,18.5,8.2,High School,High,Yes,Yes,No,No,55.4,Average,Pass
+18,Male,Private,11.0,73.6,47.3,4.4,Bachelors,Low,Yes,Yes,No,No,54.8,Average,Pass
+22,Female,Private,13.8,90.0,78.5,5.8,High School,Low,Yes,Yes,Yes,No,65.6,Good,Pass
+16,Female,Public,15.4,78.1,77.0,7.5,Bachelors,Medium,Yes,No,Yes,No,77.5,Good,Pass
+17,Female,Private,21.2,71.2,67.6,6.7,Bachelors,Low,No,Yes,No,No,72.1,Good,Pass
+18,Female,Private,14.3,75.2,75.2,6.6,High School,Low,Yes,No,Yes,No,59.7,Average,Pass
+22,Male,Public,17.8,65.6,65.2,5.3,None,Low,Yes,Yes,Yes,No,57.8,Average,Pass
+21,Male,Private,11.2,100.0,70.3,6.8,Bachelors,Low,Yes,No,No,No,71.7,Good,Pass
+15,Male,Public,19.0,78.8,57.3,8.1,None,Medium,Yes,Yes,No,No,57.3,Average,Pass
+16,Female,Private,17.6,87.7,63.7,6.8,Bachelors,High,No,No,Yes,No,68.8,Good,Pass
+21,Female,Private,21.1,73.6,52.5,5.7,Bachelors,Low,Yes,No,No,Yes,73.5,Good,Pass
+15,Female,Public,20.0,67.4,81.0,5.2,Bachelors,Medium,Yes,No,Yes,No,69.7,Good,Pass
+21,Male,Private,19.1,77.2,84.8,5.7,High School,Medium,Yes,Yes,No,Yes,80.9,Excellent,Pass
+17,Male,Public,14.3,93.2,82.7,7.3,PhD,Low,Yes,No,No,No,74.7,Good,Pass
+22,Female,Private,16.7,73.8,55.9,7.2,High School,Medium,Yes,Yes,No,Yes,71.7,Good,Pass
+17,Female,Private,22.4,69.6,47.7,5.8,Masters,Medium,Yes,No,Yes,No,66.1,Good,Pass
+18,Female,Public,10.4,81.9,81.2,3.9,Masters,Low,Yes,No,No,Yes,53.8,Average,Pass
+20,Male,Private,10.6,86.0,70.2,7.3,High School,Medium,Yes,Yes,No,No,63.0,Average,Pass
+16,Male,Public,16.3,99.7,66.9,5.6,High School,Low,Yes,No,No,No,71.8,Good,Pass
+19,Female,Public,17.9,84.2,52.5,7.7,High School,High,No,No,No,No,68.4,Good,Pass
+19,Female,Public,9.2,87.7,68.4,5.8,Masters,High,No,Yes,Yes,No,62.9,Average,Pass
+21,Male,Public,14.5,88.6,45.7,5.5,High School,High,Yes,Yes,Yes,No,71.7,Good,Pass
+22,Female,Public,14.3,66.2,71.5,7.0,Masters,Low,Yes,No,No,Yes,73.5,Good,Pass
+20,Male,Public,0.0,68.4,82.7,9.9,Bachelors,Medium,Yes,No,No,No,55.7,Average,Pass
+18,Male,Public,13.5,67.0,86.5,7.8,Bachelors,Medium,Yes,No,No,No,74.2,Good,Pass
+18,Female,Public,13.9,64.0,72.6,7.0,Bachelors,Low,No,No,Yes,No,54.9,Average,Pass
+18,Female,Private,13.9,89.5,41.3,7.3,High School,High,Yes,Yes,Yes,No,56.6,Average,Pass
+21,Female,Public,24.9,83.5,65.0,4.5,High School,Medium,Yes,Yes,Yes,No,67.5,Good,Pass
+17,Male,Private,6.5,81.0,94.1,5.3,PhD,Low,Yes,Yes,Yes,No,47.0,At Risk,Fail
+16,Female,Public,9.2,48.9,49.0,3.5,High School,High,Yes,Yes,No,No,33.7,At Risk,Fail
+17,Female,Public,0.0,100.0,61.1,9.0,Masters,Low,Yes,Yes,Yes,No,52.9,Average,Pass
+15,Female,Public,11.6,69.3,83.2,8.8,PhD,Medium,No,Yes,No,No,67.0,Good,Pass
+15,Male,Public,12.2,100.0,71.3,7.3,None,Low,Yes,No,Yes,No,61.3,Average,Pass
+15,Female,Public,11.4,62.6,99.2,7.0,Bachelors,Low,Yes,No,No,No,62.3,Average,Pass
+21,Female,Public,22.8,70.3,51.0,4.8,High School,High,No,Yes,No,Yes,70.9,Good,Pass
+20,Female,Public,21.0,53.6,47.2,6.5,Bachelors,Medium,Yes,No,Yes,No,60.2,Average,Pass
+20,Male,Public,15.5,84.3,80.4,9.1,PhD,Low,Yes,Yes,Yes,No,67.0,Good,Pass
+18,Female,Public,12.4,66.8,44.1,7.0,Masters,Medium,Yes,Yes,No,No,65.1,Good,Pass
+20,Male,Public,22.2,67.1,59.0,6.1,Masters,High,Yes,No,Yes,No,74.3,Good,Pass
+16,Male,Private,14.9,63.5,61.0,4.5,High School,High,Yes,No,Yes,Yes,51.2,Average,Pass
+22,Female,Public,9.3,89.3,77.5,8.6,Bachelors,High,Yes,Yes,No,No,70.1,Good,Pass
+19,Male,Private,3.0,88.5,71.2,6.7,High School,High,Yes,Yes,No,No,61.4,Average,Pass
+22,Female,Private,11.9,100.0,68.9,4.5,Masters,Medium,Yes,No,No,Yes,73.5,Good,Pass
+16,Male,Private,20.3,71.8,56.0,5.6,High School,Low,Yes,Yes,Yes,Yes,65.7,Good,Pass
+18,Female,Private,30.9,82.6,80.2,5.1,High School,High,No,No,Yes,No,78.3,Good,Pass
+20,Female,Public,15.4,64.5,100.0,6.6,None,Low,Yes,No,No,No,73.5,Good,Pass
+18,Female,Public,9.6,76.0,72.4,7.1,High School,Low,Yes,Yes,No,No,61.4,Average,Pass
+18,Male,Public,6.7,73.8,63.5,6.1,High School,Medium,No,No,Yes,No,48.3,At Risk,Fail
+16,Male,Private,18.9,85.6,42.5,7.8,None,Low,Yes,No,No,No,61.6,Average,Pass
+18,Male,Public,2.6,92.2,52.4,6.9,Masters,Medium,Yes,No,No,No,60.6,Average,Pass
+16,Male,Public,18.9,91.9,58.8,8.2,Masters,High,Yes,No,No,No,77.7,Good,Pass
+17,Female,Private,20.7,69.9,54.0,6.3,High School,Medium,Yes,No,No,No,60.2,Average,Pass
+20,Male,Public,18.1,92.0,61.8,10.0,Masters,Medium,No,Yes,No,No,71.2,Good,Pass
+20,Male,Public,13.5,79.5,88.7,6.1,High School,Medium,Yes,Yes,No,No,80.7,Excellent,Pass
+19,Male,Private,19.0,76.1,80.7,5.6,Masters,Medium,No,Yes,Yes,No,63.3,Average,Pass
+17,Male,Public,16.2,71.5,59.6,5.5,High School,Low,Yes,No,No,No,58.0,Average,Pass
+22,Female,Public,9.6,73.3,43.9,6.5,Bachelors,Low,Yes,No,No,No,49.7,At Risk,Fail
+15,Female,Private,28.0,100.0,82.1,4.6,High School,Medium,Yes,Yes,No,Yes,90.0,Excellent,Pass
+17,Male,Public,12.5,83.7,61.3,7.2,High School,Medium,Yes,No,No,No,66.0,Good,Pass
+15,Female,Public,20.4,82.1,36.1,4.3,Bachelors,Medium,Yes,Yes,Yes,No,73.2,Good,Pass
+17,Female,Public,0.0,76.9,72.7,7.0,Masters,Low,Yes,No,No,Yes,55.1,Average,Pass
+22,Male,Private,23.9,100.0,77.4,5.0,Masters,Low,Yes,No,No,No,89.0,Excellent,Pass
+17,Male,Public,25.3,95.7,25.6,6.3,High School,Medium,No,Yes,No,No,75.6,Good,Pass
+22,Male,Private,15.2,71.3,49.6,7.6,Bachelors,Medium,No,Yes,No,No,64.3,Average,Pass
+18,Male,Private,18.9,76.7,60.3,9.8,Masters,Medium,Yes,Yes,Yes,No,66.6,Good,Pass
+20,Male,Public,18.9,77.4,73.0,5.4,None,High,No,No,No,Yes,66.6,Good,Pass
+18,Male,Public,10.5,81.8,54.3,6.6,None,Medium,Yes,Yes,No,No,57.3,Average,Pass
+17,Female,Public,18.8,71.6,49.5,5.9,High School,Low,Yes,No,No,Yes,68.8,Good,Pass
+21,Male,Private,9.3,85.3,72.9,5.7,High School,Medium,Yes,No,Yes,No,51.9,Average,Pass
+22,Female,Public,10.7,97.4,55.0,5.9,High School,Low,Yes,No,No,No,56.1,Average,Pass
+17,Male,Public,22.9,64.2,70.1,7.9,None,Low,Yes,No,Yes,No,64.1,Average,Pass
+21,Male,Public,21.8,66.5,45.3,6.2,Bachelors,Medium,Yes,No,No,No,57.0,Average,Pass
+17,Female,Private,10.1,74.2,41.7,9.7,Bachelors,Low,No,No,Yes,No,44.1,At Risk,Fail
+20,Female,Public,9.9,74.8,73.3,7.3,Masters,Low,Yes,No,No,No,71.6,Good,Pass
+21,Female,Private,10.5,100.0,65.8,5.5,Bachelors,High,No,Yes,Yes,No,57.3,Average,Pass
+18,Male,Public,20.1,92.0,75.8,6.3,High School,Medium,Yes,Yes,Yes,No,82.4,Excellent,Pass
+20,Male,Private,8.0,91.3,54.0,5.8,PhD,High,Yes,Yes,No,No,56.7,Average,Pass
+17,Male,Public,17.5,76.8,50.1,7.8,Bachelors,High,Yes,No,No,No,71.5,Good,Pass
+15,Male,Public,20.2,76.6,82.4,4.7,Bachelors,Low,Yes,Yes,No,No,67.9,Good,Pass
+15,Female,Private,14.4,62.6,39.2,5.1,High School,Medium,Yes,No,No,No,47.7,At Risk,Fail
+18,Male,Private,22.1,89.4,80.8,6.0,Bachelors,Medium,Yes,Yes,No,No,84.8,Excellent,Pass
+22,Male,Public,12.9,85.9,81.8,7.7,Bachelors,Medium,Yes,No,No,No,74.2,Good,Pass
+16,Female,Public,13.5,95.4,74.9,8.4,Bachelors,Low,Yes,No,Yes,No,66.0,Good,Pass
+18,Male,Public,8.2,77.5,51.7,8.6,Masters,Low,Yes,No,Yes,No,52.1,Average,Pass
+20,Male,Public,22.1,78.3,49.8,7.5,Masters,Low,Yes,No,No,No,81.3,Excellent,Pass
+16,Male,Public,9.6,82.0,58.8,6.7,PhD,Medium,No,Yes,No,No,59.4,Average,Pass
+20,Male,Private,17.4,90.7,42.6,7.8,Bachelors,Low,Yes,Yes,Yes,Yes,81.2,Excellent,Pass
+17,Female,Public,14.5,62.4,47.6,5.3,PhD,Medium,Yes,No,No,No,54.7,Average,Pass
+21,Female,Private,7.6,88.8,71.7,4.4,Masters,High,Yes,Yes,No,No,60.8,Average,Pass
+19,Female,Public,10.7,79.8,71.7,7.4,None,Medium,Yes,No,No,Yes,68.3,Good,Pass
+19,Male,Public,24.7,67.3,46.3,5.5,Bachelors,Medium,Yes,No,Yes,Yes,66.2,Good,Pass
+16,Female,Private,16.4,55.0,72.1,6.7,High School,Low,Yes,Yes,No,Yes,75.0,Good,Pass
+18,Female,Public,7.9,78.4,68.8,7.0,High School,High,No,No,No,No,61.4,Average,Pass
+21,Male,Private,17.1,97.4,84.6,7.1,High School,Medium,Yes,Yes,No,No,80.1,Excellent,Pass
+15,Female,Public,14.0,100.0,70.5,8.0,Bachelors,Medium,Yes,No,No,Yes,86.6,Excellent,Pass
+21,Male,Private,39.2,84.3,77.9,7.9,None,High,Yes,Yes,Yes,No,92.7,Excellent,Pass
+18,Female,Private,17.0,100.0,69.2,7.1,High School,Low,Yes,No,No,No,69.1,Good,Pass
+20,Female,Private,12.3,79.5,76.7,6.2,None,Medium,Yes,Yes,No,No,67.8,Good,Pass
+20,Male,Public,24.9,91.4,42.7,6.9,Bachelors,Low,Yes,No,No,No,79.5,Good,Pass
+18,Male,Public,2.1,74.6,60.2,6.0,Masters,Low,Yes,No,No,No,51.3,Average,Pass
+17,Male,Public,15.7,73.8,61.4,6.5,PhD,Medium,Yes,No,No,No,71.1,Good,Pass
+20,Female,Public,29.0,71.9,58.3,10.0,High School,Medium,Yes,No,Yes,No,66.9,Good,Pass
+16,Male,Public,14.2,55.3,68.7,7.0,High School,Low,Yes,No,Yes,No,63.1,Average,Pass
+19,Female,Public,2.9,95.4,71.5,7.4,Masters,Medium,Yes,No,No,No,65.7,Good,Pass
+15,Male,Public,12.2,72.3,67.9,5.9,High School,High,No,No,No,No,52.9,Average,Pass
+20,Male,Public,25.2,70.4,59.3,8.1,PhD,High,No,No,No,No,74.6,Good,Pass
+20,Female,Public,17.6,65.8,51.0,7.8,Bachelors,Low,Yes,No,No,No,72.5,Good,Pass
+15,Female,Public,9.1,77.5,78.5,7.8,Bachelors,Medium,Yes,No,No,No,63.2,Average,Pass
+21,Female,Public,10.2,100.0,67.2,7.1,None,Low,Yes,Yes,No,No,64.3,Average,Pass
+18,Male,Public,11.1,100.0,46.7,8.1,None,Medium,No,No,No,Yes,64.8,Average,Pass
+21,Male,Public,17.5,60.1,59.1,8.5,Bachelors,Medium,Yes,Yes,No,Yes,74.1,Good,Pass
+15,Male,Public,24.4,75.7,35.9,7.2,High School,Medium,Yes,Yes,Yes,No,62.7,Average,Pass
+16,Female,Public,22.4,67.6,62.5,6.7,Masters,Low,Yes,No,No,Yes,70.7,Good,Pass
+18,Female,Private,18.2,91.9,59.0,8.0,Bachelors,Medium,No,Yes,No,No,82.8,Excellent,Pass
+16,Male,Public,5.7,83.4,53.4,5.6,High School,Low,Yes,Yes,No,No,41.7,At Risk,Fail
+17,Female,Public,5.7,72.4,85.8,5.9,High School,Low,No,No,No,No,46.7,At Risk,Fail
+20,Male,Private,18.7,80.9,44.7,6.7,Bachelors,Medium,Yes,No,Yes,No,67.6,Good,Pass
+16,Female,Public,5.6,74.3,72.6,4.5,High School,Low,Yes,Yes,No,Yes,45.9,At Risk,Fail
+20,Female,Private,13.4,99.4,94.8,7.9,Bachelors,Medium,Yes,No,Yes,No,82.5,Excellent,Pass
+15,Female,Private,17.1,86.6,78.2,5.5,Bachelors,Medium,Yes,Yes,Yes,No,63.1,Average,Pass
+16,Male,Public,7.0,88.0,61.5,6.2,Masters,Medium,Yes,No,No,Yes,63.7,Average,Pass
+19,Female,Public,7.8,48.0,45.0,6.5,High School,Medium,Yes,Yes,No,No,50.8,Average,Pass
+21,Male,Private,14.3,79.2,41.6,6.9,High School,Medium,Yes,Yes,No,Yes,67.9,Good,Pass
+16,Female,Private,18.5,100.0,55.8,6.4,Masters,High,Yes,No,No,No,76.3,Good,Pass
+17,Male,Public,22.4,95.9,51.7,6.7,Bachelors,Low,Yes,No,Yes,Yes,68.9,Good,Pass
+22,Female,Public,19.2,57.8,51.2,6.7,Bachelors,Medium,Yes,No,No,No,67.2,Good,Pass
+22,Male,Public,15.5,76.2,57.1,6.2,Bachelors,Medium,Yes,No,Yes,Yes,58.1,Average,Pass
+19,Male,Public,9.8,65.6,60.5,5.8,Masters,Low,Yes,No,No,No,62.9,Average,Pass
+18,Female,Private,7.5,100.0,69.3,8.2,High School,Low,No,No,No,Yes,60.2,Average,Pass
+17,Female,Public,11.4,82.9,43.4,4.1,High School,Low,No,Yes,No,No,30.7,At Risk,Fail
+19,Male,Private,17.9,70.8,51.8,6.5,Masters,Medium,No,No,No,Yes,60.5,Average,Pass
+19,Female,Private,17.4,80.4,59.6,6.2,High School,Medium,Yes,No,No,No,62.8,Average,Pass
+17,Male,Public,0.3,48.7,59.1,7.3,Masters,Medium,Yes,Yes,No,No,39.4,At Risk,Fail
+15,Male,Public,9.5,67.0,89.5,4.9,High School,Medium,No,Yes,No,No,56.1,Average,Pass
+16,Male,Private,23.4,80.4,65.5,6.2,High School,Medium,Yes,Yes,No,No,71.9,Good,Pass
+22,Male,Private,15.6,90.1,37.8,6.7,None,Low,Yes,No,No,No,58.0,Average,Pass
+18,Male,Private,5.1,56.7,68.3,8.2,Masters,Medium,Yes,No,Yes,Yes,59.9,Average,Pass
+18,Male,Public,31.5,75.4,70.2,7.2,Masters,Medium,Yes,No,No,No,98.1,Excellent,Pass
+18,Male,Public,14.8,92.1,60.1,5.3,High School,Low,Yes,Yes,No,No,61.8,Average,Pass
+21,Male,Public,17.7,62.6,43.8,6.2,High School,Low,No,Yes,Yes,Yes,58.5,Average,Pass
+15,Male,Private,17.8,82.8,88.4,8.0,High School,Low,Yes,No,No,Yes,86.7,Excellent,Pass
+15,Female,Public,12.4,80.8,46.0,5.2,High School,High,Yes,No,Yes,No,53.7,Average,Pass
+17,Female,Public,9.9,100.0,71.9,6.7,Bachelors,Low,Yes,No,No,Yes,72.5,Good,Pass
+18,Male,Public,29.9,77.2,65.0,6.8,High School,Low,No,No,No,No,72.3,Good,Pass
+20,Male,Public,22.0,77.9,71.0,6.3,High School,Low,Yes,No,No,No,66.3,Good,Pass
+18,Female,Private,20.8,90.3,87.6,10.0,None,Low,No,No,No,Yes,74.4,Good,Pass
+18,Female,Public,19.0,64.1,70.4,6.3,Bachelors,Medium,Yes,No,No,No,75.1,Good,Pass
+22,Female,Public,8.0,77.3,53.6,7.4,Bachelors,Medium,No,Yes,No,No,59.4,Average,Pass
+16,Female,Private,23.9,74.5,78.6,5.8,Bachelors,Medium,No,No,No,No,71.4,Good,Pass
+19,Female,Private,9.1,78.3,52.5,7.5,Bachelors,High,Yes,No,No,No,72.7,Good,Pass
+19,Female,Public,17.0,90.2,64.5,7.9,PhD,Low,Yes,No,No,No,74.6,Good,Pass
+18,Male,Public,3.5,86.6,42.6,6.0,Bachelors,Medium,Yes,Yes,No,No,46.1,At Risk,Fail
+21,Male,Private,0.7,71.0,46.5,6.7,Masters,Medium,No,No,No,No,39.6,At Risk,Fail
+17,Male,Private,17.2,81.6,62.8,5.6,Bachelors,Medium,No,Yes,No,No,74.2,Good,Pass
+22,Male,Public,9.3,97.9,67.5,5.3,None,High,Yes,No,Yes,No,49.7,At Risk,Fail
+17,Female,Public,1.1,70.0,36.5,8.1,Masters,Low,Yes,No,No,No,38.0,At Risk,Fail
+19,Female,Public,18.8,81.7,69.5,6.1,Bachelors,Medium,No,No,No,No,86.5,Excellent,Pass
+19,Female,Public,29.8,77.7,49.7,3.7,Bachelors,Medium,No,Yes,No,Yes,67.3,Good,Pass
+21,Male,Private,24.7,79.2,81.2,9.1,High School,Low,Yes,No,No,Yes,75.8,Good,Pass
+18,Male,Public,13.2,60.4,56.7,5.8,High School,High,No,Yes,Yes,No,44.7,At Risk,Fail
+17,Male,Public,15.1,96.9,45.1,6.5,Masters,Low,Yes,No,No,No,56.2,Average,Pass
+15,Female,Private,21.2,70.7,63.1,8.9,High School,Low,Yes,Yes,No,No,68.6,Good,Pass
+17,Male,Private,22.9,92.3,48.3,6.6,None,Medium,Yes,Yes,Yes,No,73.3,Good,Pass
+21,Male,Private,12.6,72.5,81.0,6.6,High School,Medium,Yes,No,No,Yes,79.2,Good,Pass
+15,Female,Public,15.2,72.5,62.0,5.2,Bachelors,High,Yes,Yes,No,No,54.3,Average,Pass
+22,Female,Public,17.1,94.6,59.7,4.7,Masters,High,Yes,No,No,No,60.8,Average,Pass
+19,Female,Public,18.9,91.9,70.9,6.6,Bachelors,Low,Yes,Yes,Yes,No,73.3,Good,Pass
+16,Male,Public,14.1,82.5,46.9,7.3,Masters,Medium,Yes,No,No,No,83.6,Excellent,Pass
+17,Male,Public,14.2,89.1,42.7,7.2,Bachelors,High,Yes,Yes,No,No,74.9,Good,Pass
+19,Male,Public,24.7,76.5,68.1,6.2,High School,Low,No,No,No,No,70.9,Good,Pass
+17,Male,Public,23.5,79.9,45.5,6.8,High School,Medium,No,No,Yes,No,55.7,Average,Pass
+15,Female,Private,18.3,72.1,45.5,4.4,High School,High,Yes,No,Yes,No,38.0,At Risk,Fail
+20,Male,Private,27.0,90.8,74.6,7.4,Bachelors,Low,No,Yes,No,No,83.7,Excellent,Pass
+20,Male,Public,12.3,71.7,69.9,7.0,None,High,Yes,No,Yes,Yes,63.4,Average,Pass
+15,Female,Public,26.4,97.8,43.2,9.4,High School,Medium,Yes,No,Yes,Yes,71.8,Good,Pass
+17,Male,Public,18.8,76.2,52.7,6.8,Masters,High,Yes,Yes,No,No,74.2,Good,Pass
+16,Male,Public,37.9,80.2,48.4,5.6,Bachelors,Medium,Yes,No,No,No,82.6,Excellent,Pass
+20,Male,Public,6.7,89.1,88.6,6.7,None,Medium,No,No,No,No,52.7,Average,Pass
+20,Male,Public,10.2,80.3,75.6,6.4,Bachelors,Medium,Yes,No,Yes,No,72.1,Good,Pass
+20,Male,Private,17.9,76.4,55.7,7.4,Bachelors,Low,Yes,Yes,No,No,63.8,Average,Pass
+22,Female,Public,17.8,79.6,70.6,6.8,Masters,Medium,Yes,No,No,No,75.4,Good,Pass
+21,Female,Private,28.7,90.7,41.7,5.2,Bachelors,High,Yes,No,No,No,77.0,Good,Pass
+17,Male,Public,10.3,72.0,51.9,4.7,None,High,Yes,No,Yes,No,46.8,At Risk,Fail
+15,Male,Public,21.3,78.5,63.6,7.1,High School,High,Yes,No,Yes,No,69.1,Good,Pass
+19,Male,Public,23.1,80.1,68.8,8.6,High School,Medium,Yes,No,No,No,82.6,Excellent,Pass
+22,Female,Public,19.9,90.4,60.5,6.9,Bachelors,Medium,Yes,Yes,Yes,No,72.0,Good,Pass
+22,Female,Public,8.3,78.8,65.7,7.9,Bachelors,Medium,Yes,Yes,No,No,63.4,Average,Pass
+16,Female,Private,24.9,100.0,63.2,8.1,Bachelors,Medium,Yes,No,Yes,Yes,95.4,Excellent,Pass
+16,Male,Public,23.6,78.1,59.5,7.1,Bachelors,Medium,Yes,No,Yes,No,69.7,Good,Pass
+15,Male,Public,19.2,77.1,57.6,5.7,High School,Low,Yes,No,No,No,66.8,Good,Pass
+16,Male,Public,16.4,77.9,55.6,7.1,High School,Low,Yes,No,No,No,69.0,Good,Pass
+19,Male,Public,16.6,64.2,65.5,8.4,High School,Medium,Yes,Yes,No,No,68.6,Good,Pass
+19,Male,Public,14.4,67.6,68.2,7.5,High School,Low,No,Yes,No,Yes,61.2,Average,Pass
+17,Female,Public,19.5,73.6,65.0,7.8,Bachelors,Low,Yes,Yes,Yes,No,82.8,Excellent,Pass
+17,Male,Private,15.2,93.6,44.3,6.2,PhD,Low,No,No,No,No,61.4,Average,Pass
+21,Female,Public,9.1,79.6,47.0,6.5,High School,High,Yes,Yes,Yes,Yes,60.0,Average,Pass
+18,Female,Public,7.7,74.2,68.0,6.6,Bachelors,High,Yes,No,No,No,62.0,Average,Pass
+21,Female,Private,9.7,94.7,84.1,6.7,High School,Medium,Yes,No,No,No,70.8,Good,Pass
+22,Male,Private,16.6,98.6,64.3,8.3,Bachelors,High,Yes,Yes,No,No,85.9,Excellent,Pass
+17,Female,Public,14.8,95.1,55.8,3.7,None,High,Yes,Yes,Yes,No,45.3,At Risk,Fail
+16,Male,Public,16.5,69.8,65.4,6.8,Bachelors,Low,Yes,No,No,Yes,57.2,Average,Pass
+22,Male,Public,18.5,74.1,44.9,6.7,High School,Low,Yes,Yes,No,Yes,68.2,Good,Pass
+20,Male,Public,10.6,100.0,81.6,5.0,High School,Low,Yes,No,No,No,54.1,Average,Pass
+17,Male,Public,25.3,82.9,64.8,7.7,Bachelors,Low,Yes,No,Yes,No,81.6,Excellent,Pass
+19,Female,Private,13.1,76.8,52.0,5.9,High School,Medium,No,Yes,No,No,53.8,Average,Pass
+19,Female,Public,12.0,88.6,59.5,6.3,Bachelors,Low,No,No,No,Yes,66.4,Good,Pass
+22,Female,Private,18.4,92.1,54.1,9.2,High School,High,Yes,Yes,No,No,65.9,Good,Pass
+17,Male,Public,2.1,73.1,81.7,8.1,PhD,Medium,Yes,Yes,No,No,61.3,Average,Pass
+22,Male,Private,9.5,82.6,59.0,7.5,High School,Medium,Yes,Yes,No,No,59.7,Average,Pass
+22,Female,Private,21.9,91.1,64.3,7.3,Bachelors,High,No,No,No,No,70.0,Good,Pass
+16,Male,Public,2.8,66.1,70.6,6.6,Masters,High,Yes,No,No,No,66.0,Good,Pass
+16,Female,Public,22.8,80.1,50.9,9.4,Bachelors,Medium,Yes,Yes,Yes,No,59.3,Average,Pass
+19,Female,Public,25.6,66.6,64.9,7.8,High School,Medium,No,No,Yes,No,75.5,Good,Pass
+15,Female,Private,12.4,68.2,66.1,5.8,Bachelors,High,Yes,No,No,No,67.2,Good,Pass
+17,Female,Public,17.0,73.2,38.7,5.0,None,Medium,Yes,No,No,No,47.7,At Risk,Fail
+18,Male,Public,22.8,85.7,65.8,7.5,Bachelors,High,No,No,No,No,81.4,Excellent,Pass
+22,Male,Public,11.7,76.1,61.3,6.7,High School,Low,No,No,Yes,No,52.2,Average,Pass
+22,Male,Private,21.1,72.2,63.9,4.9,Masters,Medium,Yes,No,No,No,66.2,Good,Pass
+16,Male,Public,10.3,80.6,62.5,7.4,Masters,Medium,Yes,Yes,No,No,70.1,Good,Pass
+22,Male,Public,11.7,66.2,65.9,6.5,High School,Low,Yes,No,No,Yes,64.1,Average,Pass
+15,Female,Private,9.4,85.1,82.1,7.5,None,Low,Yes,Yes,No,No,57.5,Average,Pass
+20,Male,Public,17.4,93.6,44.3,7.4,High School,Low,Yes,No,No,No,66.4,Good,Pass
+21,Female,Private,23.1,79.0,56.9,6.0,Bachelors,Low,Yes,No,Yes,No,52.7,Average,Pass
+22,Female,Public,13.7,77.6,72.0,7.6,High School,Low,Yes,Yes,No,No,54.8,Average,Pass
+16,Female,Public,6.1,84.5,69.2,6.2,Bachelors,Medium,Yes,Yes,No,No,65.2,Good,Pass
+22,Male,Private,7.4,55.7,68.9,6.2,Bachelors,High,No,No,No,No,51.2,Average,Pass
+15,Female,Private,17.8,86.4,100.0,6.1,PhD,Medium,No,No,Yes,Yes,77.1,Good,Pass
+19,Male,Private,27.9,100.0,71.2,8.3,High School,Medium,Yes,No,No,No,87.8,Excellent,Pass
+18,Male,Public,17.8,78.5,79.0,6.4,None,Low,Yes,No,Yes,No,61.9,Average,Pass
+17,Male,Public,12.3,78.6,57.4,8.6,High School,High,Yes,Yes,No,No,59.1,Average,Pass
+15,Male,Public,20.4,88.9,47.1,9.1,Bachelors,Low,Yes,Yes,No,No,58.6,Average,Pass
+21,Male,Public,13.3,99.7,57.3,5.8,High School,Low,Yes,No,No,No,49.3,At Risk,Fail
+17,Male,Public,12.4,91.7,72.7,3.0,High School,Medium,Yes,No,No,No,45.8,At Risk,Fail
+20,Female,Public,8.3,54.1,68.1,8.2,High School,High,Yes,No,No,No,55.2,Average,Pass
+18,Male,Public,24.9,86.8,68.0,6.4,Bachelors,High,Yes,Yes,No,No,93.1,Excellent,Pass
+17,Male,Public,0.0,100.0,58.8,5.7,PhD,Medium,Yes,Yes,No,Yes,57.4,Average,Pass
+22,Female,Public,20.6,87.5,56.4,6.0,High School,Medium,No,No,No,No,67.5,Good,Pass
+15,Female,Public,11.8,66.1,59.3,6.3,High School,Medium,Yes,No,Yes,Yes,56.5,Average,Pass
+20,Female,Private,12.1,83.4,72.9,8.5,High School,Medium,Yes,No,No,No,66.6,Good,Pass
+20,Male,Public,26.8,64.6,74.6,7.0,High School,Low,Yes,Yes,No,Yes,82.7,Excellent,Pass
+18,Female,Public,10.0,94.8,46.9,8.5,PhD,Low,No,No,No,No,54.9,Average,Pass
+17,Female,Private,10.2,68.5,73.4,7.4,Bachelors,High,Yes,No,No,No,61.0,Average,Pass
+15,Male,Private,14.1,80.9,52.2,6.4,Bachelors,High,Yes,No,No,No,72.1,Good,Pass
+22,Male,Public,17.9,69.7,69.0,6.3,Masters,Low,Yes,No,Yes,No,76.6,Good,Pass
+22,Female,Public,11.9,73.4,59.1,7.5,Bachelors,Low,Yes,No,No,Yes,74.0,Good,Pass
+16,Male,Public,4.0,97.8,85.5,7.9,High School,Low,Yes,No,No,No,58.7,Average,Pass
+15,Male,Public,8.9,81.2,55.7,8.1,Bachelors,Medium,No,No,No,No,51.5,Average,Pass
+15,Female,Private,24.0,73.3,64.7,6.5,High School,Low,Yes,No,Yes,No,65.8,Good,Pass
+15,Female,Private,15.5,66.3,71.1,7.0,High School,Medium,Yes,No,No,No,65.9,Good,Pass
+21,Female,Public,18.2,57.5,48.9,7.6,PhD,Low,Yes,Yes,No,No,66.9,Good,Pass
+22,Female,Private,13.2,65.0,60.9,6.3,High School,Low,Yes,No,Yes,Yes,50.2,Average,Pass
+16,Female,Public,10.4,81.3,58.0,5.3,Bachelors,Low,Yes,Yes,No,No,46.7,At Risk,Fail
+20,Male,Public,26.7,91.8,54.3,5.8,High School,Medium,Yes,Yes,Yes,Yes,78.3,Good,Pass
+16,Male,Private,13.7,73.3,55.4,6.5,High School,Low,No,No,No,No,31.4,At Risk,Fail
+17,Female,Public,11.9,98.8,78.7,7.7,Bachelors,Medium,Yes,Yes,Yes,No,73.4,Good,Pass
+19,Male,Public,22.7,71.4,53.0,8.4,Masters,Medium,No,No,Yes,No,61.3,Average,Pass
+20,Male,Public,9.9,77.1,70.5,5.0,Bachelors,Medium,No,No,No,Yes,60.2,Average,Pass
+21,Female,Private,10.8,67.0,66.7,6.0,High School,Low,Yes,Yes,Yes,No,59.5,Average,Pass
+15,Female,Public,15.1,91.9,41.0,6.3,None,Medium,Yes,Yes,Yes,No,63.4,Average,Pass
+16,Male,Public,15.0,100.0,69.8,7.8,Bachelors,Low,No,Yes,No,No,68.0,Good,Pass
+17,Male,Public,16.8,58.9,40.8,6.1,Bachelors,Medium,No,Yes,Yes,No,45.0,At Risk,Fail
+17,Female,Public,29.6,75.8,71.4,6.2,Masters,Medium,Yes,Yes,Yes,No,82.1,Excellent,Pass
+22,Male,Public,17.4,95.2,54.4,5.0,Bachelors,High,No,Yes,No,Yes,68.9,Good,Pass
+21,Female,Private,0.0,62.6,62.1,7.4,Masters,High,Yes,Yes,No,No,45.5,At Risk,Fail
+17,Female,Private,17.3,86.8,42.6,6.6,Masters,Medium,Yes,No,No,Yes,80.5,Excellent,Pass
+22,Female,Private,15.3,94.7,63.8,5.9,High School,High,Yes,Yes,No,No,70.2,Good,Pass
+18,Male,Private,15.3,80.9,75.9,6.5,Bachelors,Low,Yes,Yes,No,No,74.7,Good,Pass
+19,Female,Public,16.7,86.6,49.9,8.3,Bachelors,Medium,Yes,Yes,No,Yes,62.7,Average,Pass
+18,Male,Public,14.8,100.0,52.9,5.5,PhD,Low,Yes,Yes,No,Yes,65.7,Good,Pass
+16,Female,Public,14.6,100.0,68.8,5.7,High School,Low,Yes,Yes,No,No,55.5,Average,Pass
+22,Male,Public,19.3,79.3,69.2,8.4,Bachelors,Medium,No,Yes,No,No,78.3,Good,Pass
+15,Male,Private,11.2,73.6,25.5,6.9,High School,Medium,Yes,Yes,No,No,50.3,Average,Pass
+16,Female,Private,8.4,69.0,92.2,7.7,Bachelors,Medium,Yes,No,No,No,72.3,Good,Pass
+16,Male,Private,36.2,91.7,69.9,7.3,Masters,High,Yes,Yes,No,No,100.0,Excellent,Pass
+17,Female,Public,10.0,63.5,72.5,6.8,Masters,Medium,Yes,Yes,Yes,No,66.2,Good,Pass
+16,Female,Public,15.7,77.0,59.8,6.3,High School,High,Yes,No,No,No,65.6,Good,Pass
+15,Male,Public,4.5,81.2,34.2,7.9,High School,High,Yes,No,No,No,48.4,At Risk,Fail
+20,Male,Public,15.8,74.0,72.1,8.3,Masters,High,Yes,Yes,No,No,77.6,Good,Pass
+22,Female,Public,8.5,83.4,53.5,8.2,Bachelors,Low,No,No,No,Yes,57.4,Average,Pass
+15,Male,Public,11.9,100.0,70.2,5.3,Masters,Medium,Yes,No,Yes,No,67.8,Good,Pass
+17,Male,Public,22.3,78.5,58.7,8.5,High School,Medium,Yes,No,Yes,No,86.5,Excellent,Pass
+19,Male,Private,18.3,74.8,65.6,6.3,Masters,High,No,No,No,Yes,84.9,Excellent,Pass
+22,Male,Public,19.0,92.2,50.4,5.8,Bachelors,Low,Yes,No,No,No,56.1,Average,Pass
+20,Female,Public,2.6,82.9,75.0,6.6,High School,Low,Yes,No,No,Yes,55.2,Average,Pass
+21,Male,Private,27.9,97.3,44.2,7.9,High School,Low,Yes,No,Yes,No,71.6,Good,Pass
+19,Female,Public,6.7,82.0,95.7,7.5,Bachelors,Low,Yes,No,Yes,No,72.6,Good,Pass
+18,Male,Private,25.7,77.0,95.6,6.5,High School,High,Yes,No,No,No,88.3,Excellent,Pass
+16,Female,Private,22.2,58.6,86.5,7.9,Masters,Low,No,Yes,Yes,No,75.9,Good,Pass
+21,Male,Public,19.0,60.6,81.1,7.0,Bachelors,Medium,Yes,Yes,No,No,63.2,Average,Pass
+21,Male,Private,9.0,58.0,60.7,6.1,Bachelors,Medium,No,No,No,No,40.8,At Risk,Fail
+15,Female,Public,16.1,84.6,79.5,5.9,High School,Medium,Yes,No,No,Yes,86.3,Excellent,Pass
+20,Male,Private,11.7,63.7,60.6,7.3,PhD,Low,Yes,No,No,No,63.4,Average,Pass
+15,Male,Private,15.2,95.1,38.7,6.7,Bachelors,Medium,Yes,Yes,No,No,61.1,Average,Pass
+20,Female,Private,13.3,80.4,84.5,5.0,Masters,Medium,Yes,No,No,Yes,72.6,Good,Pass
+21,Male,Public,0.7,77.1,78.9,7.9,Masters,High,Yes,Yes,No,Yes,60.9,Average,Pass
+16,Male,Public,22.9,69.9,61.5,6.2,Bachelors,Medium,Yes,No,No,Yes,75.5,Good,Pass
+18,Male,Private,14.4,87.5,43.6,8.9,PhD,High,Yes,Yes,No,No,62.6,Average,Pass
+15,Female,Private,11.6,70.3,53.2,5.0,Bachelors,Low,Yes,Yes,Yes,Yes,46.1,At Risk,Fail
+19,Female,Public,11.1,68.2,34.7,6.6,Bachelors,Medium,Yes,No,Yes,No,47.9,At Risk,Fail
+22,Female,Private,17.5,94.3,76.2,5.9,High School,Medium,Yes,Yes,No,No,81.8,Excellent,Pass
+15,Female,Public,8.7,84.3,38.0,5.5,High School,Medium,Yes,Yes,No,No,52.3,Average,Pass
+18,Male,Private,0.0,77.2,66.3,6.2,Bachelors,Medium,Yes,No,No,Yes,57.7,Average,Pass
+22,Male,Private,17.8,87.7,49.3,9.1,High School,Low,Yes,Yes,No,No,62.9,Average,Pass
+17,Male,Public,18.6,80.1,40.6,7.0,Bachelors,Low,Yes,No,No,No,69.3,Good,Pass
+16,Male,Public,13.6,84.6,65.6,5.8,PhD,High,Yes,No,No,No,68.0,Good,Pass
+18,Male,Public,7.0,70.2,57.0,4.4,High School,High,Yes,Yes,No,No,40.9,At Risk,Fail
+19,Female,Public,15.6,100.0,74.6,4.6,None,Low,Yes,No,Yes,No,57.2,Average,Pass
+20,Female,Public,4.7,73.0,43.0,6.1,Bachelors,Medium,Yes,No,No,Yes,49.5,At Risk,Fail
+17,Female,Public,7.8,98.7,50.6,6.0,None,Medium,No,No,Yes,No,45.0,At Risk,Fail
+22,Female,Public,9.7,77.7,26.2,6.5,Masters,Medium,No,No,Yes,No,44.3,At Risk,Fail
+19,Female,Public,20.9,89.7,29.2,3.8,Bachelors,Low,Yes,No,Yes,No,51.9,Average,Pass
+17,Male,Public,12.5,88.8,89.0,6.7,Bachelors,High,Yes,No,No,No,87.0,Excellent,Pass
+22,Female,Private,11.9,93.8,93.3,8.1,Bachelors,Medium,Yes,Yes,No,No,75.9,Good,Pass
+22,Female,Private,28.7,69.9,63.4,8.9,Bachelors,Medium,Yes,Yes,No,No,72.0,Good,Pass
+18,Male,Public,17.5,92.9,49.6,4.3,High School,Medium,Yes,No,No,No,50.6,Average,Pass
+15,Male,Private,17.4,100.0,57.5,5.8,High School,Medium,Yes,Yes,No,No,64.6,Average,Pass
+19,Female,Public,12.4,76.9,75.1,5.7,High School,Low,Yes,No,No,No,64.6,Average,Pass
+19,Male,Public,10.8,80.4,54.3,7.0,Masters,High,Yes,Yes,Yes,No,71.6,Good,Pass
+16,Female,Public,0.0,73.7,65.6,5.2,High School,Low,Yes,Yes,No,No,34.4,At Risk,Fail
+20,Female,Public,21.8,75.8,61.8,9.0,High School,High,Yes,No,No,No,69.2,Good,Pass
+21,Male,Public,18.1,100.0,53.5,6.9,High School,High,No,Yes,No,Yes,65.4,Good,Pass
+15,Male,Public,13.7,67.9,54.1,6.6,High School,Medium,No,Yes,Yes,Yes,56.8,Average,Pass
+20,Male,Private,14.0,68.7,66.4,8.9,High School,Medium,Yes,No,Yes,No,58.8,Average,Pass
+16,Male,Private,20.2,99.3,47.3,6.8,Masters,Low,No,No,No,No,73.7,Good,Pass
+20,Male,Public,4.1,87.5,68.8,7.3,High School,Medium,No,No,No,No,56.1,Average,Pass
+18,Female,Public,10.9,100.0,54.9,5.8,Bachelors,Medium,Yes,Yes,No,No,68.7,Good,Pass
+15,Male,Public,7.0,74.6,63.9,5.0,High School,Low,Yes,No,No,No,36.3,At Risk,Fail
+22,Male,Private,27.4,81.5,82.8,6.0,Bachelors,Low,No,No,No,No,75.9,Good,Pass
+16,Male,Private,21.1,72.1,59.5,9.6,High School,High,Yes,No,No,Yes,76.8,Good,Pass
+19,Female,Public,0.0,81.7,75.8,7.6,Bachelors,Low,Yes,Yes,No,No,52.5,Average,Pass
+16,Male,Public,4.4,58.7,35.1,7.2,PhD,Low,Yes,Yes,Yes,No,34.6,At Risk,Fail
+22,Male,Public,14.1,88.2,54.9,5.5,High School,Low,Yes,No,No,No,62.0,Average,Pass
+20,Female,Public,11.7,83.9,62.4,8.0,PhD,Medium,Yes,No,No,No,67.3,Good,Pass
+21,Male,Private,5.7,79.3,90.8,5.0,High School,Medium,No,Yes,No,No,59.2,Average,Pass
+18,Male,Private,28.6,75.3,32.6,4.8,Bachelors,Medium,Yes,No,No,No,65.2,Good,Pass
+18,Male,Public,17.2,69.3,60.6,6.1,Bachelors,Medium,Yes,No,Yes,No,62.2,Average,Pass
+20,Male,Public,18.3,88.7,83.9,9.3,High School,Low,Yes,Yes,No,Yes,84.2,Excellent,Pass
+21,Male,Public,10.2,65.9,50.2,9.3,High School,Medium,Yes,No,No,No,42.6,At Risk,Fail
+21,Female,Public,20.1,86.1,58.8,6.2,None,Low,Yes,Yes,No,No,74.9,Good,Pass
+15,Male,Public,12.3,100.0,67.0,5.9,Bachelors,High,Yes,No,No,No,68.5,Good,Pass
+20,Male,Public,13.0,97.8,64.8,4.7,High School,Low,Yes,No,No,No,56.2,Average,Pass
+15,Male,Private,19.3,61.9,85.5,6.9,Masters,Low,Yes,No,No,No,77.5,Good,Pass
+17,Female,Public,3.6,73.6,68.7,7.0,High School,Medium,No,No,No,No,46.5,At Risk,Fail
+21,Female,Public,26.2,85.1,81.9,7.8,Masters,Low,No,No,Yes,No,76.2,Good,Pass
+17,Male,Public,16.3,79.2,56.6,8.0,High School,Medium,Yes,Yes,No,Yes,68.6,Good,Pass
+21,Male,Public,24.0,63.2,50.9,6.5,Bachelors,Medium,Yes,No,Yes,No,62.9,Average,Pass
+18,Male,Private,7.5,84.6,58.6,7.5,High School,High,Yes,No,No,No,73.1,Good,Pass
+16,Male,Public,8.5,79.9,44.6,5.9,High School,Low,No,Yes,No,No,41.3,At Risk,Fail
+17,Male,Private,6.9,100.0,69.3,7.5,None,Medium,No,No,No,No,63.1,Average,Pass
+19,Male,Private,16.8,77.0,56.2,6.1,Bachelors,Medium,Yes,Yes,No,No,74.6,Good,Pass
+21,Female,Public,15.5,94.0,51.9,7.4,High School,Low,No,No,No,No,61.7,Average,Pass
+19,Male,Public,11.7,64.8,69.5,7.3,Bachelors,Medium,Yes,No,No,No,64.2,Average,Pass
+22,Male,Private,7.9,67.7,44.8,6.9,PhD,High,Yes,No,No,No,61.6,Average,Pass
+21,Male,Public,6.1,88.7,73.6,7.8,High School,Medium,Yes,No,No,No,65.4,Good,Pass
+21,Female,Public,14.7,93.0,54.8,4.8,None,High,Yes,Yes,No,No,58.8,Average,Pass
+19,Female,Private,11.7,68.5,79.4,5.4,High School,Medium,Yes,No,No,Yes,53.4,Average,Pass
+17,Male,Private,10.2,80.3,56.1,6.4,High School,Medium,Yes,No,Yes,No,44.3,At Risk,Fail
+18,Male,Public,25.8,63.4,71.5,4.9,Bachelors,High,No,Yes,No,No,80.9,Excellent,Pass
+15,Female,Public,14.4,77.8,64.7,6.3,Bachelors,Low,No,Yes,No,No,45.2,At Risk,Fail
+17,Female,Public,23.9,90.0,73.2,6.3,High School,Medium,Yes,No,No,No,81.9,Excellent,Pass
+22,Male,Private,11.3,74.8,63.6,8.5,High School,Medium,Yes,No,No,Yes,62.2,Average,Pass
+18,Female,Public,16.7,77.0,37.0,7.0,Bachelors,High,Yes,Yes,No,No,68.9,Good,Pass
+15,Female,Public,14.6,66.4,77.1,8.1,High School,High,Yes,Yes,No,No,65.2,Good,Pass
+20,Male,Private,3.1,72.2,60.7,7.2,Bachelors,Low,No,Yes,Yes,No,46.6,At Risk,Fail
+22,Female,Private,25.0,100.0,73.8,6.1,PhD,Medium,Yes,No,Yes,No,88.9,Excellent,Pass
+21,Male,Private,14.1,80.9,72.4,7.0,High School,Low,Yes,No,No,Yes,85.3,Excellent,Pass
+17,Male,Public,20.2,68.0,50.4,7.7,Bachelors,Medium,No,No,No,No,65.5,Good,Pass
+18,Male,Public,9.7,76.2,48.3,8.4,Masters,Medium,Yes,No,No,No,68.0,Good,Pass
+19,Male,Private,13.8,60.8,71.8,6.6,Bachelors,Low,Yes,Yes,No,No,55.8,Average,Pass
+16,Female,Private,8.9,67.8,57.5,4.7,Masters,High,Yes,No,No,Yes,61.7,Average,Pass
+17,Male,Public,23.7,96.3,76.0,4.6,Masters,Medium,No,Yes,No,Yes,78.5,Good,Pass
+16,Male,Public,17.2,78.3,59.3,6.4,Bachelors,Medium,No,No,No,No,66.1,Good,Pass
+22,Male,Public,17.6,100.0,77.4,3.8,Bachelors,High,Yes,No,No,No,67.0,Good,Pass
+20,Female,Public,24.5,78.9,68.3,9.1,Bachelors,Medium,Yes,No,No,No,89.0,Excellent,Pass
+21,Female,Public,23.1,79.6,66.3,7.6,Bachelors,Medium,Yes,No,No,Yes,85.0,Excellent,Pass
+21,Female,Public,20.4,87.7,56.4,6.0,Bachelors,Low,Yes,Yes,No,No,66.7,Good,Pass
+22,Male,Public,5.0,47.9,65.5,5.4,High School,Low,Yes,Yes,No,No,37.9,At Risk,Fail
+15,Female,Private,10.1,82.5,79.9,8.1,Masters,Low,Yes,No,No,No,73.6,Good,Pass
+22,Female,Public,8.0,79.4,61.2,5.4,High School,Low,Yes,No,No,No,51.7,Average,Pass
+15,Female,Public,20.1,97.8,70.0,5.5,High School,Low,Yes,Yes,Yes,No,59.7,Average,Pass
+18,Male,Public,16.2,91.6,62.7,5.8,High School,Medium,Yes,No,No,Yes,73.1,Good,Pass
+19,Female,Public,5.3,66.4,63.9,6.9,High School,Medium,Yes,No,No,No,46.4,At Risk,Fail
+17,Male,Public,13.7,94.9,87.9,7.6,Bachelors,Low,Yes,No,No,No,79.1,Good,Pass
+16,Male,Public,4.5,76.9,80.0,8.4,High School,Medium,Yes,No,No,No,53.8,Average,Pass
+16,Male,Public,14.6,69.1,63.2,8.2,Bachelors,High,Yes,Yes,No,Yes,72.7,Good,Pass
+21,Male,Public,3.4,82.4,65.2,6.8,Bachelors,Low,Yes,No,No,No,51.2,Average,Pass
+17,Male,Private,18.7,77.6,51.5,8.1,High School,Medium,Yes,No,No,No,76.1,Good,Pass
+17,Male,Public,17.6,98.5,59.4,5.9,High School,Low,Yes,No,Yes,No,66.2,Good,Pass
+22,Male,Private,28.4,84.1,66.6,4.4,Bachelors,Medium,Yes,No,No,No,82.0,Excellent,Pass
+16,Female,Private,20.9,82.5,74.8,5.9,Bachelors,Medium,Yes,Yes,No,No,96.6,Excellent,Pass
+22,Male,Private,12.0,90.8,73.2,5.8,High School,Low,Yes,Yes,No,No,63.8,Average,Pass
+22,Female,Public,20.7,93.1,45.4,6.0,High School,Low,Yes,Yes,Yes,No,72.7,Good,Pass
+19,Female,Public,5.2,89.4,76.7,5.6,High School,High,Yes,No,Yes,No,52.7,Average,Pass
+16,Female,Public,8.3,97.0,60.7,6.2,None,Low,Yes,No,No,No,61.7,Average,Pass
+16,Female,Private,17.3,87.3,47.2,7.6,None,Medium,Yes,No,Yes,Yes,58.9,Average,Pass
+17,Male,Public,0.0,82.0,82.0,9.0,PhD,Medium,Yes,No,Yes,No,56.8,Average,Pass
+19,Female,Private,14.7,94.9,83.9,4.6,None,Low,No,Yes,No,No,58.1,Average,Pass
+16,Female,Public,7.9,78.9,66.0,5.1,High School,Medium,Yes,No,No,No,56.0,Average,Pass
+18,Male,Private,15.7,80.4,72.6,5.8,Masters,Medium,No,No,No,Yes,62.2,Average,Pass
+15,Male,Public,7.5,100.0,73.5,7.8,Bachelors,Low,Yes,Yes,No,No,62.3,Average,Pass
+19,Female,Public,18.0,99.5,82.9,6.5,High School,High,No,No,No,Yes,84.3,Excellent,Pass
+15,Male,Public,15.1,79.9,72.9,5.9,Bachelors,Medium,No,No,No,No,62.4,Average,Pass
+20,Male,Public,24.8,74.6,42.1,7.7,PhD,Medium,Yes,No,No,Yes,72.6,Good,Pass
+15,Female,Public,15.0,97.6,92.1,8.0,None,Low,Yes,Yes,Yes,No,71.6,Good,Pass
+16,Female,Public,9.6,89.6,78.0,6.8,High School,Low,Yes,No,No,Yes,66.2,Good,Pass
+16,Male,Public,13.3,83.8,54.4,5.7,Masters,Medium,Yes,No,No,No,65.2,Good,Pass
+21,Female,Public,5.6,76.1,46.6,7.2,Masters,Medium,Yes,No,Yes,No,55.7,Average,Pass
+15,Male,Public,17.8,84.0,69.6,6.5,PhD,Low,No,Yes,No,No,75.3,Good,Pass
+18,Female,Private,19.1,79.7,57.8,6.5,High School,Medium,Yes,Yes,No,No,65.8,Good,Pass
+19,Female,Public,32.3,72.0,66.9,6.1,PhD,Medium,No,No,No,Yes,86.5,Excellent,Pass
+19,Male,Public,10.6,81.5,73.2,8.0,High School,Low,No,Yes,No,Yes,67.3,Good,Pass
+20,Male,Public,13.1,83.2,53.5,7.1,Bachelors,Medium,No,Yes,No,No,59.0,Average,Pass
+21,Female,Public,11.0,75.5,45.3,8.1,Masters,Medium,Yes,No,No,No,58.3,Average,Pass
+18,Male,Public,16.5,90.8,67.8,8.5,High School,Medium,Yes,Yes,No,No,63.7,Average,Pass
+21,Male,Public,17.7,95.5,54.0,7.4,High School,Medium,No,No,Yes,No,62.8,Average,Pass
+17,Male,Private,14.6,91.6,64.2,6.1,Bachelors,Medium,Yes,No,Yes,No,69.2,Good,Pass
+22,Female,Public,22.6,76.7,41.9,8.2,Masters,High,Yes,No,Yes,No,61.5,Average,Pass
+19,Male,Private,10.7,89.1,58.2,7.4,None,High,Yes,No,No,No,56.4,Average,Pass
+20,Female,Public,21.9,80.9,72.7,10.0,Masters,Medium,Yes,No,Yes,No,63.0,Average,Pass
+22,Female,Public,18.8,65.2,71.1,7.2,High School,Medium,No,Yes,Yes,No,68.9,Good,Pass
+21,Male,Public,14.9,88.1,50.2,7.7,High School,High,Yes,Yes,No,No,58.0,Average,Pass
+21,Female,Public,12.8,81.8,44.5,7.2,High School,High,Yes,Yes,No,Yes,66.4,Good,Pass
+19,Female,Public,32.0,100.0,62.2,6.7,Masters,Low,Yes,Yes,No,No,97.8,Excellent,Pass
+15,Male,Private,9.3,97.5,70.4,6.5,High School,Low,Yes,No,No,No,63.4,Average,Pass
+18,Female,Private,17.1,88.5,68.1,7.2,Bachelors,Medium,Yes,No,Yes,No,70.3,Good,Pass
+16,Male,Public,9.7,83.0,54.3,7.5,High School,High,Yes,Yes,No,No,65.8,Good,Pass
+22,Male,Public,27.5,82.0,66.5,8.3,Masters,High,Yes,Yes,No,Yes,100.0,Excellent,Pass
+16,Male,Public,21.2,68.0,84.5,7.2,Masters,High,Yes,No,No,No,85.4,Excellent,Pass
+16,Female,Public,10.3,59.1,65.1,6.2,High School,Low,Yes,No,No,No,39.0,At Risk,Fail
+16,Female,Public,18.6,69.5,37.5,6.4,High School,High,Yes,Yes,No,No,71.0,Good,Pass
+20,Male,Private,16.8,79.4,65.0,5.1,High School,Low,Yes,Yes,Yes,No,59.5,Average,Pass
+19,Female,Private,11.4,54.7,92.7,9.0,High School,Medium,No,Yes,Yes,No,56.7,Average,Pass
+22,Female,Public,20.3,73.5,42.7,6.1,Masters,Medium,No,No,Yes,No,48.2,At Risk,Fail
+18,Female,Public,17.7,77.0,62.4,8.1,Bachelors,Medium,Yes,Yes,No,No,71.8,Good,Pass
+17,Female,Private,16.5,77.4,58.6,7.2,High School,Medium,Yes,No,Yes,No,58.7,Average,Pass
+15,Male,Private,14.7,72.1,63.4,7.2,Bachelors,Low,Yes,Yes,No,No,59.4,Average,Pass
+15,Female,Public,18.0,75.9,64.9,6.6,Bachelors,Low,No,No,Yes,No,60.6,Average,Pass
+17,Male,Public,16.6,100.0,79.1,5.8,High School,High,No,No,No,No,68.9,Good,Pass
+22,Male,Private,15.4,87.9,63.3,5.5,High School,Low,Yes,Yes,No,No,59.9,Average,Pass
+19,Male,Private,10.5,73.3,81.2,9.0,High School,Medium,Yes,No,Yes,No,64.1,Average,Pass
+22,Female,Public,26.9,79.2,60.2,6.9,Bachelors,Low,Yes,No,Yes,No,78.0,Good,Pass
+15,Female,Private,7.6,79.7,56.7,8.3,High School,Low,Yes,No,No,No,50.1,Average,Pass
+15,Male,Public,18.0,70.8,52.0,8.6,Bachelors,Low,No,No,Yes,No,51.9,Average,Pass
+21,Male,Private,12.8,70.8,34.7,6.3,High School,Medium,No,No,Yes,Yes,44.3,At Risk,Fail
+15,Male,Public,27.3,92.1,66.1,7.4,Bachelors,Medium,No,Yes,No,No,83.0,Excellent,Pass
+15,Female,Public,8.7,75.0,92.8,6.9,None,Low,Yes,No,No,Yes,67.7,Good,Pass
+18,Male,Public,9.9,66.9,68.9,5.3,Bachelors,High,Yes,No,No,No,53.1,Average,Pass
+22,Female,Public,8.2,79.5,72.3,6.6,None,Low,No,No,No,No,58.6,Average,Pass
+20,Male,Public,17.3,81.4,55.8,7.6,High School,Medium,Yes,Yes,No,No,73.0,Good,Pass
+15,Male,Public,5.4,56.3,58.3,6.2,None,Low,Yes,Yes,No,No,26.1,At Risk,Fail
+21,Female,Public,11.7,79.5,76.8,6.4,Bachelors,High,Yes,Yes,No,Yes,76.7,Good,Pass
+21,Male,Public,0.0,90.4,92.1,6.6,Masters,Low,Yes,Yes,No,No,69.6,Good,Pass
+21,Male,Private,16.7,85.4,84.3,9.5,High School,Medium,Yes,No,No,Yes,76.2,Good,Pass
+22,Male,Private,11.5,100.0,74.1,4.4,Bachelors,Medium,No,No,No,Yes,56.2,Average,Pass
+16,Female,Private,4.6,95.0,62.5,7.5,Bachelors,Medium,Yes,Yes,No,No,62.6,Average,Pass
+22,Male,Public,22.6,97.4,65.1,6.5,Bachelors,High,Yes,Yes,No,Yes,90.5,Excellent,Pass
+17,Male,Public,5.8,100.0,50.7,6.0,Bachelors,Low,Yes,Yes,No,No,60.3,Average,Pass
+21,Male,Private,20.6,89.1,40.3,6.4,High School,Medium,Yes,Yes,No,No,60.3,Average,Pass
+19,Female,Public,10.1,82.0,45.1,7.7,Bachelors,High,Yes,No,Yes,No,56.0,Average,Pass
+21,Female,Public,26.2,91.7,62.7,7.7,Masters,High,Yes,Yes,No,No,100.0,Excellent,Pass
+20,Female,Private,20.2,73.3,57.6,7.0,Masters,Medium,Yes,No,No,No,75.1,Good,Pass
+20,Male,Private,7.9,81.3,40.0,8.2,High School,Medium,Yes,No,No,No,60.9,Average,Pass
+19,Female,Public,8.6,72.2,61.4,8.4,Bachelors,Medium,Yes,No,No,No,77.3,Good,Pass
+21,Male,Private,19.2,84.8,57.2,7.9,High School,Medium,Yes,No,No,No,68.3,Good,Pass
+20,Female,Public,13.2,72.2,44.4,6.1,Bachelors,High,Yes,No,No,Yes,56.9,Average,Pass
+16,Female,Private,13.8,71.8,56.4,7.4,None,High,Yes,No,No,No,60.5,Average,Pass
+21,Female,Public,23.9,85.0,57.2,7.4,High School,Medium,Yes,Yes,Yes,Yes,84.9,Excellent,Pass
+19,Female,Public,9.8,78.3,52.8,5.7,Bachelors,Medium,Yes,No,No,Yes,66.9,Good,Pass
+17,Female,Public,15.6,56.9,75.9,4.8,Masters,Medium,Yes,Yes,No,No,76.4,Good,Pass
+19,Male,Public,21.7,62.5,33.5,4.2,None,Low,Yes,Yes,Yes,No,39.0,At Risk,Fail
+22,Female,Private,20.7,66.2,32.2,6.9,Bachelors,High,Yes,No,No,Yes,72.9,Good,Pass
+21,Female,Public,13.9,69.4,62.0,7.2,Bachelors,Medium,Yes,Yes,No,No,63.4,Average,Pass
+21,Female,Private,13.0,85.0,63.4,5.3,PhD,Low,Yes,Yes,Yes,Yes,49.6,At Risk,Fail
+18,Female,Private,2.8,82.6,68.1,8.2,Bachelors,Medium,Yes,Yes,No,No,59.0,Average,Pass
+21,Male,Public,7.6,92.8,53.9,7.0,High School,Low,Yes,Yes,No,No,50.1,Average,Pass
+18,Female,Private,17.2,89.0,48.2,8.6,High School,Low,Yes,Yes,No,No,68.2,Good,Pass
+20,Male,Public,14.0,92.9,61.9,7.3,Bachelors,Medium,Yes,No,Yes,Yes,60.3,Average,Pass
+20,Female,Public,15.5,87.3,55.4,5.4,High School,Medium,No,No,No,No,51.6,Average,Pass
+16,Female,Public,22.3,82.5,85.3,7.4,Masters,Medium,Yes,No,No,No,89.4,Excellent,Pass
+17,Male,Private,6.7,93.2,57.1,7.7,Masters,Low,Yes,Yes,No,No,64.5,Average,Pass
+15,Female,Private,13.3,91.0,61.2,6.1,PhD,Medium,Yes,No,Yes,No,68.2,Good,Pass
+16,Female,Private,16.3,84.5,99.1,4.9,High School,Low,Yes,No,Yes,No,76.5,Good,Pass
+18,Female,Private,10.1,95.3,59.1,6.9,Bachelors,High,No,No,No,No,73.7,Good,Pass
+18,Male,Private,25.0,51.9,70.3,5.5,Bachelors,Low,No,No,No,No,60.1,Average,Pass
+16,Male,Public,21.4,76.5,71.7,8.3,None,High,No,No,Yes,No,77.3,Good,Pass
+18,Female,Private,17.0,76.3,73.0,6.3,High School,Low,Yes,Yes,No,No,78.7,Good,Pass
+19,Female,Public,27.6,93.8,66.3,9.0,High School,Low,No,No,No,No,73.7,Good,Pass
+16,Female,Public,4.5,98.9,64.9,4.0,High School,Medium,Yes,No,No,No,43.4,At Risk,Fail
+17,Female,Public,14.9,62.6,63.5,7.0,PhD,Medium,No,No,No,Yes,67.8,Good,Pass
+17,Male,Public,17.6,96.9,53.4,8.7,Masters,High,Yes,Yes,No,No,74.8,Good,Pass
+19,Female,Public,8.6,65.9,66.9,5.6,High School,Medium,No,No,No,No,44.9,At Risk,Fail
+17,Male,Public,17.1,66.3,92.4,6.6,Bachelors,Medium,Yes,No,No,No,85.3,Excellent,Pass
+20,Female,Public,7.3,77.2,80.2,6.3,High School,Low,Yes,Yes,No,No,61.9,Average,Pass
+17,Female,Public,19.8,76.2,66.6,5.9,High School,Medium,No,No,Yes,No,58.2,Average,Pass
+18,Female,Private,22.4,61.3,74.8,7.1,None,Medium,Yes,No,No,No,66.4,Good,Pass
+18,Female,Public,16.9,87.8,49.0,5.1,Bachelors,High,No,No,No,No,55.4,Average,Pass
+16,Male,Public,2.0,88.2,58.1,6.7,Bachelors,Medium,Yes,Yes,No,No,55.2,Average,Pass
+20,Male,Public,8.2,92.6,76.2,7.5,Masters,Medium,Yes,No,Yes,No,73.7,Good,Pass
+16,Male,Public,19.0,74.8,84.3,6.5,Masters,High,Yes,No,No,No,78.5,Good,Pass
+17,Female,Public,15.1,79.5,50.4,5.5,High School,Low,Yes,No,No,Yes,63.4,Average,Pass
+21,Male,Private,0.0,79.6,54.7,8.1,Bachelors,Medium,Yes,No,No,No,51.1,Average,Pass
+22,Female,Public,23.7,100.0,94.7,7.7,High School,High,Yes,No,No,Yes,97.9,Excellent,Pass
+20,Male,Private,16.0,46.0,63.4,5.4,High School,Medium,Yes,No,No,No,61.3,Average,Pass
+22,Male,Private,9.3,68.5,89.4,5.1,Bachelors,Medium,Yes,No,Yes,No,63.1,Average,Pass
+21,Male,Public,22.0,80.1,65.1,5.6,None,High,Yes,No,Yes,Yes,62.2,Average,Pass
+18,Male,Private,10.3,67.0,65.7,7.5,High School,Low,No,No,No,No,45.2,At Risk,Fail
+21,Male,Public,10.2,76.9,57.4,7.2,High School,High,No,Yes,Yes,No,54.3,Average,Pass
+17,Male,Private,17.5,78.5,76.1,7.8,High School,Medium,Yes,No,No,No,75.7,Good,Pass
+18,Female,Private,27.5,72.1,82.4,6.4,PhD,Medium,Yes,Yes,No,No,100.0,Excellent,Pass
+19,Female,Private,26.4,80.8,46.5,5.6,High School,Low,Yes,No,No,Yes,70.9,Good,Pass
+22,Female,Private,17.5,87.5,56.7,8.0,Bachelors,Medium,Yes,Yes,No,Yes,87.3,Excellent,Pass
+21,Male,Private,18.2,77.2,75.7,6.1,PhD,Low,No,No,No,No,66.1,Good,Pass
+18,Female,Private,20.5,74.6,60.1,7.0,Bachelors,Low,Yes,No,No,Yes,71.0,Good,Pass
+20,Female,Public,6.2,78.0,54.6,4.8,High School,Medium,Yes,No,Yes,No,39.0,At Risk,Fail
+16,Female,Private,19.5,79.9,77.1,6.1,Masters,Low,Yes,No,Yes,No,67.8,Good,Pass
+21,Male,Private,9.9,59.1,78.6,8.1,High School,Medium,Yes,Yes,No,No,69.3,Good,Pass
+19,Female,Public,17.2,85.5,55.3,5.9,High School,Low,No,Yes,No,No,41.9,At Risk,Fail
+19,Female,Private,13.4,74.6,65.2,7.9,Bachelors,Low,Yes,No,No,No,61.7,Average,Pass
+21,Male,Public,18.5,95.1,43.9,3.8,High School,Low,Yes,No,No,No,53.3,Average,Pass
+20,Male,Public,15.8,87.1,48.6,6.1,Masters,Medium,Yes,No,No,No,65.7,Good,Pass
+15,Female,Public,0.0,94.0,63.9,6.6,None,Low,Yes,No,Yes,No,49.6,At Risk,Fail
+17,Male,Public,16.3,67.9,62.5,9.1,Bachelors,Low,Yes,Yes,Yes,No,74.1,Good,Pass
+16,Male,Private,19.5,75.5,47.5,5.3,Bachelors,Medium,Yes,Yes,No,No,64.9,Average,Pass
+20,Female,Public,18.1,65.1,51.3,7.7,PhD,Medium,Yes,No,No,No,78.0,Good,Pass
+15,Male,Public,14.3,71.5,46.0,8.2,High School,Medium,Yes,No,No,No,73.3,Good,Pass
+16,Male,Public,26.5,95.0,68.8,5.9,High School,Low,Yes,No,No,No,81.2,Excellent,Pass
+19,Male,Public,17.2,97.8,32.5,6.3,PhD,High,No,No,No,No,67.3,Good,Pass
+20,Female,Private,18.1,66.2,46.8,7.0,Bachelors,Medium,Yes,No,No,No,70.9,Good,Pass
+19,Male,Private,22.3,74.5,34.1,4.9,None,Medium,Yes,No,Yes,Yes,60.2,Average,Pass
+21,Female,Public,17.5,79.1,68.3,6.2,None,Low,Yes,No,Yes,No,60.0,Average,Pass
+22,Male,Public,8.7,87.0,35.0,8.5,Masters,Low,Yes,Yes,Yes,No,49.5,At Risk,Fail
+16,Female,Public,0.0,58.9,62.5,7.5,Bachelors,Medium,No,No,Yes,No,50.5,Average,Pass
+22,Female,Public,11.7,60.8,86.6,6.6,Bachelors,Low,No,No,No,No,58.5,Average,Pass
+19,Female,Public,20.3,85.9,87.1,6.9,Masters,Medium,No,Yes,No,No,90.1,Excellent,Pass
+20,Female,Public,12.5,56.6,34.9,7.6,High School,Low,Yes,No,Yes,No,46.4,At Risk,Fail
+15,Male,Public,20.6,74.6,66.5,7.8,High School,Low,Yes,No,Yes,Yes,81.4,Excellent,Pass
+19,Female,Public,16.0,81.9,47.2,6.1,Bachelors,Low,No,No,Yes,No,48.2,At Risk,Fail
+20,Female,Public,24.0,85.0,44.1,8.8,Masters,Low,Yes,Yes,Yes,No,66.1,Good,Pass
+19,Female,Public,12.9,78.3,60.3,8.5,High School,Medium,Yes,Yes,Yes,No,65.9,Good,Pass
+15,Female,Private,18.3,75.6,80.4,7.7,Bachelors,Low,Yes,No,Yes,No,65.4,Good,Pass
+19,Female,Private,18.5,90.1,71.0,5.7,High School,Medium,Yes,Yes,Yes,No,70.6,Good,Pass
+22,Male,Public,25.5,83.4,51.3,5.5,High School,Low,Yes,Yes,No,No,78.6,Good,Pass
+20,Male,Private,3.1,72.2,72.6,6.4,Masters,Medium,No,No,No,No,42.2,At Risk,Fail
+16,Male,Private,11.8,80.5,28.3,6.9,High School,High,Yes,Yes,Yes,No,56.6,Average,Pass
+22,Male,Public,20.9,84.6,50.7,4.5,None,High,Yes,No,No,No,66.1,Good,Pass
+22,Female,Public,25.8,100.0,49.6,7.4,Masters,Medium,No,No,Yes,No,76.9,Good,Pass
+16,Female,Public,16.7,89.4,63.2,8.5,High School,Medium,Yes,Yes,No,No,65.9,Good,Pass
+21,Male,Private,13.0,94.6,59.0,7.5,High School,Medium,Yes,No,No,No,65.3,Good,Pass
+18,Male,Public,20.3,72.7,59.9,5.9,Masters,High,Yes,Yes,No,Yes,74.8,Good,Pass
+19,Female,Private,21.1,73.7,59.4,5.8,High School,Medium,Yes,Yes,No,Yes,72.5,Good,Pass
+18,Female,Public,12.5,77.2,62.3,7.2,Bachelors,Low,Yes,No,No,No,61.7,Average,Pass
+21,Female,Public,17.3,78.3,70.1,6.6,High School,Medium,Yes,No,Yes,No,64.4,Average,Pass
+22,Female,Private,23.3,67.9,64.2,7.4,High School,Low,Yes,Yes,No,No,75.7,Good,Pass
+21,Female,Public,28.2,95.2,57.7,7.6,Bachelors,Medium,Yes,No,No,No,96.7,Excellent,Pass
+22,Female,Private,20.2,90.6,68.0,8.2,High School,Low,Yes,Yes,No,No,76.8,Good,Pass
+22,Male,Private,15.3,76.3,74.4,5.3,Masters,Low,Yes,No,Yes,Yes,73.7,Good,Pass
+15,Female,Private,14.6,87.7,53.7,7.1,Masters,Medium,Yes,Yes,No,Yes,84.4,Excellent,Pass
+17,Male,Public,18.9,82.7,61.1,6.3,Masters,Medium,Yes,No,No,No,71.3,Good,Pass
+20,Male,Private,14.2,88.6,79.4,6.7,High School,Medium,Yes,No,No,Yes,76.8,Good,Pass
+19,Male,Public,16.3,63.9,45.5,7.9,High School,High,No,Yes,No,Yes,59.7,Average,Pass
+15,Male,Public,7.6,78.3,89.1,8.1,Masters,High,Yes,No,No,No,64.8,Average,Pass
+15,Male,Private,24.1,79.3,41.9,8.6,Bachelors,Medium,No,No,No,No,69.6,Good,Pass
+19,Female,Private,7.0,87.5,56.8,7.4,Bachelors,High,Yes,Yes,No,No,59.0,Average,Pass
+19,Female,Public,12.0,72.5,47.7,6.7,Masters,Medium,Yes,No,Yes,Yes,64.4,Average,Pass
+16,Male,Public,15.7,50.0,94.8,6.5,High School,Low,Yes,No,Yes,No,54.2,Average,Pass
+16,Female,Private,28.9,67.0,54.4,4.5,High School,High,Yes,Yes,No,No,71.2,Good,Pass
+16,Male,Private,12.0,79.3,54.5,8.5,Bachelors,Medium,Yes,No,No,No,53.2,Average,Pass
+19,Male,Public,10.3,80.8,56.4,6.4,Bachelors,High,Yes,No,No,No,68.4,Good,Pass
+15,Female,Private,11.1,100.0,63.4,7.5,High School,Low,No,No,No,No,57.0,Average,Pass
+19,Male,Public,26.6,87.0,57.1,7.7,Bachelors,Low,No,No,No,Yes,75.4,Good,Pass
+18,Female,Public,0.0,81.0,60.0,5.2,Masters,Low,No,No,No,Yes,48.5,At Risk,Fail
+18,Female,Public,8.0,79.6,9.1,5.6,High School,Medium,Yes,No,Yes,No,32.9,At Risk,Fail
+20,Male,Private,34.1,93.3,62.9,8.8,High School,High,Yes,No,No,Yes,96.4,Excellent,Pass
+19,Male,Public,19.1,72.9,62.3,7.2,Bachelors,Medium,Yes,Yes,No,Yes,76.4,Good,Pass
+20,Female,Public,7.3,78.3,77.6,6.0,Masters,Low,Yes,Yes,Yes,Yes,65.9,Good,Pass
+21,Female,Public,14.7,66.9,81.6,6.6,PhD,Medium,No,No,No,No,76.8,Good,Pass
+22,Female,Private,15.5,97.0,59.2,8.2,High School,Low,Yes,Yes,Yes,No,70.2,Good,Pass
+21,Male,Public,20.9,84.7,74.2,8.0,Masters,Medium,Yes,No,Yes,No,77.3,Good,Pass
+19,Male,Public,27.9,71.5,45.5,4.9,Masters,Medium,Yes,Yes,No,No,79.2,Good,Pass
+18,Female,Private,17.7,78.6,73.5,8.9,Bachelors,Low,No,Yes,No,No,61.4,Average,Pass
+16,Female,Public,11.2,86.1,53.4,8.1,High School,Medium,Yes,Yes,Yes,No,55.0,Average,Pass
+19,Male,Public,20.5,77.0,44.2,6.6,None,Medium,Yes,No,No,No,62.4,Average,Pass
+16,Female,Public,10.1,73.6,59.2,5.3,Bachelors,Low,Yes,Yes,Yes,No,56.8,Average,Pass
+22,Female,Private,7.8,72.1,83.0,8.2,High School,Medium,Yes,Yes,No,No,57.1,Average,Pass
+21,Male,Public,2.7,84.1,64.7,7.4,High School,Medium,Yes,No,No,Yes,62.8,Average,Pass
+15,Male,Public,4.0,75.7,84.4,4.9,Masters,Medium,Yes,No,No,No,55.4,Average,Pass
+21,Female,Public,8.7,74.6,50.8,6.5,High School,Low,Yes,No,No,No,48.2,At Risk,Fail
+15,Female,Private,6.8,64.0,77.7,10.0,PhD,Low,Yes,Yes,No,Yes,65.0,Good,Pass
+20,Male,Private,17.2,80.9,52.2,6.8,Bachelors,Medium,Yes,Yes,No,No,65.8,Good,Pass
+15,Male,Public,6.6,77.8,65.4,5.8,Masters,Low,Yes,No,Yes,Yes,69.7,Good,Pass
+18,Female,Public,0.0,76.1,65.3,5.5,High School,High,Yes,Yes,Yes,Yes,47.6,At Risk,Fail
+20,Male,Private,7.7,82.4,71.9,9.1,Bachelors,Medium,Yes,No,No,Yes,65.3,Good,Pass
+20,Female,Public,11.7,89.0,65.8,7.9,Bachelors,Medium,Yes,No,No,No,78.3,Good,Pass
+18,Female,Public,10.8,88.4,50.9,8.6,Masters,Medium,Yes,Yes,Yes,Yes,66.4,Good,Pass
+22,Female,Public,25.6,86.6,75.2,7.1,High School,Medium,No,No,No,No,86.5,Excellent,Pass
+21,Male,Public,10.7,77.1,88.0,8.4,High School,Low,Yes,Yes,No,No,54.7,Average,Pass
+16,Male,Public,21.2,73.2,53.2,5.7,PhD,Low,Yes,Yes,No,No,68.2,Good,Pass
+20,Male,Public,14.9,67.5,34.5,7.0,None,Medium,No,Yes,No,No,51.3,Average,Pass
+20,Female,Public,14.7,72.9,69.5,7.2,Bachelors,Medium,No,No,No,Yes,74.6,Good,Pass
+17,Male,Public,9.2,80.2,57.0,8.6,None,High,Yes,No,No,No,61.7,Average,Pass
+20,Male,Private,14.6,70.6,60.0,7.2,None,Medium,Yes,No,No,No,64.8,Average,Pass
+22,Male,Public,9.6,81.2,70.3,6.0,Bachelors,Medium,Yes,Yes,Yes,No,68.2,Good,Pass
+21,Male,Public,16.2,68.4,55.2,6.9,Bachelors,Low,No,No,No,Yes,64.0,Average,Pass
+21,Male,Private,13.3,60.1,58.0,4.6,Bachelors,Low,Yes,No,No,No,35.0,At Risk,Fail
+20,Female,Public,8.4,89.8,60.5,3.8,Bachelors,High,Yes,No,No,No,56.4,Average,Pass
+17,Female,Private,21.9,74.3,84.0,7.9,Bachelors,Low,Yes,No,No,No,75.1,Good,Pass
+21,Male,Public,18.0,70.0,62.5,6.3,PhD,High,Yes,No,No,No,78.2,Good,Pass
+17,Male,Private,11.9,66.9,43.5,6.5,High School,Low,Yes,No,No,No,51.5,Average,Pass
+19,Male,Public,16.0,85.1,44.1,7.9,High School,Medium,No,Yes,Yes,No,57.4,Average,Pass
+17,Female,Public,14.4,96.5,64.1,8.6,High School,Low,Yes,No,No,Yes,62.2,Average,Pass
+17,Male,Public,8.9,75.2,45.1,7.5,Masters,Medium,No,Yes,No,No,43.7,At Risk,Fail
+16,Female,Public,15.5,77.4,38.6,9.3,High School,Low,Yes,No,Yes,Yes,46.3,At Risk,Fail
+22,Male,Public,10.7,92.9,71.5,7.5,Bachelors,Medium,No,Yes,No,Yes,75.1,Good,Pass
+16,Male,Private,8.4,58.3,72.3,7.2,High School,High,Yes,Yes,No,Yes,56.3,Average,Pass
+15,Female,Private,3.6,100.0,56.5,7.1,Bachelors,Medium,Yes,Yes,No,Yes,58.6,Average,Pass
+22,Female,Public,12.5,100.0,66.4,5.1,Masters,Low,No,No,No,No,61.4,Average,Pass
+19,Female,Private,19.0,47.5,64.8,8.0,Bachelors,Medium,No,Yes,No,No,58.1,Average,Pass
+18,Female,Private,10.1,78.8,71.0,3.6,Bachelors,Medium,No,No,No,No,37.5,At Risk,Fail
+20,Female,Private,32.6,71.4,71.1,6.0,High School,Low,No,No,No,No,77.6,Good,Pass
+18,Female,Private,21.2,76.8,22.9,6.8,Bachelors,Medium,Yes,Yes,No,No,67.2,Good,Pass
+16,Male,Private,24.1,75.0,58.4,5.8,High School,High,Yes,No,Yes,No,64.8,Average,Pass
+20,Male,Public,20.6,89.7,69.8,6.2,Masters,Medium,Yes,No,Yes,No,78.4,Good,Pass
+16,Male,Private,28.0,78.6,55.8,9.2,High School,Medium,No,No,No,No,73.1,Good,Pass
+19,Male,Private,9.5,69.1,62.5,8.2,High School,Medium,No,Yes,No,No,46.5,At Risk,Fail
+22,Male,Public,0.0,77.9,73.3,5.9,High School,Medium,No,No,No,No,45.4,At Risk,Fail
+22,Male,Public,11.9,86.2,63.2,6.2,Bachelors,Low,No,Yes,Yes,No,51.9,Average,Pass
+17,Male,Public,18.9,65.8,84.6,5.1,Masters,Medium,Yes,No,Yes,No,70.0,Good,Pass
+21,Female,Private,16.1,60.2,78.9,7.7,High School,Medium,Yes,No,No,No,73.2,Good,Pass
+19,Male,Public,16.9,100.0,60.2,6.5,High School,Low,Yes,No,Yes,No,64.5,Average,Pass
+18,Female,Private,24.2,72.3,59.0,4.2,High School,Low,Yes,Yes,No,Yes,67.1,Good,Pass
+16,Male,Private,17.7,78.4,19.2,6.9,PhD,High,Yes,No,No,No,71.1,Good,Pass
+18,Female,Private,20.6,75.2,57.1,7.4,Masters,Low,Yes,Yes,No,No,79.8,Good,Pass
+20,Female,Public,8.4,86.6,41.7,8.1,High School,Low,No,Yes,No,No,50.2,Average,Pass
+22,Male,Private,7.3,100.0,65.3,6.7,Bachelors,Low,Yes,Yes,Yes,Yes,70.7,Good,Pass
+15,Male,Private,26.3,87.0,64.3,6.3,Masters,Low,Yes,No,No,No,84.5,Excellent,Pass
+20,Female,Public,15.7,61.8,72.4,9.4,Masters,High,No,Yes,Yes,Yes,56.4,Average,Pass
+21,Female,Private,10.6,63.4,83.0,6.8,Bachelors,Medium,Yes,No,No,No,62.1,Average,Pass
+22,Male,Public,10.7,75.2,61.6,7.7,Bachelors,Medium,Yes,No,No,No,62.4,Average,Pass
+18,Female,Public,10.5,76.8,96.2,6.1,Bachelors,Medium,Yes,No,No,No,71.0,Good,Pass
+15,Female,Public,10.0,59.3,65.5,7.7,High School,Medium,Yes,No,No,No,59.8,Average,Pass
+17,Male,Public,6.0,89.8,42.3,4.9,None,Medium,Yes,No,Yes,Yes,35.6,At Risk,Fail
+21,Male,Public,4.5,67.0,53.6,6.2,High School,High,Yes,Yes,Yes,No,60.7,Average,Pass
+22,Male,Public,13.6,97.9,56.4,5.2,None,Medium,Yes,No,No,Yes,59.8,Average,Pass
+20,Female,Public,10.8,100.0,70.9,6.0,High School,Medium,No,Yes,No,No,62.6,Average,Pass
+15,Female,Public,22.8,77.0,47.8,8.4,Masters,Medium,No,Yes,No,No,67.2,Good,Pass
+15,Female,Public,17.1,85.3,57.5,6.0,Masters,High,Yes,Yes,No,Yes,72.5,Good,Pass
+18,Female,Public,16.9,65.2,59.6,7.7,None,Low,No,No,No,No,53.3,Average,Pass
+19,Male,Private,9.8,87.5,55.3,8.8,None,Medium,Yes,Yes,No,No,57.0,Average,Pass
+15,Male,Private,14.2,74.0,74.2,6.8,Bachelors,Medium,Yes,Yes,Yes,Yes,71.5,Good,Pass
+20,Male,Public,17.5,67.0,71.6,8.1,Bachelors,Medium,Yes,No,No,No,82.3,Excellent,Pass
+19,Male,Private,20.0,76.5,79.5,7.5,High School,High,No,Yes,No,Yes,78.9,Good,Pass
+15,Female,Public,14.3,74.4,57.0,7.0,Masters,Medium,No,No,No,Yes,65.5,Good,Pass
+15,Female,Private,22.6,76.1,80.0,7.8,High School,Low,No,No,No,No,77.0,Good,Pass
+18,Male,Public,15.1,91.4,41.5,9.2,None,Medium,Yes,No,No,No,55.3,Average,Pass
+20,Female,Private,20.5,70.6,41.2,6.0,Bachelors,High,Yes,Yes,No,No,72.5,Good,Pass
+21,Female,Private,11.6,100.0,43.8,5.6,Bachelors,Medium,Yes,Yes,No,No,53.5,Average,Pass
+18,Male,Private,2.3,64.1,62.1,5.5,High School,High,Yes,No,No,No,38.5,At Risk,Fail
+17,Female,Public,16.9,99.4,80.0,8.1,Bachelors,High,Yes,No,No,No,85.0,Excellent,Pass
+22,Female,Public,20.1,67.8,53.0,8.3,Masters,High,Yes,Yes,No,Yes,77.7,Good,Pass
+18,Female,Public,19.0,80.0,54.8,6.1,None,Low,Yes,Yes,Yes,Yes,57.3,Average,Pass
+17,Female,Private,18.0,74.1,58.8,4.0,Bachelors,Medium,Yes,No,No,No,54.9,Average,Pass
+18,Male,Private,12.6,75.9,70.6,5.9,High School,High,Yes,Yes,Yes,No,65.1,Good,Pass
+15,Female,Private,9.4,89.6,54.8,7.5,Bachelors,High,Yes,No,Yes,No,59.2,Average,Pass
+17,Male,Public,18.9,98.0,54.0,6.7,High School,Low,Yes,No,No,No,66.0,Good,Pass
+19,Female,Public,18.0,94.3,41.8,7.0,High School,Low,Yes,No,Yes,No,62.5,Average,Pass
+22,Male,Public,11.1,75.1,53.4,6.1,High School,Low,Yes,No,No,Yes,50.0,Average,Pass
+20,Male,Public,22.8,82.2,79.7,8.1,Masters,Medium,Yes,No,No,No,82.5,Excellent,Pass
+21,Female,Public,8.8,70.6,63.4,7.2,High School,High,Yes,No,No,No,64.3,Average,Pass
+19,Male,Public,10.9,68.1,50.9,7.6,Masters,Medium,No,No,No,Yes,59.2,Average,Pass
+15,Male,Private,26.5,66.2,80.5,7.0,High School,Low,Yes,No,No,No,76.5,Good,Pass
+18,Female,Public,21.1,74.7,53.2,7.5,Masters,Low,Yes,No,No,No,66.7,Good,Pass
+22,Male,Public,12.5,83.0,83.3,7.4,Bachelors,High,Yes,No,Yes,No,68.0,Good,Pass
+15,Female,Public,17.0,57.1,83.1,5.6,High School,Low,Yes,Yes,No,No,63.2,Average,Pass
+22,Male,Private,16.1,79.4,62.8,7.3,Bachelors,Low,Yes,No,No,Yes,83.4,Excellent,Pass
+20,Male,Private,0.0,98.2,39.5,7.8,Masters,Low,Yes,No,No,No,52.2,Average,Pass
+17,Female,Public,8.7,93.5,96.3,8.3,Bachelors,High,No,Yes,No,Yes,69.5,Good,Pass
+21,Male,Public,14.6,73.0,67.8,7.3,High School,Medium,Yes,No,No,Yes,73.9,Good,Pass
+21,Male,Public,12.5,63.2,57.1,5.5,Bachelors,Low,Yes,No,Yes,No,46.0,At Risk,Fail
+15,Female,Public,16.7,85.5,76.3,5.7,Bachelors,Low,No,No,Yes,No,62.1,Average,Pass
+15,Female,Public,22.9,52.2,72.5,6.2,High School,High,Yes,No,No,No,70.3,Good,Pass
+20,Male,Public,12.7,93.3,81.7,7.0,Masters,Medium,Yes,Yes,No,No,91.5,Excellent,Pass
+22,Female,Private,7.6,77.4,52.1,6.6,High School,Medium,Yes,No,No,No,47.1,At Risk,Fail
+15,Female,Public,17.3,100.0,66.8,5.3,Bachelors,Low,Yes,Yes,No,Yes,75.2,Good,Pass
+20,Female,Private,12.7,59.3,44.2,5.3,Bachelors,Low,Yes,No,No,Yes,46.7,At Risk,Fail
+16,Male,Public,13.9,91.0,72.0,4.1,PhD,High,No,No,No,No,64.1,Average,Pass
+20,Female,Private,13.0,78.8,61.7,3.0,High School,Medium,Yes,No,Yes,No,34.6,At Risk,Fail
+19,Female,Private,30.7,76.0,66.2,6.6,High School,Medium,No,Yes,No,Yes,91.4,Excellent,Pass
+15,Female,Private,0.0,63.6,59.8,9.8,High School,High,Yes,No,No,No,45.2,At Risk,Fail
+20,Male,Public,12.3,87.1,58.2,9.1,Bachelors,Medium,Yes,No,No,Yes,62.4,Average,Pass
+22,Female,Public,15.0,88.1,49.0,5.5,High School,High,Yes,Yes,No,No,81.4,Excellent,Pass
+21,Female,Private,9.5,100.0,73.9,7.0,High School,Low,Yes,Yes,No,No,70.1,Good,Pass
+15,Male,Private,21.3,92.1,84.3,4.9,High School,Low,Yes,Yes,Yes,No,66.3,Good,Pass
+16,Female,Public,20.7,72.9,53.6,5.1,Masters,High,Yes,No,No,No,70.6,Good,Pass
+16,Female,Public,14.7,68.0,70.3,5.2,High School,High,Yes,No,No,No,66.1,Good,Pass
+18,Male,Public,13.1,63.6,68.5,6.5,Bachelors,Medium,Yes,No,Yes,No,65.3,Good,Pass
+16,Female,Private,14.2,97.7,62.1,6.6,High School,Medium,No,No,No,No,66.7,Good,Pass
+21,Male,Private,14.3,70.7,39.1,7.1,High School,High,Yes,No,No,No,65.8,Good,Pass
+21,Female,Public,14.5,97.8,42.5,7.7,None,Medium,Yes,No,No,No,66.5,Good,Pass
+21,Female,Public,13.7,86.3,50.3,6.4,High School,Low,No,Yes,No,Yes,52.9,Average,Pass
+16,Female,Public,16.8,84.0,29.9,6.8,Bachelors,Medium,Yes,Yes,No,No,76.8,Good,Pass
+15,Male,Public,20.3,76.3,83.1,5.4,High School,Medium,Yes,Yes,No,No,85.5,Excellent,Pass
+22,Female,Public,6.4,87.9,67.5,5.1,High School,Medium,No,No,No,No,51.9,Average,Pass
+17,Male,Private,7.6,79.8,61.6,4.9,None,High,Yes,No,No,No,48.7,At Risk,Fail
+20,Female,Public,2.8,75.6,29.1,7.6,High School,Medium,Yes,No,No,No,42.3,At Risk,Fail
+22,Female,Public,21.1,88.4,34.6,6.4,High School,Low,Yes,No,Yes,Yes,60.8,Average,Pass
+15,Male,Public,16.8,78.3,62.0,4.4,High School,Low,Yes,No,No,Yes,53.7,Average,Pass
+15,Male,Public,18.5,70.4,91.6,6.7,None,High,Yes,No,No,No,63.8,Average,Pass
+15,Male,Public,5.0,87.2,51.5,5.2,Bachelors,Low,Yes,No,Yes,Yes,55.5,Average,Pass
+16,Female,Public,27.5,79.2,75.0,9.0,PhD,High,No,Yes,No,No,95.6,Excellent,Pass
+15,Male,Public,10.7,85.9,54.8,6.0,Bachelors,Low,Yes,Yes,No,No,49.7,At Risk,Fail
+21,Male,Private,16.2,74.6,62.8,7.7,None,Medium,Yes,No,Yes,Yes,69.6,Good,Pass
+19,Male,Public,21.0,65.5,80.2,8.2,PhD,High,Yes,No,No,No,85.3,Excellent,Pass
+22,Male,Public,8.1,100.0,56.8,5.6,PhD,Medium,Yes,No,No,Yes,65.4,Good,Pass
+21,Male,Public,11.2,98.6,51.6,6.9,Bachelors,High,No,Yes,No,No,68.5,Good,Pass
+22,Male,Private,16.3,90.6,83.3,7.5,High School,Low,Yes,No,No,Yes,66.6,Good,Pass
+16,Male,Public,35.0,75.3,62.7,7.0,Bachelors,Medium,Yes,No,Yes,No,88.6,Excellent,Pass
+17,Female,Private,17.1,76.4,78.4,7.3,PhD,Medium,Yes,Yes,No,No,82.4,Excellent,Pass
+21,Male,Private,26.2,96.6,51.7,5.1,Masters,High,No,No,No,No,75.7,Good,Pass
+16,Female,Private,23.4,75.8,83.1,7.5,Bachelors,Low,Yes,No,No,Yes,76.8,Good,Pass
+15,Female,Public,17.6,72.4,66.1,6.2,Bachelors,Low,No,Yes,No,No,66.2,Good,Pass
+20,Female,Private,8.1,100.0,68.5,7.3,PhD,Medium,Yes,Yes,Yes,No,77.1,Good,Pass
+21,Male,Public,22.4,79.4,64.0,8.0,None,High,Yes,No,Yes,No,75.0,Good,Pass
+22,Male,Public,4.5,100.0,54.4,7.7,High School,High,Yes,No,No,No,58.6,Average,Pass
+22,Female,Public,26.2,63.2,62.0,7.3,Masters,High,Yes,Yes,Yes,No,98.7,Excellent,Pass
+15,Female,Public,16.4,86.2,55.4,7.6,High School,Medium,Yes,No,No,No,62.4,Average,Pass
+21,Female,Public,0.0,100.0,76.4,7.7,High School,Medium,Yes,No,No,No,63.0,Average,Pass
+21,Male,Public,12.6,80.4,59.0,8.7,High School,High,Yes,Yes,Yes,No,64.2,Average,Pass
+20,Male,Public,19.6,76.8,39.6,6.8,High School,High,Yes,No,No,No,79.1,Good,Pass
+21,Male,Public,13.3,66.0,36.8,7.0,None,High,No,No,No,No,51.4,Average,Pass
+21,Male,Public,20.0,93.0,36.1,8.0,Bachelors,High,No,Yes,Yes,No,70.5,Good,Pass
+18,Female,Private,9.0,70.8,71.3,6.2,High School,High,Yes,Yes,No,Yes,68.9,Good,Pass
+15,Male,Public,5.9,78.9,44.7,5.1,Bachelors,Low,Yes,Yes,Yes,No,34.8,At Risk,Fail
+18,Male,Public,14.5,65.2,66.5,7.4,High School,Low,No,No,No,No,51.2,Average,Pass
+16,Female,Public,15.2,98.7,64.0,6.5,PhD,High,Yes,No,No,No,79.0,Good,Pass
+15,Female,Public,12.6,93.9,61.0,5.2,Bachelors,Medium,No,No,No,No,63.4,Average,Pass
+15,Male,Public,23.6,79.6,68.6,7.5,PhD,Low,Yes,No,No,No,84.1,Excellent,Pass
+20,Male,Public,9.0,66.2,64.4,8.7,High School,Medium,No,Yes,No,Yes,54.1,Average,Pass
+19,Female,Public,17.2,98.4,21.4,4.7,None,Medium,Yes,No,No,No,55.4,Average,Pass
+19,Female,Public,15.5,75.6,57.1,8.1,Masters,High,Yes,No,Yes,No,57.6,Average,Pass
+20,Female,Public,4.1,66.7,68.4,3.5,Masters,High,Yes,No,Yes,No,28.3,At Risk,Fail
+19,Female,Public,5.8,58.9,86.6,6.3,None,Low,Yes,No,Yes,Yes,36.0,At Risk,Fail
+20,Female,Public,15.1,72.2,87.3,9.2,Bachelors,Medium,Yes,No,No,No,79.2,Good,Pass
+15,Male,Public,28.9,62.5,41.6,6.4,Bachelors,Low,No,No,No,No,65.6,Good,Pass
+21,Male,Public,19.1,72.5,56.8,6.9,High School,High,Yes,No,Yes,No,73.7,Good,Pass
+18,Female,Public,2.9,88.9,38.5,7.8,Bachelors,Low,Yes,No,No,No,47.2,At Risk,Fail
+16,Male,Public,0.0,75.5,84.8,4.6,High School,Medium,Yes,No,No,No,49.7,At Risk,Fail
+21,Male,Public,20.1,84.3,77.2,6.9,None,Medium,Yes,Yes,Yes,Yes,75.6,Good,Pass
+20,Male,Public,14.3,71.3,67.3,6.9,Masters,Medium,Yes,Yes,Yes,No,71.3,Good,Pass
+15,Female,Public,23.0,80.8,64.5,9.2,Bachelors,Medium,Yes,No,No,No,77.5,Good,Pass
+16,Male,Private,8.8,100.0,82.7,5.2,Masters,Medium,No,No,Yes,No,62.1,Average,Pass
+15,Male,Public,17.5,75.8,80.2,6.3,Bachelors,Medium,No,Yes,No,No,81.9,Excellent,Pass
+17,Male,Public,20.9,84.6,79.4,5.6,PhD,Low,Yes,Yes,No,Yes,73.7,Good,Pass
+15,Male,Public,11.9,61.2,68.9,5.5,High School,Medium,No,No,No,No,50.0,Average,Pass
+20,Female,Private,12.0,98.2,56.8,8.3,High School,Medium,Yes,Yes,No,No,67.8,Good,Pass
+19,Male,Public,15.2,74.3,73.5,6.8,High School,Low,Yes,No,Yes,No,63.0,Average,Pass
+22,Female,Public,18.8,92.6,74.2,6.1,Bachelors,Medium,No,Yes,No,Yes,75.0,Good,Pass
+20,Male,Private,14.9,78.5,59.1,6.1,Bachelors,Low,No,No,No,Yes,57.8,Average,Pass
+19,Female,Public,21.8,87.3,56.7,6.1,Bachelors,High,Yes,Yes,No,No,88.6,Excellent,Pass
+19,Female,Private,11.8,88.1,79.0,6.2,High School,Low,Yes,No,No,No,64.3,Average,Pass
+15,Female,Public,5.7,74.6,87.0,5.2,High School,Medium,Yes,No,Yes,No,66.5,Good,Pass
+15,Female,Public,28.8,93.1,50.8,6.5,Masters,Low,Yes,Yes,No,No,87.5,Excellent,Pass
+19,Male,Public,10.8,70.9,58.0,6.3,Masters,Medium,Yes,No,No,Yes,63.2,Average,Pass
+15,Female,Public,11.0,89.3,67.3,5.8,High School,Low,Yes,No,No,No,62.3,Average,Pass
+15,Female,Private,14.5,75.3,69.3,7.0,Bachelors,Medium,No,No,No,No,65.9,Good,Pass
+16,Female,Public,15.5,84.2,54.2,7.1,Bachelors,Low,Yes,Yes,No,Yes,78.4,Good,Pass
+22,Female,Private,12.3,74.5,90.3,6.1,Masters,Medium,Yes,No,No,No,66.2,Good,Pass
+18,Female,Public,14.9,80.6,68.3,6.6,High School,Medium,No,Yes,No,Yes,56.4,Average,Pass
+20,Female,Public,14.7,67.1,70.0,9.6,Bachelors,High,Yes,No,Yes,No,65.1,Good,Pass
+18,Female,Private,16.2,83.0,88.4,9.6,None,Medium,Yes,No,No,No,73.0,Good,Pass
+16,Female,Public,0.0,80.5,55.3,5.4,High School,Medium,Yes,No,No,No,43.5,At Risk,Fail
+17,Male,Private,28.2,73.5,60.7,5.6,Masters,High,No,Yes,No,No,83.8,Excellent,Pass
+15,Male,Public,14.0,79.3,43.2,5.4,High School,Low,No,Yes,No,No,50.6,Average,Pass
+21,Male,Private,19.1,81.6,59.4,8.2,None,Medium,Yes,Yes,Yes,Yes,60.2,Average,Pass
+16,Male,Public,5.4,72.6,39.7,6.3,High School,Medium,Yes,No,No,No,47.1,At Risk,Fail
+18,Male,Public,11.7,78.5,73.2,7.1,High School,Medium,No,No,Yes,No,65.9,Good,Pass
+22,Male,Private,10.3,67.9,68.3,9.4,Bachelors,Low,No,No,Yes,No,48.8,At Risk,Fail
+19,Male,Public,25.3,100.0,57.8,6.8,High School,Medium,Yes,Yes,No,Yes,77.9,Good,Pass
+18,Male,Public,10.9,92.7,60.5,7.7,Bachelors,Medium,Yes,Yes,Yes,No,64.0,Average,Pass
+19,Female,Public,20.3,83.3,73.4,7.5,Masters,Medium,No,No,No,Yes,83.5,Excellent,Pass
+21,Female,Private,10.4,94.1,45.0,6.0,High School,Low,Yes,No,No,Yes,67.5,Good,Pass
+17,Female,Public,11.8,56.2,65.1,8.2,Masters,Medium,Yes,No,No,Yes,54.6,Average,Pass
+20,Male,Private,13.3,49.3,72.5,5.7,High School,High,Yes,Yes,Yes,Yes,63.5,Average,Pass
+21,Male,Private,24.0,75.2,35.3,8.5,High School,Low,Yes,Yes,Yes,No,56.6,Average,Pass
+19,Female,Public,1.8,63.5,72.3,6.0,None,Medium,Yes,Yes,No,No,49.7,At Risk,Fail
+18,Male,Public,5.8,77.2,36.9,6.2,None,High,Yes,No,No,No,49.3,At Risk,Fail
+16,Female,Private,1.4,82.5,60.2,5.4,None,High,No,No,No,No,38.6,At Risk,Fail
+16,Male,Public,7.4,91.0,44.5,5.6,High School,Low,Yes,Yes,No,Yes,55.6,Average,Pass
+22,Male,Public,9.3,66.3,83.5,6.2,Masters,Medium,No,Yes,Yes,No,67.0,Good,Pass
+19,Female,Private,3.7,84.8,44.6,3.6,Bachelors,Low,Yes,No,No,No,27.9,At Risk,Fail
+17,Male,Public,9.9,80.2,37.2,6.5,PhD,High,Yes,Yes,No,Yes,58.7,Average,Pass
+18,Male,Public,0.9,84.2,64.0,6.1,Bachelors,Medium,No,No,Yes,No,53.2,Average,Pass
+19,Female,Private,7.9,73.8,55.8,7.8,Bachelors,Medium,No,Yes,No,Yes,62.8,Average,Pass
+19,Male,Public,23.4,96.6,39.4,7.3,High School,Low,Yes,Yes,Yes,No,72.3,Good,Pass
+20,Female,Public,17.8,78.8,69.9,5.9,Bachelors,Medium,Yes,Yes,Yes,No,66.0,Good,Pass
+17,Male,Public,16.3,100.0,32.1,6.2,High School,Low,Yes,No,No,Yes,67.5,Good,Pass
+20,Male,Private,8.0,70.5,46.5,6.5,PhD,Medium,No,Yes,No,No,66.5,Good,Pass
+18,Female,Private,4.2,88.9,53.4,8.7,PhD,Medium,Yes,Yes,No,No,59.6,Average,Pass
+22,Male,Public,7.0,79.3,74.0,5.7,High School,Medium,No,No,No,Yes,55.4,Average,Pass
+16,Female,Public,14.7,76.1,81.4,5.9,Bachelors,High,Yes,Yes,No,No,68.9,Good,Pass
+16,Female,Public,21.1,87.6,78.5,5.3,Bachelors,Low,Yes,Yes,No,No,71.2,Good,Pass
+18,Female,Public,21.3,76.4,59.7,4.9,Bachelors,Low,Yes,Yes,No,No,58.1,Average,Pass
+19,Male,Public,19.4,48.1,25.6,7.2,High School,Medium,Yes,No,Yes,No,51.7,Average,Pass
+20,Female,Private,9.8,43.2,67.9,7.1,Bachelors,Medium,No,No,No,No,50.4,Average,Pass
+18,Female,Public,15.2,95.3,84.1,8.5,Masters,Low,Yes,No,No,No,80.1,Excellent,Pass
+22,Female,Private,12.8,94.8,80.5,8.2,High School,Medium,No,No,No,No,62.2,Average,Pass
+18,Male,Public,13.6,100.0,68.9,9.9,Bachelors,Medium,Yes,No,No,No,65.6,Good,Pass
+16,Female,Public,29.3,79.8,44.2,6.7,High School,Medium,Yes,Yes,No,No,72.8,Good,Pass
+15,Male,Public,2.7,64.5,54.1,6.5,PhD,Medium,No,No,No,No,48.6,At Risk,Fail
+22,Female,Public,13.4,75.0,91.0,5.1,High School,Low,Yes,No,Yes,No,48.9,At Risk,Fail
+16,Male,Private,23.5,80.1,40.7,7.7,High School,Low,Yes,No,No,Yes,71.2,Good,Pass
+22,Female,Private,4.7,67.9,44.8,7.0,High School,Medium,Yes,Yes,Yes,Yes,46.7,At Risk,Fail
+17,Female,Private,10.5,99.8,76.1,7.6,Masters,Medium,Yes,No,No,Yes,79.4,Good,Pass
+15,Male,Public,11.3,100.0,55.5,5.3,Bachelors,Medium,No,No,No,No,46.6,At Risk,Fail
+17,Female,Private,13.4,85.7,44.3,7.3,None,High,Yes,No,No,No,64.9,Average,Pass
+19,Female,Public,3.8,79.9,84.9,7.1,High School,Low,Yes,Yes,No,No,57.4,Average,Pass
+18,Male,Private,19.2,64.5,68.9,7.0,Masters,Medium,Yes,No,No,No,76.3,Good,Pass
+21,Male,Public,19.7,98.6,56.3,5.9,High School,Medium,Yes,No,No,No,59.9,Average,Pass
+19,Female,Public,18.6,80.9,44.8,8.3,None,Low,No,No,Yes,Yes,46.6,At Risk,Fail
+18,Male,Public,8.9,76.5,92.7,9.5,PhD,High,No,No,Yes,No,62.6,Average,Pass
+20,Male,Public,15.6,85.8,61.6,5.4,High School,High,Yes,No,No,No,73.6,Good,Pass
+22,Female,Public,8.7,73.0,83.0,7.7,Bachelors,Low,Yes,Yes,No,No,69.0,Good,Pass
+18,Male,Private,12.7,81.8,75.4,3.1,High School,High,Yes,Yes,Yes,No,43.3,At Risk,Fail
+16,Female,Private,30.1,62.7,54.2,7.7,Bachelors,Low,No,Yes,No,Yes,72.0,Good,Pass
+18,Male,Private,15.7,93.0,54.3,4.4,Masters,High,Yes,No,No,No,55.9,Average,Pass
+21,Female,Public,6.7,78.7,83.7,6.1,High School,High,Yes,Yes,No,No,67.1,Good,Pass
+16,Male,Public,16.3,93.9,83.9,5.1,Bachelors,Low,Yes,No,Yes,No,71.1,Good,Pass
+22,Female,Public,5.5,77.6,33.8,6.5,Masters,Medium,No,No,No,No,47.0,At Risk,Fail
+19,Female,Public,6.6,78.4,70.2,7.9,Masters,Medium,Yes,No,Yes,No,71.5,Good,Pass
+19,Male,Public,7.7,65.5,60.2,4.4,High School,Low,Yes,No,Yes,Yes,34.1,At Risk,Fail
+17,Male,Public,11.9,89.1,46.5,6.3,High School,Medium,No,No,No,No,54.9,Average,Pass
+22,Female,Public,21.6,69.5,65.9,6.1,Masters,Medium,No,Yes,No,No,62.1,Average,Pass
+15,Female,Public,19.0,74.2,41.8,8.9,None,Low,Yes,No,Yes,No,53.9,Average,Pass
+17,Female,Public,18.7,80.0,55.0,7.4,None,Low,No,No,Yes,No,63.9,Average,Pass
+18,Male,Private,7.3,81.5,50.0,5.3,High School,Low,Yes,No,No,No,38.6,At Risk,Fail
+18,Female,Public,11.2,59.5,54.5,6.2,Masters,Medium,Yes,Yes,No,No,65.0,Good,Pass
+18,Female,Private,16.9,77.2,60.9,8.8,High School,Medium,Yes,Yes,Yes,No,72.9,Good,Pass
+16,Male,Public,10.6,89.5,46.8,7.7,High School,Medium,Yes,No,Yes,No,52.2,Average,Pass
+16,Male,Private,13.1,75.5,85.6,5.6,Bachelors,Low,Yes,No,No,No,68.6,Good,Pass
+15,Male,Private,18.1,77.3,69.4,6.5,High School,Low,Yes,No,Yes,No,74.1,Good,Pass
+19,Female,Private,12.6,81.9,88.9,6.5,High School,Medium,Yes,No,No,No,72.6,Good,Pass
+17,Male,Private,16.6,78.5,59.6,6.1,Bachelors,Low,Yes,No,No,Yes,72.7,Good,Pass
+19,Male,Private,26.1,67.6,53.8,4.6,High School,Medium,Yes,No,No,No,52.0,Average,Pass
+19,Female,Public,13.8,79.6,88.4,5.9,PhD,Medium,Yes,No,No,No,80.5,Excellent,Pass
+20,Male,Public,23.3,91.9,53.3,8.6,High School,Medium,Yes,No,No,No,77.9,Good,Pass
+19,Female,Public,18.9,67.4,59.3,6.3,Masters,Medium,Yes,Yes,Yes,No,61.4,Average,Pass
+20,Female,Public,4.7,75.5,72.8,6.7,Bachelors,High,Yes,Yes,No,No,58.1,Average,Pass
+19,Female,Public,7.3,63.4,43.4,7.0,High School,Low,Yes,No,Yes,No,46.1,At Risk,Fail
+20,Female,Public,9.2,91.3,72.7,9.7,High School,High,Yes,Yes,No,No,61.9,Average,Pass
+19,Female,Public,9.0,78.9,70.8,6.8,Bachelors,Low,Yes,No,Yes,Yes,68.5,Good,Pass
+17,Female,Public,14.4,69.8,81.0,8.2,High School,Low,Yes,Yes,No,No,69.3,Good,Pass
+16,Female,Public,19.3,81.1,75.4,6.0,High School,Medium,No,No,Yes,No,65.4,Good,Pass
+21,Male,Public,23.8,65.6,81.5,6.5,PhD,Low,Yes,Yes,No,No,82.7,Excellent,Pass
+17,Male,Private,17.2,67.6,60.3,6.8,Bachelors,Medium,Yes,No,No,No,70.3,Good,Pass
+19,Female,Private,11.9,62.5,49.1,5.8,Masters,High,Yes,No,Yes,Yes,64.4,Average,Pass
+16,Male,Public,0.4,67.2,93.6,6.5,High School,Medium,No,Yes,No,No,55.3,Average,Pass
+18,Female,Public,15.5,96.3,39.1,8.0,High School,Medium,Yes,No,Yes,No,58.4,Average,Pass
+19,Female,Public,15.2,71.2,40.6,5.8,Bachelors,High,Yes,No,No,No,68.0,Good,Pass
+20,Female,Public,16.3,85.6,70.5,6.8,High School,Medium,Yes,No,No,No,75.5,Good,Pass
+19,Male,Private,29.7,70.0,86.4,7.7,High School,Low,Yes,No,No,Yes,91.3,Excellent,Pass
+17,Male,Public,23.7,89.1,64.8,5.7,None,High,No,No,No,No,71.0,Good,Pass
+22,Male,Private,20.5,67.7,77.0,8.2,None,Low,Yes,No,No,No,71.3,Good,Pass
+19,Female,Public,8.3,80.5,32.1,6.9,Masters,Low,Yes,No,No,No,40.8,At Risk,Fail
+21,Female,Private,11.4,80.6,54.5,6.6,High School,Low,Yes,No,No,No,58.0,Average,Pass
+20,Female,Public,14.3,100.0,33.9,4.2,PhD,Low,Yes,No,No,No,60.7,Average,Pass
+19,Female,Public,9.6,87.6,73.7,6.3,High School,Low,Yes,No,No,No,62.2,Average,Pass
+22,Female,Private,18.5,72.9,38.8,7.3,High School,Low,Yes,No,No,No,59.9,Average,Pass
+16,Female,Public,17.5,88.2,42.8,9.1,High School,Medium,Yes,No,Yes,No,55.9,Average,Pass
+22,Male,Private,7.4,100.0,69.7,7.5,Bachelors,Medium,No,No,No,Yes,68.9,Good,Pass
+21,Female,Public,23.4,60.4,77.9,8.3,Masters,High,Yes,Yes,Yes,No,81.6,Excellent,Pass
+19,Male,Public,15.7,69.9,59.6,5.2,Masters,Low,Yes,No,No,Yes,70.5,Good,Pass
+20,Female,Public,2.9,77.2,70.6,6.6,None,Low,Yes,No,No,No,42.7,At Risk,Fail
+19,Female,Private,14.6,75.0,70.1,8.4,High School,Medium,No,Yes,No,Yes,63.5,Average,Pass
+17,Male,Public,17.0,76.0,58.8,5.6,Masters,Low,No,No,Yes,No,52.9,Average,Pass
+21,Female,Private,21.8,64.3,45.6,8.1,None,Medium,Yes,No,Yes,No,71.0,Good,Pass
+16,Male,Private,12.6,96.8,70.5,7.8,Bachelors,Medium,Yes,Yes,No,Yes,76.8,Good,Pass
+17,Female,Private,20.8,62.9,71.2,7.2,High School,Medium,Yes,No,No,No,69.2,Good,Pass
+19,Male,Public,16.3,77.6,75.4,6.4,High School,Low,Yes,Yes,No,No,56.1,Average,Pass
+21,Male,Private,5.8,92.5,66.7,5.5,High School,Medium,No,No,No,No,44.6,At Risk,Fail
+18,Female,Private,5.1,79.6,44.5,9.1,High School,Medium,No,Yes,Yes,No,43.3,At Risk,Fail
+18,Male,Public,22.9,68.2,72.4,7.6,Masters,High,Yes,No,No,No,87.6,Excellent,Pass
+15,Female,Public,23.4,63.8,62.0,7.2,Bachelors,Low,No,Yes,No,No,65.5,Good,Pass
+15,Female,Public,17.3,77.2,54.8,6.3,Masters,Medium,Yes,No,Yes,No,63.1,Average,Pass
+15,Male,Public,25.5,70.9,57.6,6.8,Bachelors,Medium,Yes,No,No,No,89.2,Excellent,Pass
+15,Male,Private,22.4,82.5,51.6,7.0,High School,Low,No,Yes,Yes,No,79.2,Good,Pass
+21,Male,Public,19.8,63.2,75.3,7.3,Bachelors,Medium,Yes,No,Yes,No,79.6,Good,Pass
+21,Male,Public,8.6,89.8,40.7,7.8,High School,Medium,No,No,Yes,No,56.6,Average,Pass
+21,Male,Public,27.1,81.4,47.1,5.8,Masters,Low,Yes,No,No,No,85.2,Excellent,Pass
+15,Female,Public,18.8,82.3,57.1,4.9,High School,Medium,Yes,No,No,No,74.1,Good,Pass
+15,Male,Public,12.3,97.3,86.2,6.9,PhD,Medium,Yes,No,Yes,No,76.6,Good,Pass
+17,Female,Private,10.3,74.7,77.8,4.5,Bachelors,Medium,No,No,No,No,45.5,At Risk,Fail
+19,Male,Public,16.8,71.3,37.4,6.4,Bachelors,Low,Yes,No,No,No,69.0,Good,Pass
+17,Female,Public,3.3,73.4,82.3,6.1,Bachelors,Medium,Yes,Yes,No,No,54.3,Average,Pass
+18,Female,Private,19.9,77.7,82.2,7.4,Bachelors,Low,Yes,Yes,Yes,Yes,73.5,Good,Pass
+16,Male,Public,8.3,78.9,44.4,9.4,Bachelors,Medium,Yes,Yes,Yes,No,44.3,At Risk,Fail
+20,Female,Public,17.6,70.0,24.2,4.3,Bachelors,Medium,Yes,Yes,Yes,Yes,45.5,At Risk,Fail
+17,Male,Public,11.3,55.7,60.9,9.8,High School,Medium,Yes,No,No,No,38.1,At Risk,Fail
+15,Male,Private,13.1,73.3,78.8,6.5,Bachelors,Medium,Yes,Yes,No,Yes,65.9,Good,Pass
+20,Female,Private,9.7,84.3,85.9,7.3,High School,Low,Yes,No,Yes,Yes,62.1,Average,Pass
+22,Female,Public,13.9,81.6,48.9,5.0,Bachelors,Low,Yes,Yes,No,No,47.4,At Risk,Fail
+15,Male,Public,28.2,94.4,88.3,8.1,Bachelors,Medium,Yes,Yes,Yes,No,100.0,Excellent,Pass
+18,Male,Public,24.7,100.0,28.6,6.9,High School,Low,No,No,Yes,No,60.9,Average,Pass
+21,Male,Public,17.5,89.1,56.5,6.7,Bachelors,Medium,No,Yes,No,Yes,75.3,Good,Pass
+20,Male,Public,14.8,96.6,55.7,4.3,Bachelors,Medium,Yes,No,Yes,Yes,59.8,Average,Pass
+21,Male,Private,20.9,89.2,79.3,6.9,Bachelors,High,No,No,Yes,No,77.2,Good,Pass
+18,Male,Private,22.9,100.0,81.5,7.9,Bachelors,Low,No,No,No,No,87.0,Excellent,Pass
+17,Female,Public,9.2,100.0,76.3,6.5,Bachelors,Medium,Yes,No,No,No,73.3,Good,Pass
+20,Male,Private,14.5,91.4,41.7,8.3,Bachelors,Low,Yes,No,No,No,59.9,Average,Pass
+16,Female,Private,2.2,88.5,74.9,8.3,High School,High,Yes,Yes,No,Yes,54.6,Average,Pass
+16,Female,Public,22.9,77.5,69.6,6.0,High School,Medium,Yes,No,No,No,77.6,Good,Pass
+19,Female,Public,29.5,79.5,36.9,8.9,Bachelors,Medium,Yes,Yes,No,No,70.2,Good,Pass
+20,Male,Private,15.6,75.9,31.0,6.9,High School,Medium,Yes,No,No,No,59.1,Average,Pass
+15,Female,Public,0.1,87.5,77.6,6.9,High School,Low,Yes,No,No,No,53.1,Average,Pass
+19,Female,Private,19.3,71.4,59.3,6.9,High School,Medium,Yes,No,Yes,No,57.5,Average,Pass
+17,Male,Public,8.7,77.7,42.7,6.9,High School,High,Yes,No,No,No,57.4,Average,Pass
+19,Female,Public,10.4,51.7,58.9,3.4,PhD,Low,Yes,No,Yes,No,32.8,At Risk,Fail
+22,Male,Private,19.4,100.0,67.5,6.6,High School,High,Yes,No,No,No,81.0,Excellent,Pass
+15,Female,Public,16.8,77.4,60.8,5.0,High School,High,No,No,No,No,58.4,Average,Pass
+22,Male,Public,11.6,85.5,38.7,8.9,Masters,High,Yes,Yes,No,No,60.0,Average,Pass
+18,Female,Public,10.5,97.5,90.3,8.9,PhD,High,Yes,Yes,No,No,86.5,Excellent,Pass
+21,Male,Public,15.9,83.6,77.1,7.9,High School,Low,Yes,No,No,No,65.9,Good,Pass
+18,Male,Public,12.1,97.3,57.0,6.5,Masters,Medium,Yes,No,Yes,No,60.1,Average,Pass
+17,Male,Public,7.2,65.1,57.6,5.5,High School,Low,No,Yes,No,No,45.3,At Risk,Fail
+21,Male,Public,12.7,100.0,67.4,5.9,Masters,Medium,Yes,No,Yes,No,74.5,Good,Pass
+20,Male,Public,17.4,93.0,45.1,9.3,None,Low,No,Yes,No,No,56.9,Average,Pass
+16,Male,Public,13.8,82.5,66.8,5.9,High School,High,No,No,No,Yes,63.7,Average,Pass
+20,Male,Private,5.1,97.1,42.0,3.7,High School,Low,Yes,Yes,No,No,20.4,At Risk,Fail
+21,Female,Public,21.9,66.0,60.9,8.1,Bachelors,Low,Yes,Yes,No,Yes,84.3,Excellent,Pass
+18,Female,Public,0.0,76.5,44.5,8.8,None,Low,Yes,Yes,Yes,No,22.3,At Risk,Fail
+22,Female,Public,11.9,97.3,45.2,9.0,Bachelors,Medium,Yes,Yes,Yes,No,64.2,Average,Pass
+20,Female,Public,10.7,57.6,86.7,8.1,Bachelors,Low,Yes,No,No,No,76.5,Good,Pass
+17,Male,Private,16.0,86.7,62.9,8.4,None,Low,Yes,No,Yes,No,60.7,Average,Pass
+15,Male,Public,18.9,86.4,65.1,6.9,Masters,Low,Yes,Yes,No,No,78.5,Good,Pass
+20,Male,Public,22.9,100.0,31.8,4.1,High School,Low,Yes,No,No,No,54.5,Average,Pass
+16,Male,Private,10.0,61.0,53.0,6.8,High School,High,Yes,No,No,No,57.9,Average,Pass
+21,Male,Private,19.1,99.3,68.9,7.6,High School,Medium,Yes,No,Yes,No,89.1,Excellent,Pass
+19,Female,Private,16.4,73.3,64.9,6.6,High School,Low,Yes,Yes,Yes,No,57.3,Average,Pass
+18,Female,Private,3.0,74.6,29.7,6.6,High School,Low,Yes,Yes,No,Yes,36.8,At Risk,Fail
+16,Female,Private,28.3,65.3,65.1,5.5,Bachelors,Low,Yes,No,No,Yes,75.6,Good,Pass
+20,Male,Public,4.9,66.9,67.5,5.5,Bachelors,Medium,Yes,No,No,No,62.0,Average,Pass
+16,Female,Public,17.9,84.8,81.3,9.2,High School,Low,Yes,No,No,No,66.7,Good,Pass
+18,Male,Public,17.7,66.7,52.2,9.2,High School,Low,Yes,No,No,No,59.6,Average,Pass
+21,Male,Public,16.9,88.9,28.4,6.8,Masters,Low,Yes,Yes,Yes,No,67.3,Good,Pass
+22,Male,Public,11.5,72.0,47.0,7.2,High School,Low,Yes,Yes,No,Yes,62.8,Average,Pass
+22,Female,Public,20.8,65.4,45.5,5.5,Bachelors,Medium,Yes,Yes,No,No,70.6,Good,Pass
+22,Male,Private,4.1,73.7,73.1,7.6,Masters,Low,Yes,No,No,No,66.8,Good,Pass
+19,Male,Private,14.5,84.0,21.2,9.1,High School,Medium,Yes,Yes,No,No,54.9,Average,Pass
+16,Male,Private,11.1,76.7,55.3,4.8,Bachelors,Medium,Yes,Yes,No,No,51.3,Average,Pass
+21,Male,Public,10.3,80.4,83.4,7.4,PhD,High,Yes,Yes,No,Yes,83.4,Excellent,Pass
+21,Male,Public,18.0,88.4,62.1,7.5,Bachelors,Low,No,Yes,Yes,No,63.7,Average,Pass
+22,Male,Public,22.5,93.0,75.4,7.5,PhD,Medium,Yes,No,Yes,No,100.0,Excellent,Pass
+20,Male,Public,12.6,76.3,37.4,8.9,High School,High,Yes,No,No,No,52.9,Average,Pass
+16,Male,Private,20.5,67.5,38.0,9.4,Bachelors,High,Yes,No,No,Yes,69.9,Good,Pass
+19,Male,Private,15.3,80.9,83.6,6.5,High School,High,Yes,No,No,No,66.6,Good,Pass
+18,Male,Private,8.8,85.6,63.5,7.7,None,Low,No,No,No,No,51.2,Average,Pass
+21,Female,Private,13.2,62.5,63.5,6.9,PhD,High,No,No,No,No,64.3,Average,Pass
+18,Male,Private,12.9,69.3,45.2,6.0,High School,High,Yes,Yes,Yes,No,59.5,Average,Pass
+17,Female,Public,10.1,71.4,63.5,7.2,PhD,Low,No,Yes,No,Yes,67.4,Good,Pass
+15,Female,Public,18.0,77.5,44.8,7.7,Bachelors,Low,Yes,No,Yes,Yes,73.2,Good,Pass
+21,Male,Public,16.6,70.9,79.8,7.1,Masters,High,Yes,No,No,Yes,91.0,Excellent,Pass
+21,Male,Public,3.9,88.5,100.0,5.7,PhD,Low,Yes,No,No,Yes,69.2,Good,Pass
+15,Male,Public,3.4,60.7,69.3,6.2,Bachelors,Medium,Yes,Yes,Yes,Yes,48.1,At Risk,Fail
+18,Male,Public,18.0,61.0,52.5,6.2,PhD,Medium,Yes,Yes,No,Yes,67.5,Good,Pass
+18,Male,Private,9.3,76.0,24.0,5.7,Masters,Medium,Yes,Yes,No,No,51.9,Average,Pass
+18,Male,Public,17.1,77.9,36.7,7.2,Bachelors,Low,Yes,No,No,No,62.2,Average,Pass
+22,Male,Private,20.5,62.5,85.3,7.3,Bachelors,Medium,No,No,Yes,No,72.9,Good,Pass
+16,Male,Private,6.1,72.7,46.6,8.1,High School,Medium,Yes,Yes,Yes,No,45.3,At Risk,Fail
+17,Female,Public,5.1,75.2,56.4,5.7,None,High,Yes,Yes,No,Yes,61.4,Average,Pass
+16,Male,Private,26.7,75.3,71.8,6.0,High School,Low,No,Yes,No,No,64.1,Average,Pass
+16,Female,Public,17.5,81.8,84.2,8.8,High School,Low,Yes,Yes,No,No,69.4,Good,Pass
+22,Male,Public,12.1,72.1,59.0,6.6,High School,Low,Yes,No,Yes,No,47.3,At Risk,Fail
+22,Female,Public,8.5,97.7,55.9,6.8,Bachelors,Low,Yes,Yes,No,No,61.1,Average,Pass
+15,Male,Private,11.4,85.9,63.1,6.6,Bachelors,High,Yes,No,No,No,76.7,Good,Pass
+20,Female,Public,6.7,70.3,52.6,8.3,Bachelors,Low,Yes,No,Yes,No,46.8,At Risk,Fail
+16,Female,Public,21.2,81.1,53.4,8.3,Masters,Low,Yes,No,No,No,73.4,Good,Pass
+16,Male,Private,9.6,81.5,68.2,8.2,PhD,High,Yes,No,No,No,76.1,Good,Pass
+17,Female,Private,22.7,94.6,64.8,6.8,Masters,Low,Yes,No,No,Yes,82.2,Excellent,Pass
+16,Male,Public,12.2,72.8,94.0,5.7,Bachelors,Low,No,No,No,Yes,67.3,Good,Pass
+18,Male,Public,7.7,89.2,68.6,9.3,High School,Medium,No,Yes,Yes,No,53.0,Average,Pass
+22,Female,Public,12.0,80.5,79.3,7.9,PhD,Medium,Yes,Yes,No,No,70.3,Good,Pass
+19,Female,Private,0.0,97.9,45.9,6.2,High School,High,No,Yes,Yes,No,40.2,At Risk,Fail
+20,Male,Public,14.2,95.5,69.9,8.7,High School,Medium,No,No,No,No,67.0,Good,Pass
+18,Female,Public,13.8,82.4,51.2,6.1,High School,Low,No,No,No,No,59.8,Average,Pass
+15,Female,Public,20.8,76.9,67.9,8.6,Bachelors,Medium,Yes,Yes,No,Yes,88.1,Excellent,Pass
+15,Female,Public,1.8,86.1,72.3,8.7,Bachelors,High,Yes,No,No,No,72.7,Good,Pass
+17,Male,Public,23.1,77.8,62.7,5.6,None,Medium,Yes,No,No,Yes,73.9,Good,Pass
+16,Female,Public,20.7,100.0,98.1,7.6,Masters,Medium,No,No,Yes,No,83.3,Excellent,Pass
+21,Male,Public,23.8,80.9,83.4,7.8,High School,Medium,Yes,No,No,No,83.1,Excellent,Pass
+21,Female,Public,14.6,75.1,79.7,10.0,High School,Medium,No,Yes,No,No,57.8,Average,Pass
+21,Female,Public,22.1,74.5,73.5,5.8,High School,Medium,Yes,No,No,No,71.0,Good,Pass
+20,Female,Public,4.7,65.4,88.5,8.7,High School,Low,Yes,Yes,No,No,58.7,Average,Pass
+19,Female,Private,20.0,86.7,40.4,6.8,Masters,Medium,Yes,No,No,Yes,77.6,Good,Pass
+20,Female,Private,9.6,70.2,82.6,5.2,None,Low,No,Yes,No,No,40.7,At Risk,Fail
+18,Male,Public,3.4,93.2,47.1,6.6,High School,Medium,Yes,Yes,No,No,59.1,Average,Pass
+20,Male,Private,7.1,64.5,53.5,6.8,None,Medium,Yes,No,No,No,37.2,At Risk,Fail
+21,Female,Public,15.0,81.5,70.4,5.4,Masters,Low,No,No,No,Yes,62.5,Average,Pass
+21,Male,Public,9.2,93.8,80.5,7.2,PhD,Low,Yes,Yes,Yes,No,78.2,Good,Pass
+19,Female,Private,17.6,54.2,44.7,8.0,Bachelors,High,Yes,No,No,No,68.3,Good,Pass
+15,Male,Private,2.3,100.0,54.3,7.1,Bachelors,Low,Yes,Yes,No,No,53.6,Average,Pass
+20,Female,Private,0.1,74.9,63.5,6.1,Masters,Low,No,No,No,No,55.2,Average,Pass
+17,Male,Public,24.6,81.7,59.2,6.6,High School,Low,Yes,Yes,No,Yes,75.3,Good,Pass
+20,Male,Private,21.3,86.9,74.8,6.8,None,Medium,Yes,Yes,No,Yes,68.4,Good,Pass
+19,Male,Public,7.7,88.7,100.0,7.1,Bachelors,Low,Yes,No,No,No,74.3,Good,Pass
+22,Male,Public,15.0,83.3,68.3,8.2,High School,High,Yes,No,No,Yes,64.1,Average,Pass
+17,Male,Public,22.1,92.0,51.0,7.2,Bachelors,Medium,Yes,No,Yes,No,69.3,Good,Pass
+22,Male,Private,17.9,86.2,42.6,5.0,Bachelors,Low,Yes,No,No,No,60.7,Average,Pass
+21,Female,Public,16.0,100.0,57.1,6.1,High School,Medium,No,No,No,No,60.4,Average,Pass
+17,Female,Private,22.7,86.3,47.9,7.0,Bachelors,Low,Yes,No,No,No,76.1,Good,Pass
+18,Female,Public,9.9,100.0,69.0,8.3,High School,Low,No,Yes,No,No,53.3,Average,Pass
+19,Female,Private,15.2,90.8,68.8,8.5,High School,Medium,No,No,No,No,70.4,Good,Pass
+21,Female,Private,14.9,58.3,55.1,9.1,Masters,Low,Yes,No,No,Yes,51.2,Average,Pass
+20,Female,Private,13.1,100.0,91.8,7.0,Bachelors,High,Yes,No,No,No,91.6,Excellent,Pass
+21,Male,Public,12.3,73.1,51.0,7.8,None,Medium,Yes,No,Yes,No,50.0,Average,Pass
+17,Female,Public,15.5,97.9,60.2,4.9,High School,Low,Yes,No,No,No,67.7,Good,Pass
+19,Male,Public,15.2,80.3,71.6,7.4,None,High,Yes,No,Yes,Yes,65.1,Good,Pass
+18,Male,Public,7.7,92.7,75.4,5.4,None,Medium,Yes,Yes,No,No,69.2,Good,Pass
+22,Female,Public,20.6,71.7,81.2,6.7,None,Low,Yes,No,No,No,64.7,Average,Pass
+17,Male,Public,8.2,87.5,68.4,10.0,High School,Medium,Yes,No,No,Yes,46.2,At Risk,Fail
+19,Female,Public,13.5,77.0,77.8,7.2,Masters,High,Yes,No,No,No,77.4,Good,Pass
+15,Female,Public,12.9,98.9,52.0,5.7,Masters,Medium,Yes,No,No,Yes,76.5,Good,Pass
+21,Female,Public,17.5,85.3,75.8,7.3,Masters,Medium,Yes,Yes,No,No,86.3,Excellent,Pass
+18,Female,Private,0.2,91.2,75.6,6.1,Bachelors,Medium,Yes,No,No,Yes,66.8,Good,Pass
+17,Female,Public,21.2,54.0,84.7,5.6,Bachelors,Low,Yes,No,Yes,Yes,74.8,Good,Pass
+19,Male,Private,10.3,79.0,37.0,9.5,Bachelors,Low,Yes,Yes,Yes,No,41.6,At Risk,Fail
+18,Female,Private,23.5,84.9,48.4,8.2,Masters,Medium,Yes,Yes,No,Yes,87.2,Excellent,Pass
+21,Male,Public,11.7,82.7,74.3,7.2,Bachelors,High,Yes,No,No,Yes,76.9,Good,Pass
+19,Male,Private,14.7,91.5,22.2,6.3,Bachelors,Medium,Yes,Yes,No,Yes,58.4,Average,Pass
+19,Male,Public,28.4,75.6,69.4,6.4,Masters,Low,Yes,No,Yes,No,82.0,Excellent,Pass
+15,Male,Private,13.1,80.6,77.9,8.8,Bachelors,Medium,No,Yes,Yes,Yes,66.4,Good,Pass
+15,Female,Public,23.7,94.2,53.4,7.2,High School,Low,Yes,Yes,No,No,84.3,Excellent,Pass
+18,Male,Public,15.3,52.7,55.5,3.0,None,Low,Yes,Yes,No,No,23.4,At Risk,Fail
+22,Female,Public,17.9,87.1,45.9,9.9,High School,Medium,Yes,No,Yes,No,52.3,Average,Pass
+22,Female,Public,15.5,76.0,54.2,7.0,None,Low,No,No,Yes,No,45.8,At Risk,Fail
+20,Female,Private,20.9,69.1,54.6,7.2,High School,High,No,No,Yes,No,75.4,Good,Pass
+20,Female,Private,10.2,84.0,51.8,8.2,None,Medium,Yes,No,No,No,51.7,Average,Pass
+18,Male,Private,8.1,94.7,50.9,7.4,High School,Medium,Yes,No,No,No,66.7,Good,Pass
+16,Male,Private,10.5,92.5,57.9,7.8,PhD,High,Yes,Yes,No,No,68.5,Good,Pass
+15,Female,Private,15.7,78.4,57.8,6.2,High School,Medium,Yes,Yes,No,No,68.5,Good,Pass
+17,Female,Public,13.5,90.5,90.1,5.2,High School,High,Yes,No,No,No,73.1,Good,Pass
+17,Female,Private,20.0,90.4,56.1,7.2,High School,High,No,Yes,No,No,79.9,Good,Pass
+16,Male,Public,24.1,79.0,67.2,8.7,High School,Medium,Yes,No,No,No,83.4,Excellent,Pass
+17,Male,Public,8.2,71.7,53.3,6.0,Bachelors,Low,Yes,No,No,No,51.8,Average,Pass
+15,Male,Public,9.9,72.4,53.2,5.9,Bachelors,Low,Yes,No,No,Yes,52.7,Average,Pass
+19,Male,Private,4.9,90.1,36.4,8.4,None,High,Yes,No,No,Yes,61.6,Average,Pass
+22,Male,Public,29.2,79.5,38.4,6.2,Bachelors,Low,Yes,No,No,No,69.9,Good,Pass
+20,Female,Public,17.1,67.4,43.9,6.3,None,High,Yes,No,No,No,45.5,At Risk,Fail
+18,Male,Public,18.4,59.8,64.8,6.3,Bachelors,Low,Yes,No,Yes,No,51.1,Average,Pass
+18,Female,Public,5.6,90.0,78.1,6.7,PhD,Medium,Yes,No,No,No,59.6,Average,Pass
+17,Female,Public,15.0,73.4,35.2,4.8,Masters,Low,Yes,No,No,No,52.5,Average,Pass
+16,Female,Private,18.6,84.0,53.8,6.1,High School,High,No,Yes,No,No,79.5,Good,Pass
+19,Male,Private,13.2,94.9,41.5,7.1,Bachelors,Low,No,No,Yes,No,41.6,At Risk,Fail
+19,Male,Public,22.5,64.3,58.0,7.1,Masters,Medium,Yes,No,No,No,71.0,Good,Pass
+15,Female,Public,31.2,79.5,78.1,8.3,Masters,High,Yes,No,No,No,97.9,Excellent,Pass
+18,Male,Public,8.4,78.0,55.3,9.2,High School,Low,No,Yes,No,No,55.6,Average,Pass
+17,Female,Public,7.8,84.6,61.3,8.8,Bachelors,Low,Yes,No,No,No,52.5,Average,Pass
+16,Female,Public,8.9,94.9,83.8,8.0,High School,High,No,No,Yes,No,67.9,Good,Pass
+20,Male,Private,26.2,64.0,68.9,6.6,None,High,No,No,Yes,Yes,70.8,Good,Pass
+19,Female,Public,22.3,86.8,50.6,6.0,Bachelors,Low,Yes,Yes,No,No,87.4,Excellent,Pass
+20,Male,Public,14.1,92.4,64.4,6.8,High School,Medium,Yes,No,Yes,Yes,69.5,Good,Pass
+20,Male,Public,15.3,77.8,49.6,7.6,High School,Low,Yes,No,No,No,62.2,Average,Pass
+22,Female,Public,9.3,78.4,68.3,7.9,Masters,Low,Yes,No,No,No,64.2,Average,Pass
+21,Female,Public,21.2,85.0,69.7,7.6,Bachelors,Medium,Yes,Yes,No,No,79.5,Good,Pass
+19,Male,Private,12.3,84.1,41.5,6.6,PhD,Low,No,Yes,Yes,No,60.8,Average,Pass
+22,Female,Private,13.2,87.0,64.6,7.8,Masters,Medium,Yes,Yes,No,No,66.6,Good,Pass
+18,Female,Private,19.3,86.7,60.2,8.4,Masters,Low,Yes,Yes,No,Yes,66.1,Good,Pass
+22,Female,Private,13.7,68.2,70.2,7.9,Masters,High,Yes,No,Yes,No,69.1,Good,Pass
+21,Male,Public,13.4,91.9,74.5,6.8,High School,Medium,Yes,No,Yes,Yes,75.5,Good,Pass
+20,Male,Private,15.1,94.0,69.2,5.7,None,Low,Yes,No,No,No,58.3,Average,Pass
+22,Female,Public,20.6,82.2,57.5,5.7,Masters,High,No,No,Yes,No,69.0,Good,Pass
+19,Female,Public,26.5,62.1,76.0,5.9,High School,High,Yes,No,Yes,No,69.6,Good,Pass
+20,Female,Public,19.1,78.6,48.9,7.1,High School,Low,No,Yes,No,No,67.1,Good,Pass
+17,Male,Public,20.6,82.3,42.2,7.5,Bachelors,High,No,No,No,No,72.9,Good,Pass
+22,Male,Public,13.6,66.3,14.1,5.0,High School,Low,Yes,No,Yes,No,33.0,At Risk,Fail
+19,Female,Public,10.0,75.7,60.9,6.1,High School,Low,No,No,No,No,50.4,Average,Pass
+21,Male,Private,19.6,63.1,49.7,7.1,Bachelors,Medium,Yes,No,No,No,59.2,Average,Pass
+18,Male,Private,16.2,87.3,68.0,5.6,High School,Low,Yes,No,No,Yes,58.7,Average,Pass
+21,Female,Public,5.0,82.0,32.4,7.4,Bachelors,Medium,Yes,No,No,No,49.3,At Risk,Fail
+15,Female,Public,12.7,60.3,52.3,6.4,None,Medium,Yes,No,Yes,No,52.4,Average,Pass
+15,Male,Private,14.4,84.2,69.1,5.9,Bachelors,High,Yes,No,Yes,No,71.9,Good,Pass
+19,Male,Public,11.4,79.3,46.6,6.9,High School,Low,Yes,No,No,No,52.3,Average,Pass
+20,Male,Public,25.4,86.2,68.1,7.3,Bachelors,Low,Yes,Yes,No,No,88.0,Excellent,Pass
+21,Female,Public,18.4,75.3,53.6,5.7,High School,Medium,No,No,No,No,66.2,Good,Pass
+18,Male,Public,24.6,70.4,61.5,6.5,High School,Low,Yes,No,No,No,70.8,Good,Pass
+20,Female,Public,16.8,70.7,70.9,7.4,Masters,High,Yes,No,No,No,79.6,Good,Pass
+19,Male,Private,15.6,73.5,76.3,5.8,High School,Medium,No,Yes,No,No,61.7,Average,Pass
+22,Female,Private,8.4,80.2,63.4,4.6,Bachelors,Medium,Yes,No,No,No,50.7,Average,Pass
+20,Female,Private,15.1,81.8,49.8,4.8,High School,Medium,Yes,No,No,No,54.6,Average,Pass
+18,Female,Public,15.1,77.7,55.1,6.3,High School,Low,Yes,Yes,No,No,71.0,Good,Pass
+22,Female,Private,5.4,74.9,71.6,5.1,High School,Low,Yes,No,No,Yes,55.0,Average,Pass
+15,Female,Private,11.2,75.8,46.7,6.3,Masters,Medium,Yes,No,No,Yes,68.2,Good,Pass
+22,Male,Public,12.7,100.0,59.3,9.0,High School,High,No,Yes,No,No,61.7,Average,Pass
+16,Female,Public,17.9,70.8,56.2,5.0,High School,Low,Yes,Yes,No,Yes,53.9,Average,Pass
+17,Female,Public,18.2,73.3,60.4,6.4,Bachelors,Low,Yes,No,No,No,69.5,Good,Pass
+21,Female,Public,10.9,100.0,46.9,9.6,High School,Medium,Yes,No,No,Yes,66.6,Good,Pass
+20,Male,Public,18.3,85.1,34.2,7.3,Masters,Low,Yes,No,No,Yes,78.8,Good,Pass
+22,Female,Public,13.7,63.4,69.8,6.3,PhD,Medium,Yes,No,Yes,No,51.5,Average,Pass
+20,Male,Public,0.0,90.1,76.5,6.6,Bachelors,Low,Yes,No,No,No,69.8,Good,Pass
+20,Female,Public,11.6,69.1,35.1,7.4,Bachelors,Medium,No,No,No,No,53.1,Average,Pass
+17,Female,Public,22.6,90.9,67.5,9.0,High School,Medium,No,Yes,No,Yes,81.5,Excellent,Pass
+15,Male,Private,3.2,77.5,78.2,6.1,PhD,High,Yes,No,Yes,Yes,54.6,Average,Pass
+15,Female,Public,15.8,74.7,70.9,5.8,Bachelors,Medium,Yes,No,No,Yes,70.0,Good,Pass
+17,Female,Public,26.1,99.3,55.7,5.0,High School,Low,Yes,Yes,No,No,76.8,Good,Pass
+15,Male,Public,9.7,86.8,47.8,6.9,PhD,Medium,Yes,No,Yes,Yes,57.6,Average,Pass
+19,Male,Private,15.0,91.7,63.2,5.0,PhD,Medium,Yes,Yes,No,No,52.1,Average,Pass
+21,Male,Public,5.9,85.2,65.7,6.2,High School,Medium,Yes,No,No,Yes,61.4,Average,Pass
+22,Female,Private,26.4,74.7,63.4,5.6,High School,High,Yes,No,Yes,No,74.1,Good,Pass
+18,Female,Public,14.4,87.3,59.3,8.2,Bachelors,High,Yes,Yes,Yes,No,79.6,Good,Pass
+22,Female,Public,15.3,94.5,45.8,6.1,Masters,Low,Yes,No,No,No,64.1,Average,Pass
+22,Female,Public,24.5,81.6,68.3,7.3,Bachelors,Medium,No,No,No,Yes,80.5,Excellent,Pass
+21,Female,Public,19.6,100.0,69.1,4.7,High School,Low,Yes,No,No,Yes,72.1,Good,Pass
+18,Male,Private,8.9,90.2,65.0,7.0,High School,Medium,Yes,No,Yes,No,65.9,Good,Pass
+17,Male,Private,10.5,82.5,63.7,5.2,High School,High,Yes,Yes,Yes,No,52.9,Average,Pass
+22,Male,Public,18.5,83.0,87.2,6.2,High School,Medium,No,Yes,No,No,79.1,Good,Pass
+16,Male,Private,10.6,81.6,52.6,9.7,Masters,Low,Yes,Yes,Yes,No,50.2,Average,Pass
+18,Female,Public,0.2,65.0,81.2,8.0,High School,High,Yes,Yes,No,No,56.6,Average,Pass
+15,Male,Public,14.6,78.9,51.0,6.6,High School,Medium,Yes,Yes,Yes,No,64.5,Average,Pass
+21,Male,Public,4.6,82.7,78.6,10.0,Masters,Low,Yes,No,No,No,58.9,Average,Pass
+20,Male,Public,26.3,75.0,80.5,5.6,High School,High,No,Yes,No,Yes,83.8,Excellent,Pass
+15,Male,Private,16.2,84.1,57.6,8.3,High School,Low,Yes,No,No,No,57.5,Average,Pass
+16,Male,Public,8.7,80.3,86.9,4.8,PhD,Medium,Yes,Yes,Yes,No,51.3,Average,Pass
+19,Male,Public,10.1,89.3,69.0,6.5,High School,Medium,Yes,Yes,No,No,64.4,Average,Pass
+19,Female,Public,1.8,88.0,48.8,5.0,Masters,High,Yes,No,No,No,55.0,Average,Pass
+21,Male,Public,7.3,82.0,56.4,7.1,None,Low,Yes,No,No,No,53.4,Average,Pass
+17,Male,Public,22.1,63.6,79.0,6.9,High School,Low,Yes,No,Yes,No,71.5,Good,Pass
+22,Male,Private,30.6,100.0,75.8,6.4,Bachelors,Medium,Yes,Yes,Yes,Yes,96.2,Excellent,Pass
+18,Female,Public,20.1,78.3,46.1,8.2,High School,High,No,No,No,Yes,69.8,Good,Pass
+21,Female,Public,14.4,79.0,59.9,6.1,Bachelors,Low,Yes,Yes,No,No,58.0,Average,Pass
+16,Female,Public,12.0,75.9,65.1,7.2,High School,Low,Yes,No,No,Yes,68.1,Good,Pass
+15,Female,Public,8.3,74.1,54.4,7.9,Bachelors,High,No,No,No,No,61.6,Average,Pass
+15,Female,Public,29.4,98.5,97.4,4.9,High School,Medium,Yes,Yes,No,No,87.9,Excellent,Pass
+17,Female,Private,13.7,96.6,65.5,5.8,Masters,Low,Yes,No,No,No,70.8,Good,Pass
+22,Male,Private,29.8,85.3,61.1,6.9,Bachelors,Medium,Yes,No,No,Yes,80.0,Excellent,Pass
+15,Female,Public,24.8,78.7,79.9,7.6,Bachelors,Medium,Yes,Yes,Yes,No,85.8,Excellent,Pass
+17,Male,Private,2.8,87.4,56.5,8.6,None,Medium,No,Yes,Yes,No,40.8,At Risk,Fail
+15,Male,Public,10.3,80.9,77.1,6.5,Bachelors,Medium,Yes,No,No,No,75.5,Good,Pass
+22,Female,Public,10.3,77.7,37.0,6.4,Bachelors,Medium,No,No,No,No,48.6,At Risk,Fail
+20,Male,Private,14.4,84.1,55.2,5.7,High School,Low,Yes,Yes,No,No,64.2,Average,Pass
+21,Male,Private,14.6,74.7,77.7,7.2,Bachelors,High,Yes,Yes,Yes,No,72.1,Good,Pass
+20,Female,Private,36.0,83.0,85.6,6.4,None,Low,Yes,No,Yes,No,74.4,Good,Pass
+20,Male,Public,7.5,82.5,50.4,6.4,High School,High,Yes,Yes,No,No,56.9,Average,Pass
+21,Male,Public,16.6,87.2,48.7,6.7,Bachelors,Low,Yes,No,No,No,66.6,Good,Pass
+15,Female,Public,19.3,72.6,70.5,7.5,High School,Low,No,No,No,No,65.7,Good,Pass
+21,Female,Public,15.0,88.5,52.7,6.1,High School,Low,Yes,Yes,Yes,No,59.6,Average,Pass
+20,Male,Private,15.8,69.1,58.0,5.8,Bachelors,Low,No,Yes,No,Yes,56.6,Average,Pass
+20,Female,Public,7.7,73.1,75.1,7.4,Bachelors,Medium,Yes,No,No,No,62.0,Average,Pass
+18,Female,Public,15.7,73.7,53.8,3.0,None,Medium,Yes,No,No,No,25.9,At Risk,Fail
+21,Male,Public,18.6,67.1,32.5,6.0,High School,High,Yes,Yes,Yes,No,45.8,At Risk,Fail
+18,Male,Public,17.3,92.2,42.5,5.3,High School,Medium,Yes,Yes,No,Yes,63.5,Average,Pass
+15,Male,Public,19.0,68.4,62.1,8.4,Bachelors,Medium,Yes,No,Yes,Yes,66.5,Good,Pass
+22,Male,Public,24.9,71.6,34.0,6.2,Bachelors,Low,Yes,No,No,Yes,75.3,Good,Pass
+16,Male,Public,21.6,95.1,57.5,6.1,Bachelors,High,Yes,No,Yes,Yes,66.5,Good,Pass
+15,Male,Public,15.5,73.2,41.1,6.7,Masters,Low,Yes,Yes,No,No,64.2,Average,Pass
+19,Male,Public,6.8,77.7,86.6,6.0,PhD,Low,Yes,No,Yes,No,75.1,Good,Pass
+16,Male,Public,10.8,67.9,94.5,6.3,High School,Low,Yes,No,No,Yes,66.0,Good,Pass
+21,Male,Private,13.5,90.0,46.1,6.9,High School,Low,Yes,Yes,No,No,60.6,Average,Pass
+18,Male,Public,16.8,90.2,65.9,6.3,High School,Medium,Yes,No,Yes,No,69.7,Good,Pass
+15,Male,Public,11.7,88.9,47.6,6.2,High School,Low,Yes,No,Yes,No,55.5,Average,Pass
+22,Male,Public,8.4,86.5,57.4,5.5,High School,Low,No,Yes,No,No,44.8,At Risk,Fail
+19,Female,Private,6.7,80.9,89.1,5.3,Masters,High,Yes,No,No,No,60.9,Average,Pass
+17,Male,Private,3.4,73.7,55.0,6.9,High School,Low,Yes,No,No,Yes,53.5,Average,Pass
+20,Female,Public,13.4,70.2,57.7,7.2,High School,Medium,Yes,No,No,No,50.0,Average,Pass
+19,Female,Public,4.7,95.5,47.9,4.9,Bachelors,Medium,Yes,Yes,Yes,No,51.6,Average,Pass
+15,Female,Public,8.0,89.2,79.2,7.8,PhD,High,Yes,No,No,Yes,76.6,Good,Pass
+21,Female,Private,12.2,71.7,13.1,7.8,High School,Medium,Yes,No,Yes,No,44.2,At Risk,Fail
+18,Male,Public,5.6,80.5,55.4,8.1,Masters,Low,Yes,No,No,No,52.7,Average,Pass
+20,Female,Public,17.7,76.4,61.3,7.2,Masters,High,Yes,Yes,No,Yes,90.0,Excellent,Pass
+22,Male,Private,20.2,66.5,52.1,7.6,High School,Medium,Yes,Yes,No,No,69.9,Good,Pass
+19,Male,Private,11.2,82.1,75.0,9.6,Bachelors,Low,Yes,No,Yes,Yes,58.5,Average,Pass
+20,Male,Public,11.9,75.0,80.0,6.4,High School,Medium,Yes,No,Yes,Yes,64.0,Average,Pass
+17,Male,Public,18.8,68.6,40.8,5.4,High School,Medium,No,Yes,No,Yes,55.1,Average,Pass
+16,Male,Public,10.0,62.3,93.4,4.8,High School,Low,No,No,No,No,62.9,Average,Pass
+18,Male,Public,9.5,61.2,40.7,9.1,None,Medium,Yes,Yes,No,No,37.2,At Risk,Fail
+21,Female,Public,23.4,75.5,81.3,9.1,Bachelors,Low,Yes,No,No,No,84.3,Excellent,Pass
+19,Female,Private,21.2,79.0,64.2,5.6,Masters,Medium,Yes,No,Yes,No,74.9,Good,Pass
+17,Male,Private,19.2,69.5,54.4,5.9,High School,High,No,Yes,No,No,72.2,Good,Pass
+21,Female,Public,21.5,87.8,55.9,6.4,Bachelors,Medium,Yes,No,No,Yes,82.3,Excellent,Pass
+21,Male,Public,1.2,79.2,61.5,8.4,High School,High,Yes,No,No,No,52.6,Average,Pass
+22,Male,Public,24.5,86.9,65.1,5.1,High School,Low,Yes,No,No,No,75.5,Good,Pass
+17,Female,Public,17.7,77.8,48.2,4.2,Bachelors,Medium,Yes,No,Yes,No,52.0,Average,Pass
+20,Female,Private,22.1,70.6,58.5,9.6,High School,High,Yes,No,No,No,73.2,Good,Pass
+19,Male,Public,17.7,81.4,50.4,7.2,Masters,Medium,Yes,No,No,No,80.3,Excellent,Pass
+18,Male,Public,15.3,64.8,43.8,7.4,High School,Low,No,Yes,No,No,52.6,Average,Pass
+18,Male,Public,13.1,86.5,49.7,6.5,Masters,Low,Yes,No,No,No,60.6,Average,Pass
+15,Male,Public,17.6,68.8,44.8,7.4,High School,Low,No,Yes,No,No,51.9,Average,Pass
+17,Male,Public,12.8,91.0,55.7,4.8,High School,Medium,Yes,Yes,No,No,59.2,Average,Pass
+19,Female,Private,21.1,75.9,68.5,5.7,Masters,High,Yes,No,No,No,73.2,Good,Pass
+22,Female,Private,3.9,92.8,63.8,6.9,Bachelors,Medium,Yes,No,Yes,Yes,58.0,Average,Pass
+21,Male,Public,11.2,66.5,91.6,3.8,High School,Low,Yes,Yes,No,Yes,45.5,At Risk,Fail
+16,Female,Private,29.3,71.9,28.8,6.4,Masters,Low,Yes,Yes,No,Yes,79.6,Good,Pass
+20,Male,Public,10.6,84.6,69.0,6.3,High School,Medium,Yes,Yes,No,No,60.1,Average,Pass
+15,Male,Private,13.3,94.0,62.1,6.4,High School,Medium,Yes,Yes,No,Yes,63.3,Average,Pass
+20,Male,Public,8.8,100.0,74.2,6.1,High School,Low,Yes,No,Yes,No,52.4,Average,Pass
+17,Female,Public,17.4,80.5,72.7,5.5,Bachelors,Medium,No,No,No,No,62.0,Average,Pass
+18,Female,Private,9.8,100.0,59.5,4.4,Bachelors,Low,Yes,Yes,No,No,50.1,Average,Pass
+20,Female,Public,13.7,76.5,64.6,7.0,Masters,Medium,Yes,No,No,No,71.6,Good,Pass
+18,Male,Public,20.9,93.2,50.8,6.4,Bachelors,Medium,Yes,Yes,No,Yes,78.2,Good,Pass
+21,Female,Public,10.1,68.7,71.2,5.0,High School,Low,Yes,No,No,No,52.2,Average,Pass
+19,Male,Public,20.5,85.0,33.8,6.9,High School,Medium,No,No,No,No,63.1,Average,Pass
+22,Male,Public,20.8,51.9,73.7,6.4,High School,Medium,Yes,No,No,No,73.7,Good,Pass
+20,Female,Public,22.4,66.5,61.7,6.2,Bachelors,Medium,No,Yes,No,No,58.1,Average,Pass
+17,Male,Private,16.0,85.6,54.7,4.0,High School,Medium,No,No,No,No,38.2,At Risk,Fail
+21,Female,Public,37.7,64.3,58.5,7.7,Bachelors,Medium,Yes,No,No,No,94.8,Excellent,Pass
+18,Female,Public,22.4,85.1,59.6,5.2,Bachelors,Low,Yes,No,No,No,69.7,Good,Pass
+19,Female,Public,17.3,90.9,81.5,6.9,Masters,High,Yes,Yes,No,No,92.6,Excellent,Pass
+16,Male,Private,8.9,74.0,100.0,5.7,None,High,Yes,No,Yes,No,53.4,Average,Pass
+15,Male,Public,14.3,68.4,80.3,6.3,High School,Low,Yes,No,No,No,61.2,Average,Pass
+19,Female,Public,25.0,74.3,53.5,8.3,Masters,High,Yes,No,No,No,80.0,Excellent,Pass
+16,Female,Public,27.0,68.4,71.4,7.5,Bachelors,Medium,Yes,No,No,No,85.0,Excellent,Pass
+22,Female,Private,25.3,78.8,72.1,8.3,Bachelors,Low,Yes,No,No,No,81.0,Excellent,Pass
+21,Female,Private,20.5,81.2,48.1,7.2,Bachelors,Medium,Yes,No,No,Yes,78.1,Good,Pass
+20,Male,Public,6.2,76.3,43.1,7.3,Masters,Low,Yes,Yes,No,Yes,56.1,Average,Pass
+20,Male,Private,18.4,100.0,61.1,4.5,High School,Medium,Yes,Yes,Yes,No,69.0,Good,Pass
+19,Female,Public,6.3,71.4,74.1,6.4,Masters,High,Yes,No,Yes,No,72.1,Good,Pass
+15,Male,Public,4.6,96.7,37.8,6.5,High School,Medium,No,Yes,No,No,39.8,At Risk,Fail
+18,Female,Public,16.7,67.5,51.2,8.4,PhD,Medium,Yes,No,No,No,69.0,Good,Pass
+18,Male,Public,18.7,80.9,70.6,6.1,High School,Low,Yes,No,Yes,No,70.1,Good,Pass
+22,Female,Public,21.3,94.2,62.6,7.1,High School,Medium,Yes,No,Yes,No,77.9,Good,Pass
+16,Female,Public,18.5,93.6,83.2,7.1,None,High,Yes,Yes,Yes,No,76.1,Good,Pass
+18,Male,Public,18.7,75.0,40.8,8.3,Masters,Low,Yes,No,Yes,No,63.4,Average,Pass
+17,Male,Public,8.1,86.7,97.3,6.6,PhD,Medium,Yes,No,No,Yes,70.5,Good,Pass
+16,Female,Public,14.3,85.1,38.9,7.9,High School,Medium,No,No,No,No,55.0,Average,Pass
+15,Male,Private,4.5,73.5,31.6,4.6,High School,Medium,Yes,No,No,No,23.6,At Risk,Fail
+17,Female,Private,1.0,87.4,61.1,4.7,High School,Medium,Yes,Yes,No,No,45.8,At Risk,Fail
+15,Female,Public,20.2,100.0,45.0,3.8,High School,Medium,Yes,No,Yes,Yes,46.7,At Risk,Fail
+15,Female,Public,9.7,85.7,61.4,7.8,Masters,Medium,Yes,Yes,No,No,69.3,Good,Pass
+17,Male,Public,21.1,86.8,60.9,7.7,None,Medium,Yes,No,No,Yes,77.0,Good,Pass
+16,Female,Public,22.8,88.1,59.1,8.0,PhD,Medium,Yes,Yes,Yes,No,82.4,Excellent,Pass
+19,Male,Public,10.7,62.5,49.4,5.9,Masters,Medium,Yes,Yes,Yes,No,50.5,Average,Pass
+15,Female,Public,19.1,85.5,68.5,6.1,High School,Medium,Yes,Yes,No,No,72.2,Good,Pass
+17,Female,Private,10.4,67.8,57.2,6.6,Bachelors,High,No,Yes,Yes,No,63.1,Average,Pass
+18,Male,Public,2.1,72.9,78.6,8.7,PhD,Low,No,No,Yes,No,47.0,At Risk,Fail
+22,Male,Public,15.9,100.0,59.3,9.0,Masters,Low,Yes,No,No,Yes,73.5,Good,Pass
+20,Male,Public,11.7,77.0,47.5,7.8,Bachelors,High,Yes,Yes,No,No,62.2,Average,Pass
+22,Female,Private,11.9,71.1,36.7,7.2,None,Low,Yes,Yes,Yes,No,52.4,Average,Pass
+17,Male,Public,28.8,93.8,59.4,8.5,None,High,No,No,No,No,79.1,Good,Pass
+18,Male,Private,4.3,68.6,43.0,6.5,Masters,Medium,No,Yes,Yes,No,38.9,At Risk,Fail
+18,Female,Public,17.7,74.6,41.8,6.3,High School,High,Yes,No,No,Yes,66.8,Good,Pass
+22,Female,Public,8.0,95.0,69.9,6.6,Bachelors,Medium,Yes,Yes,No,No,66.6,Good,Pass
+22,Female,Public,21.4,80.5,35.3,5.5,Bachelors,High,Yes,No,No,Yes,78.3,Good,Pass
+22,Female,Public,17.1,61.3,83.2,6.6,High School,Medium,Yes,No,No,Yes,73.1,Good,Pass
+21,Female,Private,17.7,86.5,64.4,5.3,High School,Medium,Yes,Yes,No,No,58.9,Average,Pass
+19,Female,Public,8.4,75.2,61.3,8.1,High School,Medium,Yes,No,No,Yes,63.5,Average,Pass
+19,Male,Private,9.6,98.5,46.5,7.5,Masters,Low,Yes,No,No,Yes,75.9,Good,Pass
+22,Female,Public,21.5,72.7,73.5,8.7,High School,Low,Yes,No,No,No,78.6,Good,Pass
+17,Female,Private,27.4,92.6,62.0,4.7,None,High,Yes,No,No,No,66.2,Good,Pass
+17,Female,Private,18.4,100.0,51.7,9.3,PhD,Low,Yes,No,No,No,70.1,Good,Pass
+22,Female,Public,8.7,69.8,65.0,4.8,Bachelors,Medium,No,No,Yes,No,42.7,At Risk,Fail
+18,Female,Public,17.4,77.7,36.8,5.2,Bachelors,Medium,Yes,No,No,Yes,60.3,Average,Pass
+16,Male,Private,32.0,84.7,37.5,6.0,Masters,Low,Yes,Yes,Yes,No,79.8,Good,Pass
+19,Female,Public,15.7,69.7,45.2,8.5,High School,High,No,No,No,No,55.0,Average,Pass
+17,Female,Private,25.2,83.2,67.2,7.1,PhD,Low,Yes,No,No,Yes,82.3,Excellent,Pass
+22,Male,Public,9.8,77.3,62.0,6.5,Masters,Medium,Yes,Yes,No,No,71.1,Good,Pass
+22,Female,Public,14.7,77.1,77.7,5.8,High School,Medium,Yes,Yes,Yes,No,58.3,Average,Pass
+17,Male,Public,19.3,80.6,48.2,5.0,High School,Low,Yes,Yes,No,Yes,55.9,Average,Pass
+19,Female,Private,17.8,80.9,70.6,8.3,High School,Low,No,No,No,No,57.3,Average,Pass
+22,Female,Private,9.6,82.0,60.3,7.8,Bachelors,Medium,Yes,Yes,No,No,68.7,Good,Pass
+20,Male,Public,9.3,72.8,47.9,8.6,Bachelors,Low,Yes,Yes,No,No,55.2,Average,Pass
+16,Male,Private,21.9,73.3,67.8,7.3,Bachelors,High,Yes,Yes,Yes,Yes,87.9,Excellent,Pass
+19,Female,Private,23.3,78.6,61.0,3.4,PhD,Medium,No,No,No,No,49.3,At Risk,Fail
+19,Male,Public,25.6,79.5,52.6,5.2,Bachelors,Low,No,Yes,No,Yes,60.6,Average,Pass
+20,Female,Public,27.6,74.7,62.6,7.4,Masters,Low,Yes,Yes,Yes,No,78.3,Good,Pass
+15,Male,Private,15.9,83.9,60.1,6.3,Bachelors,Low,Yes,Yes,No,Yes,69.8,Good,Pass
+17,Female,Public,12.8,58.2,59.7,6.1,Bachelors,Medium,Yes,No,No,No,60.4,Average,Pass
+21,Female,Public,24.5,71.2,55.8,5.4,None,Medium,Yes,Yes,No,No,56.1,Average,Pass
+16,Female,Private,20.0,76.6,42.4,8.0,Bachelors,Low,Yes,No,No,No,68.6,Good,Pass
+17,Male,Public,8.1,69.7,63.1,7.4,Bachelors,Medium,Yes,Yes,Yes,Yes,56.2,Average,Pass
+17,Female,Private,7.8,99.6,50.0,7.5,High School,Medium,Yes,Yes,No,No,56.9,Average,Pass
+16,Male,Private,18.4,80.2,46.7,6.0,Masters,Medium,No,No,No,No,70.2,Good,Pass
+16,Male,Private,13.8,82.1,58.4,7.0,Bachelors,Low,Yes,No,No,Yes,54.5,Average,Pass
+17,Male,Public,14.8,74.2,73.0,5.1,High School,Low,Yes,No,No,No,59.4,Average,Pass
+21,Female,Public,22.5,79.8,64.8,6.6,Masters,Low,No,Yes,No,No,75.7,Good,Pass
+15,Female,Public,20.3,65.4,54.0,3.5,High School,Medium,Yes,No,No,No,40.3,At Risk,Fail
+17,Male,Public,24.3,78.0,53.4,4.8,Bachelors,Medium,Yes,No,No,No,64.5,Average,Pass
+15,Male,Private,1.5,68.8,71.5,6.4,Bachelors,Low,Yes,No,No,No,57.4,Average,Pass
+19,Female,Public,16.8,76.7,26.0,9.9,None,Low,Yes,No,No,No,55.3,Average,Pass
+17,Male,Public,19.9,49.3,74.0,4.5,High School,Medium,Yes,No,No,No,62.8,Average,Pass
+21,Male,Public,4.3,66.5,33.9,5.2,High School,Low,Yes,No,No,No,44.1,At Risk,Fail
+19,Female,Public,10.4,97.6,40.8,7.1,High School,Medium,Yes,Yes,No,No,56.3,Average,Pass
+21,Male,Public,9.1,90.0,54.3,9.1,Bachelors,Medium,Yes,No,No,Yes,53.0,Average,Pass
+20,Female,Public,15.2,95.8,94.6,7.1,None,Low,No,No,No,No,68.8,Good,Pass
+18,Female,Private,26.4,96.7,87.2,7.7,PhD,Medium,Yes,No,No,No,100.0,Excellent,Pass
+21,Male,Public,29.2,88.1,72.6,6.4,High School,Low,Yes,Yes,No,No,73.7,Good,Pass
+18,Male,Private,9.3,74.6,67.3,6.1,High School,Medium,Yes,Yes,No,No,54.1,Average,Pass
+22,Female,Private,18.7,67.6,34.1,6.9,Masters,Low,Yes,Yes,Yes,No,55.2,Average,Pass
+22,Female,Public,18.9,93.8,64.4,5.9,Bachelors,Medium,Yes,No,Yes,Yes,76.9,Good,Pass
+19,Female,Private,17.7,80.8,53.8,7.7,Bachelors,Medium,Yes,No,No,No,72.1,Good,Pass
+20,Male,Public,17.8,100.0,49.7,4.7,Bachelors,Low,Yes,Yes,Yes,No,53.9,Average,Pass
+17,Female,Public,17.1,75.6,64.3,8.0,Masters,Medium,Yes,Yes,No,No,76.4,Good,Pass
+21,Female,Public,26.8,100.0,54.9,6.9,High School,Medium,Yes,Yes,Yes,No,73.9,Good,Pass
+20,Male,Public,22.7,78.1,75.0,6.5,None,High,No,No,Yes,No,67.4,Good,Pass
+22,Female,Private,7.6,96.0,33.0,4.7,PhD,Low,Yes,No,No,No,38.4,At Risk,Fail
+17,Female,Private,20.6,100.0,63.1,5.5,None,Low,No,Yes,No,No,62.2,Average,Pass
+21,Male,Private,21.2,67.7,48.8,8.4,Bachelors,Low,Yes,No,No,No,61.6,Average,Pass
+18,Male,Public,17.2,74.2,55.9,6.5,Bachelors,High,Yes,No,No,Yes,78.2,Good,Pass
+16,Female,Public,22.9,67.6,66.6,7.2,Bachelors,Medium,Yes,No,Yes,Yes,77.4,Good,Pass
+16,Male,Private,16.3,65.2,45.2,5.7,Masters,Low,No,No,Yes,No,48.1,At Risk,Fail
+19,Male,Public,16.4,88.0,64.5,6.8,PhD,Medium,Yes,Yes,No,No,89.4,Excellent,Pass
+17,Male,Public,15.8,77.6,58.8,5.0,None,Low,No,Yes,No,No,50.6,Average,Pass
+15,Female,Public,0.9,80.6,52.1,6.9,Bachelors,Medium,Yes,Yes,No,No,49.7,At Risk,Fail
+18,Male,Public,14.4,86.7,54.9,7.3,Bachelors,Medium,Yes,No,No,Yes,68.1,Good,Pass
+20,Female,Public,10.3,57.7,59.7,7.2,High School,Medium,No,No,No,Yes,46.8,At Risk,Fail
+17,Female,Public,6.7,95.4,50.5,5.6,Masters,Medium,No,Yes,No,No,53.5,Average,Pass
+22,Female,Public,25.0,75.8,62.1,6.4,Bachelors,Low,No,No,Yes,Yes,72.6,Good,Pass
+21,Female,Public,18.5,86.4,57.8,7.5,High School,Medium,Yes,No,Yes,No,56.7,Average,Pass
+19,Male,Public,14.8,87.4,52.8,6.5,Masters,Medium,No,No,Yes,No,53.1,Average,Pass
+22,Male,Public,11.0,96.4,85.8,6.4,PhD,Low,Yes,No,No,No,72.5,Good,Pass
+18,Male,Public,17.1,78.7,68.2,9.3,None,High,No,Yes,No,Yes,59.4,Average,Pass
+16,Female,Private,21.9,54.5,56.3,5.6,Masters,Medium,No,No,Yes,No,59.6,Average,Pass
+15,Female,Public,9.2,80.7,64.2,8.2,High School,High,Yes,No,Yes,No,61.5,Average,Pass
+22,Male,Private,15.0,82.4,46.6,5.3,None,Medium,Yes,No,Yes,No,49.3,At Risk,Fail
+22,Female,Private,21.1,67.6,55.4,7.7,High School,Low,Yes,No,No,No,69.5,Good,Pass
+20,Female,Public,1.4,81.8,57.2,7.7,Masters,Medium,No,Yes,No,No,48.2,At Risk,Fail
+15,Male,Private,14.6,75.7,43.3,6.1,High School,Medium,No,No,No,No,52.0,Average,Pass
+17,Male,Private,12.0,63.9,67.8,5.2,High School,Low,Yes,Yes,No,Yes,49.9,At Risk,Fail
+15,Male,Public,14.1,88.1,54.4,4.2,Bachelors,Medium,No,No,Yes,No,47.2,At Risk,Fail
+15,Male,Public,11.5,73.2,56.7,6.0,High School,Low,Yes,Yes,No,No,55.6,Average,Pass
+16,Male,Public,16.0,75.1,53.5,7.5,High School,Low,No,Yes,No,Yes,53.7,Average,Pass
+19,Female,Private,28.5,74.4,100.0,5.4,High School,High,Yes,Yes,Yes,No,87.0,Excellent,Pass
+15,Female,Private,12.7,94.8,52.1,6.9,Masters,Low,Yes,No,No,No,65.9,Good,Pass
+22,Female,Private,17.0,79.5,31.0,4.9,Bachelors,Medium,Yes,No,No,No,55.0,Average,Pass
+18,Male,Private,29.0,80.9,38.0,6.5,Masters,Medium,Yes,Yes,Yes,No,80.0,Excellent,Pass
+17,Female,Public,11.1,74.7,73.4,5.3,None,Medium,Yes,No,No,Yes,53.7,Average,Pass
+19,Male,Private,27.7,85.6,82.0,6.7,Bachelors,Low,No,Yes,No,No,89.0,Excellent,Pass
+21,Male,Public,15.0,96.2,51.8,6.1,Masters,Medium,Yes,No,No,Yes,76.1,Good,Pass
+17,Female,Private,27.5,87.8,81.2,5.3,High School,Medium,Yes,Yes,No,No,78.8,Good,Pass
+15,Female,Public,20.3,88.2,73.1,5.9,High School,High,Yes,No,Yes,No,67.9,Good,Pass
+15,Male,Public,17.1,87.3,59.2,5.6,High School,Low,No,No,No,No,53.2,Average,Pass
+21,Male,Private,14.5,63.4,58.1,5.1,High School,Low,Yes,No,Yes,No,38.7,At Risk,Fail
+15,Female,Private,10.6,69.5,64.7,8.2,High School,Medium,Yes,No,Yes,Yes,61.0,Average,Pass
+20,Female,Public,15.5,77.5,75.2,6.3,PhD,Low,Yes,No,Yes,No,77.2,Good,Pass
+18,Male,Public,21.3,71.3,68.0,3.9,Bachelors,Medium,Yes,Yes,No,No,69.3,Good,Pass
+21,Female,Public,14.9,67.2,51.8,6.0,Bachelors,Medium,Yes,Yes,No,No,55.8,Average,Pass
+15,Female,Private,12.8,57.5,59.4,8.0,High School,Medium,Yes,Yes,No,No,64.6,Average,Pass
+22,Male,Public,13.2,63.8,91.7,5.8,Bachelors,High,Yes,No,No,No,72.8,Good,Pass
+20,Female,Public,21.9,76.9,65.8,8.7,Bachelors,Medium,Yes,No,No,No,61.8,Average,Pass
+18,Female,Public,23.6,79.2,75.0,5.7,PhD,High,Yes,No,No,No,83.9,Excellent,Pass
+16,Female,Public,10.3,70.5,70.1,7.5,High School,Medium,Yes,No,No,No,59.3,Average,Pass
+22,Male,Public,10.3,80.9,66.1,8.1,Masters,Low,Yes,Yes,Yes,Yes,73.2,Good,Pass
+17,Male,Public,17.7,74.8,63.6,7.4,High School,Medium,Yes,Yes,Yes,No,62.6,Average,Pass
+18,Female,Private,25.7,93.1,75.5,5.0,Bachelors,Medium,Yes,No,No,No,83.9,Excellent,Pass
+18,Female,Private,23.0,78.1,72.8,5.6,Masters,High,Yes,Yes,No,No,82.7,Excellent,Pass
+16,Male,Private,6.2,88.4,66.0,8.3,Bachelors,Low,Yes,No,Yes,No,47.3,At Risk,Fail
+18,Female,Public,13.2,82.4,51.6,5.8,Bachelors,Low,Yes,Yes,No,No,56.2,Average,Pass
+16,Female,Public,8.5,63.2,67.8,8.1,Masters,High,Yes,Yes,No,Yes,78.7,Good,Pass
+15,Male,Private,13.1,78.9,61.0,6.2,Masters,Low,Yes,Yes,No,Yes,67.5,Good,Pass
+17,Female,Private,26.2,65.2,57.4,7.0,High School,Medium,Yes,No,Yes,No,77.3,Good,Pass
+15,Male,Public,5.0,78.7,100.0,5.0,High School,Medium,Yes,Yes,Yes,No,61.5,Average,Pass
+18,Male,Private,3.7,71.1,38.9,6.0,Bachelors,Low,Yes,No,No,No,39.2,At Risk,Fail
+21,Male,Private,9.2,84.6,76.4,5.7,PhD,Low,Yes,Yes,No,No,58.7,Average,Pass
+16,Male,Private,17.0,63.9,49.1,7.1,Bachelors,High,No,No,No,No,55.7,Average,Pass
+15,Female,Private,19.3,80.2,64.0,6.9,High School,Low,Yes,No,Yes,Yes,77.8,Good,Pass
+15,Male,Public,18.1,86.9,100.0,7.4,Bachelors,Medium,Yes,No,Yes,Yes,87.3,Excellent,Pass
+19,Female,Public,23.2,90.9,47.6,6.2,None,Medium,Yes,Yes,No,Yes,63.1,Average,Pass
+17,Male,Public,2.7,70.8,51.1,5.6,High School,Medium,No,Yes,Yes,No,40.9,At Risk,Fail
+18,Female,Public,23.3,80.2,61.7,7.0,High School,Medium,Yes,No,No,Yes,68.5,Good,Pass
+15,Male,Private,12.8,82.2,49.3,5.5,None,Low,Yes,No,No,No,44.3,At Risk,Fail
+17,Female,Public,20.1,98.6,75.3,8.2,Bachelors,High,No,Yes,No,No,83.2,Excellent,Pass
+18,Female,Public,5.7,62.2,54.0,6.7,High School,Low,Yes,No,Yes,No,58.1,Average,Pass
+18,Female,Private,15.0,69.1,71.8,6.4,High School,Low,Yes,Yes,No,Yes,72.2,Good,Pass
+19,Male,Private,16.7,100.0,42.1,7.4,Bachelors,High,Yes,No,No,No,70.4,Good,Pass
+21,Male,Private,23.1,76.7,34.9,6.7,High School,Low,Yes,No,No,No,63.7,Average,Pass
+18,Male,Public,3.9,57.3,58.6,4.6,High School,Low,No,Yes,No,No,35.8,At Risk,Fail
+21,Male,Private,15.2,73.0,38.5,5.4,High School,High,Yes,No,No,No,64.1,Average,Pass
+19,Male,Public,7.4,46.8,84.8,8.2,None,Low,Yes,No,Yes,No,46.6,At Risk,Fail
+17,Female,Public,18.5,82.9,39.1,6.9,Bachelors,Low,Yes,No,No,No,63.0,Average,Pass
+16,Male,Public,20.4,89.7,46.4,4.6,High School,Medium,No,No,No,No,49.0,At Risk,Fail
+17,Male,Public,24.0,69.1,68.2,7.3,High School,Medium,Yes,No,No,Yes,83.7,Excellent,Pass
+19,Male,Private,11.3,74.4,53.2,6.1,High School,High,Yes,No,No,No,65.1,Good,Pass
+16,Female,Public,21.5,91.1,39.2,5.7,High School,Medium,No,Yes,No,No,50.2,Average,Pass
+22,Female,Public,24.5,59.0,92.6,5.3,High School,High,Yes,No,Yes,No,73.4,Good,Pass
+18,Female,Private,3.5,64.1,47.0,8.1,High School,Low,No,Yes,Yes,No,28.4,At Risk,Fail
+21,Male,Private,19.3,77.3,59.1,4.2,High School,Medium,Yes,Yes,No,No,58.0,Average,Pass
+20,Male,Public,21.7,71.0,58.9,5.7,None,Low,Yes,No,No,No,53.8,Average,Pass
+17,Female,Private,13.2,76.5,72.7,7.0,Masters,High,Yes,Yes,Yes,No,65.5,Good,Pass
+16,Female,Private,6.5,64.8,68.9,8.9,High School,High,No,No,No,No,58.1,Average,Pass
+20,Male,Private,21.6,82.6,49.6,7.5,None,Low,Yes,No,No,No,64.4,Average,Pass
+17,Male,Private,6.6,78.2,57.1,5.7,Bachelors,High,Yes,Yes,No,No,58.0,Average,Pass
+16,Male,Private,13.8,86.6,58.6,8.8,High School,Medium,No,Yes,Yes,Yes,62.7,Average,Pass
+22,Female,Private,14.7,82.4,73.2,5.0,Masters,Low,Yes,No,Yes,No,66.9,Good,Pass
+18,Male,Public,20.0,82.5,44.5,7.1,None,Medium,Yes,No,No,Yes,65.3,Good,Pass
+15,Female,Public,10.6,62.6,92.3,7.4,Bachelors,High,Yes,No,No,Yes,73.8,Good,Pass
+18,Female,Public,10.2,85.9,50.6,5.7,PhD,Low,No,Yes,Yes,No,49.7,At Risk,Fail
+18,Female,Private,15.7,76.0,61.9,7.7,High School,Low,Yes,No,No,No,70.3,Good,Pass
+21,Female,Public,22.0,78.0,44.6,6.1,High School,High,No,Yes,No,No,65.9,Good,Pass
+20,Male,Private,31.0,92.6,42.5,7.7,Bachelors,Medium,Yes,Yes,No,No,85.0,Excellent,Pass
+16,Female,Public,4.4,71.4,48.9,4.4,PhD,Medium,No,No,No,No,39.9,At Risk,Fail
+16,Male,Public,17.2,96.2,47.4,7.2,High School,Medium,Yes,Yes,No,No,81.1,Excellent,Pass
+19,Male,Public,7.4,97.3,55.8,6.3,Bachelors,Medium,Yes,Yes,No,No,63.0,Average,Pass
+15,Male,Public,22.1,89.0,47.3,8.3,High School,Low,Yes,Yes,No,Yes,71.7,Good,Pass
+17,Male,Public,8.4,68.2,72.4,6.7,Bachelors,Low,Yes,No,Yes,Yes,70.8,Good,Pass
+16,Male,Public,10.3,53.8,50.3,8.4,High School,High,Yes,No,No,No,62.0,Average,Pass
+15,Male,Private,10.9,92.9,48.6,7.5,Bachelors,Medium,Yes,No,No,No,71.1,Good,Pass
+22,Male,Public,14.5,81.3,56.1,6.6,None,Medium,Yes,Yes,No,No,59.3,Average,Pass
+15,Male,Public,17.3,71.1,76.9,7.8,Bachelors,High,Yes,No,No,No,74.3,Good,Pass
+15,Male,Public,18.4,94.1,65.2,7.8,High School,Low,Yes,No,No,No,60.7,Average,Pass
+22,Male,Public,15.0,69.7,60.5,7.4,Bachelors,High,Yes,Yes,Yes,No,74.5,Good,Pass
+16,Female,Public,5.7,74.9,40.5,3.8,Bachelors,Medium,Yes,Yes,No,No,34.7,At Risk,Fail
+21,Male,Private,20.1,86.3,44.9,5.5,Masters,High,Yes,Yes,Yes,No,59.3,Average,Pass
+15,Male,Private,14.6,66.6,42.8,8.6,PhD,Low,Yes,No,Yes,Yes,67.4,Good,Pass
+16,Male,Public,23.1,78.7,81.6,5.2,Bachelors,Low,Yes,No,No,No,72.3,Good,Pass
+15,Male,Public,10.0,93.1,70.0,7.9,Bachelors,Medium,No,Yes,No,Yes,67.5,Good,Pass
+20,Female,Public,3.8,82.5,49.1,7.7,None,High,No,Yes,No,No,38.1,At Risk,Fail
+19,Female,Public,14.8,95.0,53.5,5.9,Masters,High,Yes,No,No,Yes,77.6,Good,Pass
+18,Female,Private,24.1,93.6,49.6,4.2,Bachelors,Medium,Yes,No,No,No,67.5,Good,Pass
+16,Female,Public,16.1,80.1,48.7,6.1,High School,Medium,Yes,Yes,No,Yes,65.6,Good,Pass
+15,Male,Private,13.6,52.0,68.9,9.5,High School,Low,Yes,Yes,No,No,51.6,Average,Pass
+19,Female,Public,8.9,66.7,57.7,5.7,Masters,Medium,Yes,No,Yes,No,68.8,Good,Pass
+16,Male,Public,27.3,89.2,93.2,5.8,Masters,High,No,No,No,No,84.1,Excellent,Pass
+19,Female,Public,7.8,61.4,80.8,5.5,Masters,Medium,No,No,No,No,50.3,Average,Pass
+20,Male,Public,9.9,76.1,81.6,8.4,Bachelors,Low,Yes,No,Yes,No,66.3,Good,Pass
+21,Female,Private,19.0,84.1,72.1,6.5,High School,High,Yes,No,Yes,No,67.9,Good,Pass
+18,Male,Public,2.0,97.6,55.7,6.0,PhD,Low,Yes,Yes,Yes,Yes,49.7,At Risk,Fail
+15,Female,Private,23.9,73.1,71.0,8.6,Bachelors,Medium,Yes,Yes,No,Yes,90.9,Excellent,Pass
+17,Male,Private,19.4,72.3,56.8,7.6,Bachelors,Medium,Yes,Yes,No,No,76.8,Good,Pass
+21,Female,Public,21.3,79.4,86.5,5.6,Bachelors,Medium,Yes,No,No,No,82.3,Excellent,Pass
+19,Female,Public,18.9,84.2,68.1,5.2,Bachelors,Medium,Yes,Yes,Yes,No,69.4,Good,Pass
+19,Female,Public,13.9,78.1,65.9,8.3,Bachelors,Medium,No,Yes,No,Yes,63.9,Average,Pass
+18,Male,Public,7.6,92.6,63.9,6.8,Bachelors,Low,Yes,Yes,No,No,61.1,Average,Pass
+16,Male,Private,14.0,70.4,88.1,4.8,Masters,Low,Yes,No,No,No,62.8,Average,Pass
+22,Female,Public,8.2,81.4,40.5,4.5,Masters,Medium,No,No,No,No,45.3,At Risk,Fail
+21,Male,Private,18.4,85.3,89.6,5.3,High School,Medium,Yes,Yes,No,Yes,80.9,Excellent,Pass
+22,Male,Public,20.6,75.2,59.2,5.2,High School,Medium,Yes,Yes,No,No,60.0,Average,Pass
+21,Male,Public,25.3,90.1,40.9,4.1,Bachelors,Medium,Yes,No,No,No,66.7,Good,Pass
+17,Male,Private,17.6,81.8,50.7,5.4,Bachelors,Low,Yes,Yes,No,No,52.0,Average,Pass
+17,Male,Public,21.5,89.5,37.2,5.6,Bachelors,Medium,Yes,No,No,Yes,68.1,Good,Pass
+16,Male,Private,12.9,82.3,71.8,6.2,Masters,Medium,No,Yes,No,No,60.3,Average,Pass
+22,Female,Public,11.7,84.5,46.4,9.0,None,Medium,Yes,No,Yes,No,45.1,At Risk,Fail
+19,Female,Private,18.3,72.4,64.5,6.5,High School,Medium,Yes,No,No,No,79.9,Good,Pass
+18,Male,Private,12.3,72.4,79.0,6.6,Masters,Low,Yes,No,No,No,59.3,Average,Pass
+22,Male,Private,16.9,94.7,51.9,7.5,PhD,Low,Yes,Yes,No,No,69.9,Good,Pass
+19,Male,Public,7.6,87.6,58.0,6.5,High School,Low,No,Yes,No,Yes,57.0,Average,Pass
+22,Female,Private,8.8,67.7,42.4,7.3,High School,Medium,Yes,No,No,No,48.4,At Risk,Fail
+22,Male,Public,19.4,82.2,56.2,7.2,High School,Low,Yes,No,No,No,68.6,Good,Pass
+15,Female,Private,21.2,51.5,100.0,7.0,Bachelors,Low,Yes,No,No,No,87.4,Excellent,Pass
+17,Female,Public,8.1,73.1,73.7,10.0,Bachelors,High,Yes,No,No,No,62.2,Average,Pass
+20,Female,Public,19.7,91.5,58.0,8.0,High School,Medium,No,No,Yes,No,62.6,Average,Pass
+21,Male,Public,11.3,78.5,52.8,5.4,High School,Medium,Yes,No,Yes,No,49.6,At Risk,Fail
+16,Female,Public,15.1,81.4,61.4,7.3,Bachelors,Medium,Yes,No,No,Yes,76.3,Good,Pass
+17,Female,Public,24.9,43.8,64.0,5.8,Bachelors,Low,Yes,No,No,No,70.6,Good,Pass
+19,Female,Private,20.7,75.3,55.7,7.4,Bachelors,Low,Yes,Yes,No,No,72.1,Good,Pass
+21,Female,Public,20.6,84.1,70.0,5.0,High School,High,Yes,Yes,No,No,74.6,Good,Pass
+15,Female,Private,28.4,85.6,47.7,5.4,High School,Medium,Yes,No,No,No,75.0,Good,Pass
+19,Male,Public,10.1,91.5,47.6,7.2,High School,Medium,Yes,Yes,No,No,60.4,Average,Pass
+17,Female,Private,8.1,77.5,67.6,8.1,PhD,High,No,Yes,No,Yes,65.5,Good,Pass
+16,Female,Private,9.9,78.0,44.5,7.5,High School,Low,Yes,Yes,No,Yes,61.4,Average,Pass
+19,Male,Public,13.2,64.0,72.9,7.9,Bachelors,Medium,Yes,No,No,No,69.2,Good,Pass
+18,Male,Private,0.0,77.5,61.8,7.3,Bachelors,Low,Yes,No,Yes,Yes,36.5,At Risk,Fail
+20,Female,Private,13.5,64.9,34.6,7.0,Masters,Medium,No,Yes,No,Yes,53.0,Average,Pass
+17,Male,Private,11.2,57.8,63.6,6.1,High School,High,Yes,Yes,Yes,Yes,57.2,Average,Pass
+21,Male,Public,20.5,67.0,36.7,7.9,High School,Low,Yes,Yes,Yes,Yes,59.9,Average,Pass
+15,Female,Public,17.5,98.1,72.4,8.1,Masters,High,Yes,Yes,No,No,93.1,Excellent,Pass
+21,Female,Private,10.8,76.8,58.3,6.7,High School,Medium,Yes,Yes,No,Yes,83.1,Excellent,Pass
+15,Female,Public,19.1,82.6,89.8,6.6,Bachelors,Medium,Yes,Yes,No,No,69.3,Good,Pass
+20,Male,Private,20.1,73.8,78.1,8.9,High School,Low,Yes,No,No,No,72.4,Good,Pass
+17,Male,Public,9.6,58.5,46.1,6.8,PhD,Medium,No,No,No,Yes,55.9,Average,Pass
+18,Female,Private,11.5,91.2,31.7,6.9,Bachelors,Medium,Yes,Yes,No,Yes,62.3,Average,Pass
+15,Female,Public,0.0,53.9,50.7,7.4,None,Low,No,Yes,No,No,34.3,At Risk,Fail
+20,Male,Public,7.4,73.3,43.7,6.7,Masters,Medium,Yes,Yes,No,No,57.7,Average,Pass
+16,Male,Private,9.8,79.3,89.4,5.7,Bachelors,Low,Yes,Yes,No,No,64.0,Average,Pass
+20,Male,Private,15.5,82.8,61.8,7.3,Bachelors,High,Yes,Yes,Yes,No,72.7,Good,Pass
+20,Female,Private,8.4,71.3,76.0,6.7,High School,Low,Yes,No,No,No,61.2,Average,Pass
+21,Male,Private,11.4,57.9,57.7,9.2,High School,Medium,No,No,No,Yes,53.4,Average,Pass
+20,Female,Public,6.4,70.4,59.3,7.8,Bachelors,Medium,Yes,No,No,Yes,61.1,Average,Pass
+17,Male,Public,16.2,71.0,61.5,6.0,High School,Medium,No,Yes,No,No,56.2,Average,Pass
+20,Female,Public,18.0,70.7,78.6,7.7,Masters,High,Yes,No,No,Yes,100.0,Excellent,Pass
+21,Male,Public,17.8,91.6,66.7,7.2,High School,High,Yes,No,No,No,79.2,Good,Pass
+17,Female,Public,15.1,65.4,46.1,8.5,Bachelors,Low,Yes,Yes,No,Yes,66.8,Good,Pass
+15,Female,Private,4.2,83.6,86.3,6.1,High School,Medium,Yes,No,No,No,56.9,Average,Pass
+22,Male,Public,10.7,81.9,57.6,7.0,Bachelors,Medium,Yes,Yes,Yes,No,63.4,Average,Pass
+16,Male,Public,12.1,91.5,55.2,6.7,None,Low,No,No,No,No,53.3,Average,Pass
+19,Female,Public,12.2,78.4,19.6,6.9,High School,Medium,Yes,Yes,No,No,40.1,At Risk,Fail
+16,Female,Public,15.5,89.5,71.5,5.6,High School,Low,Yes,No,Yes,Yes,60.4,Average,Pass
+16,Female,Public,25.0,77.9,63.5,7.5,Bachelors,High,Yes,Yes,No,No,81.5,Excellent,Pass
+21,Female,Private,20.7,85.2,63.5,7.3,High School,Medium,Yes,No,No,No,71.4,Good,Pass
+16,Female,Public,8.1,62.0,56.0,8.5,Masters,Medium,No,No,No,Yes,48.5,At Risk,Fail
+20,Female,Public,19.7,48.3,53.4,6.8,High School,Medium,Yes,No,No,No,62.4,Average,Pass
+20,Male,Private,19.5,84.5,56.5,6.3,Bachelors,High,Yes,No,Yes,No,80.7,Excellent,Pass
+15,Female,Public,9.4,85.2,68.9,7.8,Bachelors,Medium,Yes,Yes,Yes,No,65.8,Good,Pass
+16,Male,Private,20.9,85.7,71.6,5.8,None,High,No,No,No,No,61.6,Average,Pass
+21,Male,Public,13.9,73.7,58.5,8.2,None,High,Yes,Yes,Yes,No,54.8,Average,Pass
+19,Male,Public,5.1,97.9,76.2,8.2,High School,Low,No,No,No,No,52.8,Average,Pass
+15,Male,Public,18.2,74.5,60.8,8.4,Bachelors,Low,Yes,Yes,No,Yes,63.8,Average,Pass
+22,Male,Private,16.5,85.1,54.4,7.3,PhD,Low,No,No,No,No,68.3,Good,Pass
+17,Female,Public,13.4,87.1,65.0,6.2,None,Medium,No,Yes,No,Yes,69.7,Good,Pass
+15,Male,Public,14.7,100.0,41.6,6.9,Bachelors,Medium,No,No,Yes,No,56.0,Average,Pass
+22,Male,Public,10.0,76.2,65.5,7.3,Bachelors,Low,Yes,No,No,Yes,64.8,Average,Pass
+15,Male,Private,19.3,72.2,38.9,6.1,Bachelors,High,Yes,Yes,No,No,65.3,Good,Pass
+19,Female,Private,14.7,62.0,46.6,8.5,Bachelors,Low,No,No,No,No,47.7,At Risk,Fail
+22,Female,Public,16.2,98.6,31.7,7.6,PhD,Medium,Yes,Yes,No,Yes,75.9,Good,Pass
+19,Female,Private,17.5,85.1,59.4,5.6,Bachelors,Medium,Yes,Yes,Yes,No,62.8,Average,Pass
+19,Male,Private,6.9,85.4,86.1,9.2,Masters,Medium,Yes,Yes,No,No,63.5,Average,Pass
+18,Female,Public,8.7,100.0,60.2,6.9,High School,Low,Yes,No,Yes,No,47.4,At Risk,Fail
+16,Female,Public,0.0,83.9,71.7,5.4,Masters,Medium,Yes,No,No,No,52.5,Average,Pass
+19,Male,Public,19.0,64.4,97.3,5.7,PhD,Medium,Yes,No,Yes,No,84.6,Excellent,Pass
+22,Female,Private,6.5,77.6,68.1,8.7,Masters,Low,Yes,Yes,No,No,64.1,Average,Pass
+15,Male,Public,15.9,68.3,50.5,9.2,High School,Medium,Yes,Yes,Yes,No,65.5,Good,Pass
+22,Female,Public,17.6,75.2,52.6,8.1,Masters,Medium,No,No,No,Yes,64.5,Average,Pass
+18,Female,Public,19.2,75.2,62.0,8.5,None,Medium,Yes,Yes,Yes,No,69.9,Good,Pass
+19,Male,Public,6.6,73.0,52.5,8.4,Bachelors,Medium,No,No,Yes,No,40.2,At Risk,Fail
+16,Female,Private,14.5,63.3,53.6,7.5,High School,Medium,Yes,No,Yes,No,61.5,Average,Pass
+19,Male,Public,26.7,99.1,76.8,7.2,Bachelors,High,Yes,Yes,Yes,No,100.0,Excellent,Pass
+16,Male,Private,27.0,83.6,77.4,7.5,High School,Medium,Yes,Yes,No,No,90.6,Excellent,Pass
+17,Female,Public,21.9,77.3,37.3,7.8,None,Low,Yes,No,No,Yes,73.8,Good,Pass
+20,Female,Public,17.4,89.1,49.7,5.8,High School,Medium,Yes,No,Yes,Yes,60.5,Average,Pass
+15,Female,Public,8.0,85.7,55.0,7.8,None,Low,Yes,No,No,No,51.1,Average,Pass
+18,Female,Private,20.0,83.3,71.0,8.7,High School,High,Yes,No,No,Yes,74.7,Good,Pass
+19,Male,Public,13.9,88.2,79.1,6.5,Masters,Medium,Yes,Yes,Yes,Yes,78.0,Good,Pass
+16,Female,Public,18.9,81.6,100.0,6.4,Bachelors,Low,Yes,No,No,No,83.1,Excellent,Pass
+17,Female,Private,10.6,88.0,55.0,7.4,Masters,Medium,No,No,No,No,61.7,Average,Pass
+17,Female,Public,13.8,89.0,55.8,6.0,Masters,Low,Yes,No,No,No,61.5,Average,Pass
+20,Female,Public,16.1,82.0,70.8,5.1,High School,High,Yes,No,No,No,63.3,Average,Pass
+22,Female,Public,16.7,77.4,51.8,8.3,Bachelors,High,Yes,No,No,No,72.5,Good,Pass
+21,Female,Private,18.5,98.4,59.9,6.2,Bachelors,Medium,Yes,Yes,No,Yes,78.6,Good,Pass
+16,Male,Public,10.9,74.3,55.8,6.8,High School,Medium,Yes,Yes,No,No,53.1,Average,Pass
+15,Male,Public,5.6,84.7,22.7,6.0,Bachelors,Medium,Yes,No,No,No,33.9,At Risk,Fail
+15,Male,Public,26.4,85.0,63.8,8.5,Bachelors,Medium,No,No,No,No,74.8,Good,Pass
+19,Female,Public,32.4,72.7,59.3,7.9,Bachelors,Low,Yes,No,No,No,76.0,Good,Pass
+16,Female,Public,18.1,70.3,81.1,6.5,Bachelors,High,Yes,No,No,Yes,76.7,Good,Pass
+16,Male,Public,5.7,75.8,62.1,5.3,High School,Low,Yes,Yes,No,No,44.4,At Risk,Fail
+21,Female,Public,9.6,74.1,43.2,6.3,Masters,Low,No,No,Yes,No,45.0,At Risk,Fail
+21,Female,Public,18.6,62.5,58.1,7.5,High School,Low,Yes,No,Yes,Yes,59.0,Average,Pass
+21,Male,Private,24.4,72.2,30.6,7.0,Masters,High,Yes,No,Yes,No,84.5,Excellent,Pass
+17,Male,Public,6.5,83.2,43.8,6.9,High School,High,Yes,No,Yes,No,44.4,At Risk,Fail
+19,Female,Public,14.1,95.2,71.5,7.1,Bachelors,Low,Yes,No,No,Yes,82.2,Excellent,Pass
+19,Male,Private,16.4,86.7,58.3,7.8,Bachelors,Low,Yes,No,No,No,67.8,Good,Pass
+16,Female,Private,21.1,48.8,75.8,6.7,High School,High,Yes,Yes,Yes,No,68.0,Good,Pass
+19,Female,Private,12.6,87.7,32.5,7.4,High School,Medium,Yes,No,No,No,60.5,Average,Pass
+19,Female,Public,4.1,73.3,58.4,5.5,High School,High,Yes,Yes,Yes,Yes,48.1,At Risk,Fail
+18,Male,Public,19.3,85.4,54.9,10.0,Bachelors,High,Yes,Yes,No,No,64.9,Average,Pass
+21,Female,Public,22.9,79.8,76.3,6.4,Masters,Medium,Yes,No,No,No,94.4,Excellent,Pass
+20,Male,Public,14.4,77.7,72.1,7.1,High School,Low,Yes,No,Yes,No,49.4,At Risk,Fail
+19,Male,Public,17.8,78.8,71.6,7.5,Bachelors,Medium,Yes,No,No,No,74.4,Good,Pass
+20,Male,Public,11.7,79.7,85.1,6.3,Masters,High,Yes,Yes,No,No,78.5,Good,Pass
+21,Male,Public,9.1,96.1,56.5,6.8,Bachelors,Medium,No,Yes,No,Yes,72.3,Good,Pass
+19,Male,Public,22.2,79.8,82.0,6.8,Masters,High,No,No,No,No,81.1,Excellent,Pass
+17,Female,Public,17.7,93.0,46.3,5.6,High School,Medium,Yes,No,No,No,79.2,Good,Pass
+21,Male,Public,18.4,91.3,45.8,7.4,High School,High,Yes,No,Yes,No,73.0,Good,Pass
+20,Female,Private,25.5,88.0,73.3,4.7,High School,Medium,No,No,No,No,53.7,Average,Pass
+22,Male,Private,7.6,58.6,39.4,9.1,High School,Low,Yes,No,Yes,No,28.8,At Risk,Fail
+16,Male,Public,11.1,93.4,70.6,7.8,Bachelors,Medium,Yes,No,No,No,72.3,Good,Pass
+18,Female,Public,16.1,74.5,63.5,7.6,Masters,Low,Yes,Yes,No,Yes,67.1,Good,Pass
+22,Female,Public,11.0,88.6,78.1,4.5,High School,Medium,Yes,No,No,No,60.2,Average,Pass
+19,Female,Public,20.5,68.3,61.1,5.8,Masters,High,Yes,No,No,No,71.5,Good,Pass
+22,Female,Private,13.7,65.8,62.8,8.6,High School,Low,No,Yes,No,No,47.2,At Risk,Fail
+15,Male,Public,8.1,100.0,69.6,10.0,High School,High,No,No,No,No,49.1,At Risk,Fail
+15,Male,Public,15.5,68.5,52.1,8.4,Masters,Low,Yes,No,No,No,68.1,Good,Pass
+21,Female,Public,16.2,93.8,51.4,8.1,Masters,Medium,Yes,Yes,No,Yes,64.9,Average,Pass
+17,Female,Public,21.5,81.4,69.1,7.5,Bachelors,High,Yes,Yes,Yes,No,87.7,Excellent,Pass
+19,Male,Public,17.8,75.0,61.6,5.7,High School,Medium,Yes,No,No,No,70.8,Good,Pass
+18,Male,Public,18.2,79.5,55.9,8.1,High School,High,Yes,No,No,No,69.2,Good,Pass
+18,Female,Private,17.2,64.4,60.8,5.4,High School,High,No,No,Yes,No,45.9,At Risk,Fail
+22,Female,Public,13.7,79.8,85.9,5.2,Masters,Medium,Yes,Yes,No,No,75.2,Good,Pass
+15,Male,Public,10.0,67.0,55.4,5.1,High School,Medium,Yes,No,No,No,45.6,At Risk,Fail
+21,Male,Public,17.0,75.3,54.9,8.1,Bachelors,Low,Yes,Yes,No,No,58.1,Average,Pass
+22,Female,Public,12.7,91.1,36.4,6.7,High School,Medium,Yes,Yes,No,Yes,74.1,Good,Pass
+20,Male,Public,26.8,83.1,61.4,6.9,Bachelors,Low,Yes,Yes,No,Yes,79.8,Good,Pass
+18,Male,Public,24.4,62.2,71.9,6.8,High School,High,Yes,No,No,No,70.2,Good,Pass
+16,Male,Private,19.4,90.2,74.5,5.3,Bachelors,Medium,Yes,Yes,No,No,77.7,Good,Pass
+20,Female,Public,17.6,79.9,63.6,5.9,Bachelors,Medium,Yes,Yes,Yes,No,68.1,Good,Pass
+18,Male,Public,14.4,73.5,76.3,6.0,PhD,High,No,Yes,No,No,81.4,Excellent,Pass
+16,Male,Public,6.2,89.0,73.0,5.0,Masters,Low,Yes,No,No,No,52.8,Average,Pass
+17,Male,Public,13.5,78.0,78.7,6.1,Bachelors,High,No,Yes,No,No,67.5,Good,Pass
+22,Female,Public,15.7,66.0,76.8,5.4,High School,Low,Yes,Yes,No,Yes,66.4,Good,Pass
+17,Male,Private,16.6,100.0,85.5,7.6,Masters,Low,Yes,No,Yes,No,80.5,Excellent,Pass
+16,Male,Public,18.3,79.8,59.5,7.7,Masters,Medium,Yes,No,No,Yes,79.3,Good,Pass
+20,Male,Public,21.4,79.0,42.1,5.1,Masters,Low,No,No,No,No,58.9,Average,Pass
+16,Female,Private,10.2,75.1,72.0,6.4,Bachelors,Medium,Yes,No,Yes,No,62.6,Average,Pass
+22,Female,Public,10.2,94.2,73.7,9.2,High School,Medium,Yes,No,No,No,61.5,Average,Pass
+21,Female,Public,25.2,73.7,85.5,5.5,Masters,High,No,No,No,No,86.8,Excellent,Pass
+22,Male,Public,20.4,61.5,81.2,7.4,High School,Low,No,No,Yes,No,61.7,Average,Pass
+22,Female,Private,12.3,71.9,91.2,6.9,High School,Low,Yes,No,No,No,72.1,Good,Pass
+16,Male,Public,14.2,95.9,71.3,8.2,High School,Low,Yes,Yes,No,No,78.5,Good,Pass
+16,Female,Private,14.3,90.0,65.4,7.2,Bachelors,Medium,Yes,Yes,No,Yes,72.6,Good,Pass
+17,Male,Private,15.2,76.9,41.2,6.2,High School,Low,Yes,Yes,Yes,Yes,71.0,Good,Pass
+18,Female,Private,18.3,96.5,66.6,6.9,Bachelors,Low,Yes,Yes,Yes,Yes,72.5,Good,Pass
+22,Female,Private,32.7,89.0,53.7,6.9,Bachelors,High,No,No,No,Yes,86.1,Excellent,Pass
+20,Male,Private,16.3,76.8,65.2,6.7,Bachelors,High,Yes,Yes,No,No,78.5,Good,Pass
+20,Female,Private,19.6,78.0,62.8,5.1,None,High,Yes,No,Yes,No,63.6,Average,Pass
+22,Male,Private,3.2,84.0,69.1,8.4,PhD,Low,Yes,No,No,Yes,62.6,Average,Pass
+20,Male,Private,11.6,70.0,60.5,8.2,High School,Medium,Yes,No,Yes,No,61.7,Average,Pass
+18,Male,Private,23.6,80.1,76.0,5.4,High School,Low,Yes,Yes,No,No,75.2,Good,Pass
+18,Female,Private,17.8,83.7,21.2,6.4,Bachelors,Medium,Yes,No,No,No,72.5,Good,Pass
+19,Male,Public,0.0,59.8,64.8,6.5,High School,Medium,No,Yes,Yes,No,37.9,At Risk,Fail
+15,Female,Public,19.7,77.7,80.0,5.3,Bachelors,High,Yes,Yes,No,No,72.9,Good,Pass
+20,Female,Public,28.4,76.4,90.1,4.4,None,Medium,Yes,No,No,No,70.0,Good,Pass
+20,Female,Private,1.0,92.3,73.0,5.9,Masters,Low,Yes,Yes,No,No,59.8,Average,Pass
+20,Female,Public,25.6,57.9,87.3,6.3,High School,Medium,No,No,No,No,77.9,Good,Pass
+19,Male,Private,0.0,75.4,64.5,4.9,PhD,High,Yes,Yes,Yes,Yes,52.9,Average,Pass
+21,Female,Private,21.6,74.2,62.0,7.0,Bachelors,Low,Yes,No,Yes,No,64.8,Average,Pass
+22,Male,Private,14.9,91.5,69.9,8.3,None,High,Yes,Yes,No,No,79.0,Good,Pass
+19,Female,Public,0.0,79.5,62.0,7.9,Bachelors,Low,Yes,No,No,No,61.0,Average,Pass
+18,Male,Private,18.1,100.0,50.3,6.6,High School,Low,Yes,Yes,Yes,No,66.0,Good,Pass
+15,Female,Private,23.1,87.9,54.3,4.4,PhD,High,Yes,No,No,No,83.1,Excellent,Pass
+21,Female,Private,17.5,75.1,45.3,7.7,Masters,Low,Yes,Yes,Yes,Yes,72.4,Good,Pass
+22,Female,Private,19.1,82.9,69.9,7.0,Bachelors,Medium,No,No,Yes,No,82.6,Excellent,Pass
+20,Male,Public,12.1,75.8,62.2,7.4,High School,Low,No,No,No,No,57.6,Average,Pass
+21,Female,Public,2.0,90.3,56.6,9.3,PhD,Medium,Yes,No,No,No,55.8,Average,Pass
+21,Male,Public,19.8,64.0,53.5,5.7,Bachelors,Medium,No,Yes,No,No,66.6,Good,Pass
+21,Male,Private,27.2,70.1,69.6,3.1,Bachelors,High,Yes,No,Yes,No,54.0,Average,Pass
+19,Male,Public,22.9,85.5,73.7,5.4,High School,High,Yes,No,No,No,80.2,Excellent,Pass
+15,Female,Private,1.1,94.7,45.0,7.4,High School,Medium,No,No,Yes,No,49.1,At Risk,Fail
+15,Female,Private,4.4,53.6,42.7,6.8,Bachelors,Medium,Yes,No,No,No,50.4,Average,Pass
+16,Female,Public,9.1,96.5,76.3,5.2,Bachelors,Low,Yes,No,No,No,60.6,Average,Pass
+18,Male,Public,3.8,78.3,41.4,5.0,Masters,Medium,Yes,No,No,No,44.7,At Risk,Fail
+20,Male,Public,15.3,57.4,70.2,6.3,Bachelors,Medium,Yes,No,No,No,70.5,Good,Pass
+18,Female,Private,17.8,44.0,86.3,5.2,Bachelors,Low,Yes,Yes,No,No,67.8,Good,Pass
+15,Male,Public,5.0,61.6,86.3,7.5,Bachelors,High,No,Yes,Yes,No,62.7,Average,Pass
+16,Male,Public,20.4,79.8,73.1,6.3,Masters,Low,Yes,No,Yes,No,75.4,Good,Pass
+22,Female,Private,19.2,79.2,72.6,6.0,High School,Low,Yes,No,No,No,63.6,Average,Pass
+22,Male,Public,11.2,87.6,95.8,5.8,Masters,High,Yes,No,Yes,No,71.4,Good,Pass
+18,Female,Private,13.8,73.4,27.0,7.1,High School,Medium,Yes,Yes,Yes,No,54.7,Average,Pass
+21,Female,Public,1.4,66.7,55.0,6.9,Bachelors,Medium,Yes,Yes,Yes,No,52.1,Average,Pass
+20,Female,Public,12.7,75.0,74.7,7.1,Masters,Low,Yes,Yes,No,No,74.4,Good,Pass
+22,Female,Public,15.1,80.4,56.9,7.0,Masters,Medium,Yes,No,No,No,66.2,Good,Pass
+22,Female,Public,16.2,82.8,80.6,6.7,High School,Medium,Yes,No,No,No,72.7,Good,Pass
+20,Female,Public,17.7,70.5,61.4,5.5,Bachelors,Low,Yes,Yes,No,Yes,59.4,Average,Pass
+18,Male,Private,16.7,90.8,64.0,5.9,High School,Medium,Yes,Yes,No,Yes,64.2,Average,Pass
+20,Male,Public,13.1,72.5,57.9,6.3,None,Low,Yes,Yes,Yes,No,52.9,Average,Pass
+17,Male,Public,17.0,69.6,54.2,9.5,Masters,Low,No,No,No,Yes,67.2,Good,Pass
+17,Female,Public,22.0,73.5,53.8,5.0,Masters,Low,Yes,No,No,Yes,68.3,Good,Pass
+19,Female,Public,14.3,92.9,66.1,6.3,None,Low,Yes,Yes,No,No,75.0,Good,Pass
+19,Male,Private,17.2,78.4,50.4,6.9,PhD,Low,Yes,Yes,No,Yes,72.7,Good,Pass
+19,Female,Public,13.7,71.7,76.3,6.4,High School,Medium,No,No,No,No,61.4,Average,Pass
+18,Male,Private,10.5,91.1,71.8,8.2,Masters,Medium,No,No,Yes,Yes,60.5,Average,Pass
+18,Female,Public,18.7,100.0,78.5,6.4,Masters,Low,Yes,No,No,Yes,81.7,Excellent,Pass
+15,Female,Public,11.1,82.5,45.1,6.5,Masters,Medium,Yes,No,No,No,54.4,Average,Pass
+19,Female,Public,17.7,94.8,36.5,7.9,Masters,Low,Yes,No,Yes,No,55.2,Average,Pass
+19,Male,Public,15.2,92.4,61.9,9.2,PhD,Medium,No,No,Yes,No,58.0,Average,Pass
+22,Male,Private,12.9,72.7,100.0,8.6,Bachelors,High,Yes,No,No,No,79.0,Good,Pass
+19,Female,Public,12.7,80.3,81.0,6.6,High School,Medium,Yes,Yes,No,No,66.1,Good,Pass
+18,Female,Public,11.4,64.6,53.7,6.7,High School,Medium,No,Yes,No,No,49.7,At Risk,Fail
+15,Female,Private,3.5,77.5,68.4,6.9,Masters,Low,Yes,Yes,Yes,No,57.5,Average,Pass
+16,Male,Public,17.7,72.5,72.9,7.0,High School,Low,Yes,No,No,No,59.0,Average,Pass
+17,Male,Private,16.6,75.2,41.5,5.7,Masters,Medium,Yes,No,Yes,Yes,62.5,Average,Pass
+18,Male,Private,20.9,71.0,82.5,8.0,High School,Medium,No,Yes,No,No,79.2,Good,Pass
+17,Female,Private,11.3,76.6,59.5,7.1,Masters,Medium,Yes,No,Yes,No,68.5,Good,Pass
+18,Male,Private,28.3,86.4,60.6,6.7,Bachelors,High,No,No,Yes,No,83.5,Excellent,Pass
+21,Male,Private,12.3,78.6,62.4,5.1,Masters,Low,Yes,Yes,No,No,59.1,Average,Pass
+16,Male,Public,8.9,57.6,79.2,6.9,PhD,High,Yes,No,Yes,No,62.9,Average,Pass
+17,Female,Private,8.0,71.0,50.7,4.3,High School,Medium,No,No,No,No,34.1,At Risk,Fail
+16,Female,Public,2.9,61.8,36.4,6.0,Bachelors,Low,Yes,Yes,Yes,No,46.8,At Risk,Fail
+17,Female,Private,25.7,82.9,66.8,6.1,High School,Low,Yes,No,No,No,77.2,Good,Pass
+20,Male,Private,24.6,86.0,31.3,7.2,Masters,Medium,Yes,Yes,Yes,Yes,75.8,Good,Pass
+15,Male,Public,19.2,83.1,57.5,9.2,Masters,Low,No,No,No,No,67.2,Good,Pass
+17,Male,Private,8.7,70.6,79.8,7.5,High School,Medium,Yes,No,Yes,No,60.3,Average,Pass
+15,Male,Private,27.7,83.0,70.7,8.7,None,Medium,Yes,No,No,No,81.2,Excellent,Pass
+22,Female,Public,12.5,74.4,77.6,7.6,High School,Medium,No,No,Yes,No,58.1,Average,Pass
+20,Female,Public,13.1,66.3,71.3,8.3,High School,Medium,No,Yes,No,No,57.8,Average,Pass
+16,Female,Private,25.1,88.9,98.2,9.2,Masters,Medium,No,Yes,No,Yes,97.7,Excellent,Pass
+16,Male,Private,19.6,89.8,53.2,5.8,High School,Medium,Yes,No,Yes,No,53.2,Average,Pass
+15,Male,Public,30.4,91.4,68.0,5.8,PhD,High,No,Yes,Yes,Yes,94.1,Excellent,Pass
+18,Female,Public,16.7,72.7,55.4,7.7,PhD,Low,No,No,Yes,Yes,61.5,Average,Pass
+21,Male,Private,12.2,94.2,76.4,6.8,Masters,High,Yes,Yes,Yes,No,65.5,Good,Pass
+19,Male,Public,10.7,74.1,61.1,7.1,Bachelors,Low,No,Yes,No,No,50.9,Average,Pass
+22,Male,Public,2.1,87.8,87.8,6.5,High School,Low,Yes,No,No,No,56.9,Average,Pass
+17,Male,Public,13.0,73.9,54.0,6.0,Masters,Medium,No,No,No,No,58.5,Average,Pass
+17,Female,Public,23.0,77.3,83.1,8.9,Bachelors,Low,Yes,No,No,No,83.6,Excellent,Pass
+18,Female,Public,19.2,50.9,70.9,5.4,PhD,Low,Yes,No,Yes,No,67.5,Good,Pass
+16,Male,Private,15.1,76.4,61.5,7.7,High School,Low,Yes,No,Yes,No,50.8,Average,Pass
+22,Female,Public,8.0,81.1,70.1,7.5,None,Medium,Yes,No,Yes,No,57.9,Average,Pass
+16,Male,Private,16.6,75.1,65.9,4.7,PhD,Medium,Yes,No,Yes,Yes,69.6,Good,Pass
+18,Male,Public,22.1,100.0,67.3,5.7,Masters,Low,Yes,No,No,No,80.0,Excellent,Pass
+19,Male,Public,18.0,66.1,58.9,5.9,High School,Medium,No,No,Yes,No,58.0,Average,Pass
+15,Female,Public,16.2,73.2,51.5,7.5,Bachelors,Low,Yes,No,Yes,No,49.1,At Risk,Fail
+18,Female,Public,9.4,69.1,57.0,6.3,None,High,Yes,Yes,Yes,No,47.3,At Risk,Fail
+18,Female,Public,21.1,73.2,36.8,6.7,Bachelors,Low,Yes,No,No,No,72.1,Good,Pass
+17,Male,Public,0.0,92.4,74.6,4.9,High School,Medium,Yes,Yes,Yes,No,43.6,At Risk,Fail
+16,Male,Public,17.7,97.7,43.5,9.8,High School,Medium,Yes,No,No,No,74.2,Good,Pass
+15,Female,Public,33.0,71.6,58.7,6.9,High School,Medium,Yes,No,No,Yes,79.6,Good,Pass
+15,Male,Private,4.4,71.3,71.7,7.4,High School,High,Yes,No,No,No,68.2,Good,Pass
+18,Male,Public,13.3,66.1,74.6,6.1,Bachelors,Low,Yes,No,No,No,59.3,Average,Pass
+15,Female,Private,14.9,95.7,35.4,6.0,High School,Medium,No,No,No,No,59.2,Average,Pass
+22,Female,Private,11.8,93.5,60.6,9.3,Bachelors,Medium,Yes,Yes,No,No,64.0,Average,Pass
+16,Male,Public,22.3,78.7,68.9,4.3,Bachelors,Medium,Yes,No,No,No,66.5,Good,Pass
+20,Male,Public,18.3,63.2,62.8,7.2,Bachelors,Medium,No,No,No,No,68.7,Good,Pass
+20,Female,Public,16.1,64.3,82.2,5.2,Bachelors,Low,No,Yes,No,Yes,59.3,Average,Pass
+18,Male,Public,20.6,82.0,49.7,6.3,High School,Low,Yes,Yes,Yes,Yes,71.3,Good,Pass
+22,Male,Public,15.1,86.6,31.3,6.0,None,Low,No,No,No,No,43.4,At Risk,Fail
+15,Male,Public,37.3,55.2,74.2,5.5,Masters,High,Yes,No,No,No,94.3,Excellent,Pass
+16,Male,Public,16.1,76.1,53.9,6.8,Masters,Medium,No,No,No,Yes,51.4,Average,Pass
+17,Female,Public,16.4,99.4,35.6,3.5,PhD,Low,Yes,No,No,No,44.0,At Risk,Fail
+16,Female,Private,3.0,77.4,59.6,6.4,PhD,Medium,Yes,No,No,No,64.7,Average,Pass
+17,Female,Private,11.2,97.9,80.5,6.7,Bachelors,Medium,Yes,Yes,No,No,79.8,Good,Pass
+17,Male,Private,23.0,87.8,43.1,5.0,Masters,Medium,Yes,No,No,No,74.0,Good,Pass
+21,Male,Public,5.7,67.0,97.0,8.8,High School,Medium,No,No,No,No,56.9,Average,Pass
+17,Female,Public,0.0,76.5,49.4,6.0,Masters,Medium,Yes,Yes,No,No,58.7,Average,Pass
+22,Male,Public,15.2,78.5,63.3,6.5,PhD,Low,Yes,No,Yes,Yes,71.6,Good,Pass
+21,Female,Private,24.6,68.6,43.7,6.0,Masters,Medium,Yes,Yes,Yes,No,66.5,Good,Pass
+22,Female,Public,15.3,68.4,62.6,6.7,High School,Low,Yes,Yes,No,No,67.6,Good,Pass
+15,Male,Public,12.6,98.1,60.0,8.5,High School,Low,No,No,Yes,No,60.8,Average,Pass
+22,Female,Public,2.0,68.3,39.7,10.0,High School,Medium,Yes,Yes,Yes,Yes,39.2,At Risk,Fail
+19,Female,Private,18.2,92.9,100.0,7.8,High School,Medium,Yes,No,No,No,82.3,Excellent,Pass
+22,Male,Public,19.6,74.8,54.6,8.2,Masters,High,Yes,No,No,No,77.9,Good,Pass
+17,Female,Public,2.5,79.7,54.6,9.0,Bachelors,Low,No,No,Yes,No,47.4,At Risk,Fail
+22,Male,Public,22.9,86.7,76.5,7.1,High School,Medium,No,No,Yes,Yes,79.6,Good,Pass
+19,Female,Public,20.4,72.8,89.2,8.8,Bachelors,High,Yes,Yes,No,No,75.8,Good,Pass
+15,Female,Public,22.9,86.8,78.9,7.8,High School,Medium,Yes,Yes,No,No,80.2,Excellent,Pass
+18,Male,Public,19.1,55.4,44.0,7.0,Bachelors,High,No,No,No,No,57.4,Average,Pass
+16,Female,Public,19.6,85.3,65.2,7.3,High School,High,No,Yes,Yes,No,66.2,Good,Pass
+22,Male,Private,18.6,50.4,33.8,4.4,Bachelors,High,Yes,Yes,No,No,37.8,At Risk,Fail
+17,Female,Public,21.1,77.3,75.5,7.2,Bachelors,High,Yes,Yes,No,No,96.1,Excellent,Pass
+16,Female,Private,2.3,90.3,37.5,4.8,Bachelors,Medium,Yes,No,No,No,34.7,At Risk,Fail
+19,Female,Public,4.5,87.5,50.0,4.7,Masters,Medium,Yes,Yes,No,No,43.5,At Risk,Fail
+18,Female,Private,9.8,64.4,62.0,7.1,High School,High,Yes,Yes,No,No,50.2,Average,Pass
+15,Male,Public,14.1,66.0,68.7,5.4,Bachelors,High,No,No,No,No,64.6,Average,Pass
+21,Female,Private,17.7,71.7,58.1,6.8,High School,Low,Yes,No,No,No,62.8,Average,Pass
+21,Male,Public,17.3,82.2,84.8,7.0,Bachelors,Low,No,Yes,No,No,70.9,Good,Pass
+20,Female,Private,22.8,55.6,72.8,7.0,Bachelors,Low,Yes,No,No,No,71.7,Good,Pass
+19,Male,Public,23.0,79.8,71.7,5.6,Bachelors,High,Yes,No,No,Yes,86.7,Excellent,Pass
+18,Female,Private,8.9,83.7,43.6,8.0,Masters,Low,Yes,No,No,Yes,57.0,Average,Pass
+19,Male,Private,16.7,76.6,87.5,6.7,High School,Low,Yes,Yes,No,No,61.4,Average,Pass
+19,Female,Public,9.1,86.3,50.0,7.4,Masters,Medium,No,Yes,No,No,51.6,Average,Pass
+16,Male,Public,13.7,82.7,88.1,5.2,High School,Low,Yes,Yes,No,Yes,60.2,Average,Pass
+15,Female,Public,17.3,73.5,92.3,6.6,Bachelors,High,Yes,No,No,No,83.6,Excellent,Pass
+17,Male,Public,0.0,56.8,69.7,8.2,Masters,Medium,No,Yes,No,No,53.2,Average,Pass
+18,Male,Public,31.9,81.6,77.5,8.1,Bachelors,Low,Yes,No,Yes,No,96.7,Excellent,Pass
+16,Male,Public,19.0,68.6,15.8,5.8,Masters,Low,Yes,Yes,Yes,Yes,44.6,At Risk,Fail
+15,Male,Public,10.8,73.1,59.1,6.1,Masters,Medium,No,Yes,No,No,62.2,Average,Pass
+21,Female,Public,28.5,85.7,78.5,5.5,High School,Medium,Yes,No,Yes,Yes,79.5,Good,Pass
+17,Male,Private,12.6,97.0,75.9,5.9,PhD,Medium,Yes,No,No,No,93.2,Excellent,Pass
+19,Male,Public,15.9,79.5,43.7,5.0,PhD,Low,Yes,Yes,Yes,Yes,67.3,Good,Pass
+19,Male,Private,11.6,86.6,57.6,6.6,High School,High,Yes,Yes,No,No,76.8,Good,Pass
+20,Male,Public,26.6,62.7,24.0,7.6,None,Medium,Yes,No,No,No,66.8,Good,Pass
+20,Female,Public,14.3,82.9,68.2,5.8,High School,Medium,No,Yes,No,No,63.3,Average,Pass
+17,Female,Public,16.0,79.3,33.8,6.7,Masters,Medium,Yes,No,No,No,61.2,Average,Pass
+21,Male,Private,23.4,94.8,79.0,6.5,PhD,High,No,No,No,No,85.0,Excellent,Pass
+17,Female,Public,19.1,73.5,79.7,8.2,Masters,Medium,Yes,Yes,Yes,Yes,76.6,Good,Pass
+21,Female,Private,14.6,77.1,54.9,6.0,High School,Medium,Yes,No,No,No,64.3,Average,Pass
+18,Female,Public,22.8,92.7,69.8,6.1,None,High,Yes,Yes,Yes,Yes,89.0,Excellent,Pass
+15,Female,Public,32.8,78.9,58.7,5.7,Bachelors,High,Yes,No,No,Yes,88.5,Excellent,Pass
+21,Female,Public,17.2,66.7,65.6,5.3,High School,Medium,Yes,No,No,Yes,59.7,Average,Pass
+15,Male,Public,15.8,100.0,44.8,7.5,High School,Medium,No,No,No,No,53.2,Average,Pass
+21,Female,Public,16.2,67.1,71.3,6.6,High School,Medium,No,No,No,No,63.7,Average,Pass
+15,Male,Public,24.2,79.2,37.4,6.9,High School,Medium,Yes,No,No,Yes,79.8,Good,Pass
+16,Male,Public,10.8,84.2,34.6,8.5,High School,Low,Yes,Yes,Yes,No,56.7,Average,Pass
+19,Female,Public,13.1,83.2,60.2,8.5,Masters,Medium,No,Yes,No,No,73.1,Good,Pass
+22,Male,Public,4.2,77.7,58.8,4.7,High School,Medium,Yes,Yes,Yes,Yes,45.8,At Risk,Fail
+18,Female,Private,6.7,77.8,66.1,7.6,High School,Low,Yes,No,No,No,55.7,Average,Pass
+15,Female,Public,11.4,77.2,52.3,7.1,Bachelors,High,Yes,No,No,No,72.7,Good,Pass
+16,Female,Public,14.6,66.6,90.3,6.2,PhD,Low,Yes,No,No,No,67.0,Good,Pass
+22,Male,Private,27.4,100.0,64.4,7.2,Masters,High,Yes,No,No,Yes,94.6,Excellent,Pass
+20,Male,Public,18.8,77.4,65.5,4.6,Bachelors,Low,No,No,Yes,Yes,64.9,Average,Pass
+15,Male,Public,8.6,87.2,65.0,8.7,Bachelors,Low,Yes,Yes,Yes,No,52.1,Average,Pass
+18,Female,Private,9.9,76.0,77.0,7.5,Bachelors,Low,Yes,Yes,No,No,66.0,Good,Pass
+17,Male,Private,24.6,75.7,70.6,5.7,Bachelors,Medium,No,No,Yes,No,73.8,Good,Pass
+16,Female,Private,22.9,74.5,68.6,6.0,Bachelors,Medium,Yes,Yes,No,Yes,81.8,Excellent,Pass
+21,Male,Public,15.2,61.4,73.0,4.6,Bachelors,Low,Yes,Yes,No,No,62.9,Average,Pass
+19,Male,Private,11.9,78.1,34.6,6.4,Bachelors,Medium,Yes,Yes,No,Yes,69.7,Good,Pass
+16,Male,Public,22.9,75.1,35.2,6.2,High School,Medium,No,No,No,No,62.3,Average,Pass
+20,Male,Private,8.0,94.1,60.9,5.1,High School,Low,Yes,Yes,No,No,60.3,Average,Pass
+18,Male,Private,17.7,65.6,59.0,7.8,High School,Low,Yes,No,No,Yes,60.4,Average,Pass
+15,Male,Private,30.9,73.1,70.7,8.5,High School,Low,Yes,Yes,No,No,82.6,Excellent,Pass
+18,Female,Public,16.4,69.2,62.3,6.8,Bachelors,Low,No,Yes,No,No,76.5,Good,Pass
+16,Female,Public,9.6,97.3,70.7,6.4,Bachelors,Low,No,No,No,No,72.1,Good,Pass
+16,Female,Private,17.9,69.6,43.3,7.4,High School,Medium,Yes,No,Yes,No,51.7,Average,Pass
+22,Male,Public,11.7,86.7,61.8,6.8,High School,Medium,No,No,No,No,58.8,Average,Pass
+20,Male,Public,5.2,91.6,41.9,5.4,High School,High,Yes,Yes,No,Yes,54.4,Average,Pass
+16,Female,Private,19.9,78.2,67.8,6.0,Bachelors,Medium,No,No,No,No,71.1,Good,Pass
+21,Female,Public,22.8,63.5,33.8,6.4,High School,Medium,Yes,No,No,No,69.9,Good,Pass
+19,Female,Public,12.8,63.6,67.2,7.1,None,Low,Yes,No,No,No,67.2,Good,Pass
+21,Male,Public,12.4,90.3,40.0,6.8,None,Low,No,Yes,Yes,No,46.6,At Risk,Fail
+20,Male,Public,8.3,64.9,56.2,7.1,Bachelors,Medium,Yes,No,Yes,Yes,63.6,Average,Pass
+17,Female,Public,14.0,84.7,75.4,4.8,High School,Low,Yes,Yes,No,Yes,66.1,Good,Pass
+19,Female,Public,11.1,81.4,65.4,7.7,Bachelors,Low,Yes,No,No,Yes,66.6,Good,Pass
+19,Female,Private,7.9,84.5,37.3,6.8,Bachelors,High,Yes,No,No,No,47.5,At Risk,Fail
+20,Female,Private,28.2,85.7,51.9,10.0,PhD,Low,Yes,No,No,No,81.8,Excellent,Pass
+16,Male,Public,18.3,68.8,39.5,6.3,Bachelors,Low,Yes,Yes,No,No,64.6,Average,Pass
+17,Female,Public,19.0,68.3,36.6,7.2,None,High,Yes,Yes,No,No,65.1,Good,Pass
+16,Female,Private,21.2,88.6,63.8,10.0,High School,Low,Yes,Yes,No,No,60.3,Average,Pass
+17,Female,Private,20.4,72.4,70.4,7.1,Masters,Medium,Yes,No,Yes,No,87.5,Excellent,Pass
+16,Female,Private,12.1,47.0,68.6,6.7,High School,Low,Yes,Yes,No,No,56.9,Average,Pass
+15,Male,Public,16.9,87.8,71.0,5.5,Masters,Medium,No,Yes,No,No,62.7,Average,Pass
+22,Female,Private,13.1,67.6,61.8,8.8,Bachelors,High,Yes,Yes,Yes,No,56.4,Average,Pass
+15,Male,Public,18.1,85.6,57.9,5.3,None,Medium,Yes,Yes,No,No,66.2,Good,Pass
+22,Female,Public,17.4,96.7,45.9,7.4,High School,Medium,Yes,No,Yes,No,69.8,Good,Pass
+15,Male,Private,12.3,80.2,55.4,6.2,Masters,Low,Yes,Yes,No,No,60.2,Average,Pass
+21,Female,Public,5.7,91.9,42.2,6.6,PhD,Medium,Yes,No,No,No,61.5,Average,Pass
+17,Female,Public,16.0,81.8,49.3,4.9,Masters,Medium,Yes,No,Yes,No,61.6,Average,Pass
+19,Male,Public,13.6,99.0,63.3,8.5,High School,Low,Yes,No,No,No,66.2,Good,Pass
+17,Male,Public,1.8,67.3,60.2,6.4,Masters,Low,Yes,No,No,Yes,47.6,At Risk,Fail
+18,Female,Public,18.6,79.9,100.0,5.2,High School,Medium,Yes,No,Yes,No,77.9,Good,Pass
+18,Male,Private,21.8,88.1,41.8,8.4,High School,High,Yes,No,No,No,77.3,Good,Pass
+19,Female,Public,32.7,77.7,60.1,6.1,Bachelors,High,No,Yes,No,Yes,92.6,Excellent,Pass
+18,Female,Public,12.3,93.8,40.6,7.2,PhD,High,Yes,No,No,No,65.3,Good,Pass
+19,Female,Private,11.2,74.8,56.2,7.9,High School,Medium,No,Yes,No,Yes,51.0,Average,Pass
+21,Male,Public,7.2,100.0,56.8,7.4,Bachelors,Medium,Yes,Yes,Yes,No,62.8,Average,Pass
+18,Male,Private,16.5,100.0,74.7,3.9,High School,High,Yes,No,No,Yes,70.7,Good,Pass
+17,Female,Public,16.4,83.4,55.3,7.7,High School,Low,Yes,No,No,Yes,73.5,Good,Pass
+16,Female,Public,9.3,86.6,59.1,6.7,None,Medium,Yes,Yes,Yes,No,59.1,Average,Pass
+17,Female,Public,13.8,94.3,55.5,6.4,Masters,Low,Yes,Yes,No,Yes,68.8,Good,Pass
+16,Male,Private,1.1,65.8,41.0,6.7,None,High,Yes,Yes,No,No,37.3,At Risk,Fail
+16,Female,Public,21.5,64.3,52.2,4.7,Bachelors,High,Yes,No,No,No,63.0,Average,Pass
+22,Female,Private,9.6,95.1,56.3,7.0,High School,High,Yes,Yes,No,No,66.5,Good,Pass
+15,Female,Public,14.8,83.3,63.1,5.0,Bachelors,Low,Yes,No,No,Yes,68.8,Good,Pass
+18,Male,Public,5.0,77.3,70.4,6.4,High School,High,Yes,Yes,No,Yes,60.4,Average,Pass
+21,Female,Public,10.9,80.1,58.5,7.0,High School,Low,Yes,No,No,Yes,58.5,Average,Pass
+22,Female,Public,13.0,51.4,58.2,8.2,Bachelors,Low,Yes,No,Yes,No,65.9,Good,Pass
+16,Male,Public,14.9,77.7,36.2,5.7,Bachelors,Medium,Yes,No,No,No,66.6,Good,Pass
+16,Female,Public,18.4,71.0,70.1,8.7,PhD,Medium,Yes,No,Yes,No,68.0,Good,Pass
+17,Female,Public,25.1,91.0,51.6,8.0,High School,High,Yes,Yes,Yes,Yes,90.7,Excellent,Pass
+19,Male,Public,20.1,91.9,73.2,6.2,Bachelors,Low,Yes,No,Yes,Yes,69.9,Good,Pass
+22,Female,Public,21.7,86.9,81.7,5.4,Masters,Medium,No,Yes,No,Yes,77.6,Good,Pass
+16,Female,Public,25.1,84.7,59.2,4.9,High School,Medium,Yes,Yes,No,Yes,72.1,Good,Pass
+16,Female,Public,19.0,62.0,46.7,7.2,Masters,Low,Yes,Yes,No,No,65.8,Good,Pass
+17,Male,Public,14.7,87.1,61.7,5.8,PhD,High,Yes,No,No,Yes,81.0,Excellent,Pass
+21,Female,Public,22.1,87.6,67.2,8.4,Masters,Low,Yes,No,No,No,79.9,Good,Pass
+15,Female,Public,22.5,94.9,57.3,5.9,Bachelors,Low,Yes,Yes,Yes,Yes,79.1,Good,Pass
+18,Male,Public,19.5,100.0,53.5,5.6,Bachelors,Medium,No,No,Yes,No,61.7,Average,Pass
+15,Female,Private,4.8,59.7,70.5,7.1,Bachelors,Medium,Yes,Yes,Yes,No,56.8,Average,Pass
+16,Male,Public,9.1,75.3,69.5,5.9,Bachelors,High,Yes,Yes,No,Yes,68.8,Good,Pass
+22,Male,Public,13.1,71.1,56.8,6.8,PhD,Low,No,Yes,Yes,No,49.7,At Risk,Fail
+15,Female,Private,20.5,82.1,37.2,8.1,High School,Low,Yes,No,No,No,65.7,Good,Pass
+17,Male,Public,14.9,80.2,68.8,7.0,Masters,High,Yes,No,No,No,77.0,Good,Pass
+22,Male,Public,23.0,77.2,50.5,7.0,Bachelors,Medium,Yes,Yes,No,No,71.8,Good,Pass
+19,Male,Private,24.2,92.3,65.2,7.1,High School,Medium,Yes,Yes,No,No,79.9,Good,Pass
+15,Female,Private,23.4,66.8,64.3,4.6,Bachelors,Low,No,No,No,No,55.2,Average,Pass
+18,Male,Private,23.4,67.5,33.7,7.3,Masters,High,Yes,No,Yes,Yes,71.9,Good,Pass
+22,Female,Public,7.7,67.7,63.2,7.0,Bachelors,Medium,No,Yes,No,No,66.0,Good,Pass
+18,Female,Public,18.4,75.7,69.7,8.0,Masters,Low,Yes,No,Yes,No,83.4,Excellent,Pass
+19,Female,Private,10.7,65.3,71.6,7.6,High School,Low,No,No,No,No,37.3,At Risk,Fail
+19,Female,Private,3.5,79.4,63.8,6.5,Masters,Low,No,No,Yes,No,49.7,At Risk,Fail
+20,Male,Public,13.0,78.0,32.3,8.1,Bachelors,Low,No,Yes,No,Yes,60.0,Average,Pass
+16,Male,Public,24.3,70.6,81.2,6.4,Masters,Low,No,No,No,No,75.4,Good,Pass
+21,Female,Public,18.2,90.5,68.2,7.1,High School,Low,Yes,No,No,No,77.2,Good,Pass
+22,Female,Public,29.1,79.3,44.0,6.4,High School,Low,Yes,Yes,No,Yes,87.3,Excellent,Pass
+16,Female,Private,16.2,92.8,50.2,7.4,Masters,Medium,Yes,No,Yes,No,61.4,Average,Pass
+21,Male,Public,32.1,77.7,65.5,6.3,None,Medium,Yes,No,No,No,83.0,Excellent,Pass
+21,Male,Public,16.2,79.7,72.2,8.9,High School,Medium,Yes,No,No,No,80.2,Excellent,Pass
+20,Female,Public,15.2,73.2,54.7,9.4,Masters,High,Yes,No,Yes,Yes,58.8,Average,Pass
+17,Female,Public,6.0,79.9,74.4,7.9,Bachelors,Low,Yes,Yes,Yes,No,57.9,Average,Pass
+18,Male,Public,22.8,88.5,35.1,8.8,Masters,High,Yes,No,Yes,Yes,72.6,Good,Pass
+21,Female,Public,11.5,75.1,46.4,4.8,Bachelors,High,No,Yes,Yes,No,52.7,Average,Pass
+16,Female,Public,10.5,86.2,31.0,5.0,PhD,High,Yes,No,No,No,61.9,Average,Pass
+21,Male,Private,24.0,70.2,48.5,6.4,Bachelors,Low,No,Yes,Yes,No,63.8,Average,Pass
+22,Female,Public,23.1,89.1,84.6,6.9,Bachelors,Low,Yes,Yes,No,No,86.2,Excellent,Pass
+20,Male,Public,22.9,73.0,92.9,6.5,Masters,Medium,No,No,Yes,Yes,72.2,Good,Pass
+17,Male,Public,12.5,90.2,65.5,4.7,Bachelors,Low,Yes,No,No,No,64.6,Average,Pass
+19,Male,Public,14.6,80.7,52.4,8.3,High School,Low,Yes,No,Yes,No,54.8,Average,Pass
+15,Female,Public,14.6,98.3,58.7,9.6,High School,Low,Yes,No,No,Yes,62.5,Average,Pass
+22,Female,Public,20.5,66.2,69.1,8.5,Bachelors,Medium,No,Yes,No,No,76.4,Good,Pass
+17,Female,Public,25.9,62.3,38.6,8.2,Masters,High,Yes,Yes,No,No,78.5,Good,Pass
+15,Female,Public,17.6,72.6,53.4,7.1,Bachelors,Low,No,No,No,Yes,69.5,Good,Pass
+21,Male,Private,28.8,63.4,83.5,5.7,Masters,High,No,Yes,No,No,89.3,Excellent,Pass
+20,Male,Public,21.3,63.4,46.3,6.9,Masters,Medium,Yes,No,No,No,71.5,Good,Pass
+19,Male,Public,13.4,87.5,50.8,9.5,High School,Low,Yes,No,No,No,56.4,Average,Pass
+15,Female,Public,20.8,79.9,62.2,6.3,Bachelors,Medium,No,No,No,No,63.1,Average,Pass
+21,Female,Public,26.9,74.2,66.2,6.2,Bachelors,Low,No,No,Yes,Yes,72.5,Good,Pass
+20,Female,Public,29.0,75.4,52.6,8.2,High School,High,Yes,No,Yes,Yes,87.9,Excellent,Pass
+21,Male,Public,23.3,72.8,63.2,8.3,Bachelors,Medium,Yes,No,Yes,Yes,71.9,Good,Pass
+21,Male,Public,15.2,99.8,71.1,5.7,Bachelors,Medium,Yes,No,No,Yes,71.4,Good,Pass
+16,Male,Public,13.5,71.2,91.4,6.5,Masters,Medium,Yes,No,Yes,No,67.3,Good,Pass
+16,Male,Private,19.0,64.1,60.1,6.1,Bachelors,Low,No,Yes,Yes,No,59.4,Average,Pass
+22,Male,Private,26.7,89.6,61.4,6.9,None,High,No,No,No,No,85.2,Excellent,Pass
+19,Female,Private,18.0,77.4,84.9,8.2,Bachelors,High,Yes,Yes,No,No,86.8,Excellent,Pass
+18,Female,Public,18.2,100.0,53.8,5.8,Masters,Medium,Yes,No,No,No,60.2,Average,Pass
+17,Male,Public,15.4,73.7,42.1,8.2,Bachelors,Medium,Yes,No,No,No,66.2,Good,Pass
+20,Male,Public,12.7,90.2,65.8,6.9,High School,Low,No,No,Yes,No,53.6,Average,Pass
+21,Female,Public,13.9,93.0,78.1,9.8,Masters,Low,Yes,Yes,No,Yes,75.3,Good,Pass
+15,Male,Public,15.9,73.7,67.4,7.2,High School,Low,Yes,No,Yes,Yes,64.3,Average,Pass
+19,Male,Public,27.0,71.1,60.5,6.7,High School,Medium,Yes,Yes,Yes,No,70.8,Good,Pass
+22,Female,Public,13.3,88.9,40.3,7.5,High School,Medium,Yes,No,No,No,60.0,Average,Pass
+17,Female,Public,15.4,86.9,61.1,6.4,Bachelors,High,Yes,No,Yes,No,67.2,Good,Pass
+17,Female,Public,8.9,63.1,80.5,4.5,Masters,Low,No,No,No,Yes,50.8,Average,Pass
