@@ -19,7 +19,10 @@ def load_data(path: str = DATA_PATH) -> pd.DataFrame:
         df = generate_dataset()
         df.to_csv(path, index=False)
         return df
-    return pd.read_csv(path)
+    # keep_default_na=False: several categorical values (e.g. "None" for
+    # parental_education) collide with pandas' default NA sentinel strings
+    # and would otherwise be silently read in as NaN.
+    return pd.read_csv(path, keep_default_na=False, na_values=[])
 
 
 def build_preprocessor() -> ColumnTransformer:

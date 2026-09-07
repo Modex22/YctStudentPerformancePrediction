@@ -20,9 +20,9 @@ import pandas as pd
 RANDOM_SEED = 42
 N_STUDENTS = 2000
 
-PARENTAL_EDUCATION_LEVELS = ["None", "High School", "Bachelors", "Masters", "PhD"]
+PARENTAL_EDUCATION_LEVELS = ["No Formal Education", "High School", "Bachelors", "Masters", "PhD"]
 PARENTAL_EDUCATION_BONUS = {
-    "None": -4,
+    "No Formal Education": -4,
     "High School": -1,
     "Bachelors": 2,
     "Masters": 4,

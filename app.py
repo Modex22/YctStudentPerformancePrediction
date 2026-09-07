@@ -17,7 +17,7 @@ FORM_FIELDS = [
     {"name": "previous_grade", "label": "Previous term grade (0-100)", "type": "number", "min": 0, "max": 100, "default": 60},
     {"name": "sleep_hours", "label": "Average sleep hours / night", "type": "number", "min": 0, "max": 12, "default": 7, "step": "0.5"},
     {"name": "parental_education", "label": "Parental education", "type": "select",
-     "options": ["None", "High School", "Bachelors", "Masters", "PhD"]},
+     "options": ["No Formal Education", "High School", "Bachelors", "Masters", "PhD"]},
     {"name": "family_income_level", "label": "Family income level", "type": "select", "options": ["Low", "Medium", "High"]},
     {"name": "internet_access", "label": "Internet access at home", "type": "select", "options": ["Yes", "No"]},
     {"name": "extracurricular_activities", "label": "Extracurricular activities", "type": "select", "options": ["Yes", "No"]},
