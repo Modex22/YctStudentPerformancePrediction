@@ -82,6 +82,23 @@ automatically the first time a prediction is requested.
 python app.py
 ```
 
+## Static client-side demo (no server)
+
+`src/export_web_model.py` walks the fitted scikit-learn pipelines (every
+tree's feature/threshold/children/value arrays, plus the scaler and one-hot
+encoder parameters) into a JSON file, and `src/export_web_charts.py` exports
+the feature-importance and actual-vs-predicted data used by the demo's
+charts. A small hand-written JS predictor walks those same trees, so
+predictions match the Python model bit-for-bit with nothing running
+server-side:
+
+```bash
+python -m src.export_web_model web_demo_model.json
+python -m src.export_web_charts web_demo_charts.json
+```
+
+Used to build the "Grade Forecast" artifact demo.
+
 Then open http://localhost:5000, fill in the form, and submit to see the
 prediction. Visit `/about` for model comparison metrics and charts.
 
