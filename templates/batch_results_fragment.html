@@ -1,0 +1,119 @@
+{% set s = outcome.summary %}
+{% set classification_class = {
+    "Fail": "badge-risk",
+    "Pass": "badge-average",
+    "Lower Credit": "badge-average",
+    "Upper Credit": "badge-good",
+    "Distinction": "badge-excellent"
+} %}
+
+{% if outcome.truncated %}
+  <div class="batch-notice">Only the first {{ s.n_students }} rows were processed (file had {{ outcome.n_input_rows }}+ rows).</div>
+{% endif %}
+
+{% if outcome.warnings %}
+  <details class="batch-warnings">
+    <summary>{{ outcome.warnings|length }} row warning(s) — click to review</summary>
+    <ul>
+      {% for w in outcome.warnings %}<li>{{ w }}</li>{% endfor %}
+    </ul>
+  </details>
+{% endif %}
+
+<div class="stat-tiles">
+  <div class="stat-tile">
+    <span class="stat-value">{{ s.n_students }}</span>
+    <span class="stat-label">Students scored</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ s.avg_score }}</span>
+    <span class="stat-label">Average score</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ s.pass_rate }}%</span>
+    <span class="stat-label">Predicted pass rate</span>
+  </div>
+  <div class="stat-tile stat-tile-risk">
+    <span class="stat-value">{{ s.at_risk_count }}</span>
+    <span class="stat-label">At risk</span>
+  </div>
+</div>
+
+<div class="dashboard-grid">
+  <div class="panel chart-card">
+    <h3>Classification breakdown</h3>
+    {% set max_class = (s.classification_counts.values() | list | max) or 1 %}
+    <div class="hbar-list">
+      {% for label, count in s.classification_counts.items() %}
+        <div class="hbar-row">
+          <span class="hbar-label">{{ label }}</span>
+          <div class="hbar-track"><div class="hbar-fill {{ classification_class.get(label, '') }}" style="width: {{ (count / max_class * 100) if max_class else 0 }}%"></div></div>
+          <span class="hbar-count">{{ count }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="panel chart-card">
+    <h3>Score distribution</h3>
+    {% set max_bucket = (s.histogram | map(attribute='count') | list | max) or 1 %}
+    <div class="hbar-list">
+      {% for bucket in s.histogram %}
+        <div class="hbar-row">
+          <span class="hbar-label">{{ bucket.range }}</span>
+          <div class="hbar-track"><div class="hbar-fill hbar-fill-accent" style="width: {{ (bucket.count / max_bucket * 100) if max_bucket else 0 }}%"></div></div>
+          <span class="hbar-count">{{ bucket.count }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% if s.at_risk_list %}
+  <div class="panel at-risk-panel">
+    <h3>At-risk students <span class="muted">(lowest predicted score first)</span></h3>
+    <ul class="at-risk-list">
+      {% for r in s.at_risk_list %}
+        <li>
+          <span class="at-risk-name">{{ r.display_name }}</span>
+          <span class="badge badge-risk">{{ r.predicted_score }}</span>
+          <span class="at-risk-note">{{ r.counsellor_note }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<div class="panel">
+  <div class="table-wrap">
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Score</th>
+          <th>Classification</th>
+          <th>Outcome</th>
+          <th>Counsellor's note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in outcome.results %}
+          <tr>
+            <td>
+              <div class="student-cell">
+                <span>{{ r.display_name }}</span>
+                {% if r.identity.department or r.identity.level %}
+                  <span class="muted small">{{ r.identity.department }}{% if r.identity.department and r.identity.level %} &middot; {% endif %}{{ r.identity.level }}</span>
+                {% endif %}
+              </div>
+            </td>
+            <td class="tabular">{{ r.predicted_score }}</td>
+            <td><span class="badge {{ classification_class.get(r.classification, '') }}">{{ r.classification }}</span></td>
+            <td><span class="badge {{ 'badge-good' if r.pass_fail == 'Pass' else 'badge-risk' }}">{{ r.pass_fail }}</span></td>
+            <td class="note-cell">{{ r.counsellor_note }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

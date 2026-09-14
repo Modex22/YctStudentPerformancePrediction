@@ -14,6 +14,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 body {
   margin: 0;
@@ -203,4 +204,205 @@ h1 { margin-bottom: 0.25rem; }
   color: var(--muted);
   font-size: 0.85rem;
   padding: 1.5rem;
+}
+
+/* ---- Batch upload workflow ---- */
+
+.container-wide { max-width: 1140px; }
+
+.upload-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2.5rem 1.5rem;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--muted);
+  cursor: pointer;
+  text-align: center;
+}
+.dropzone:hover { border-color: var(--primary); color: var(--primary); }
+.dropzone-title { font-weight: 600; color: var(--text); }
+.dropzone-sub { font-size: 0.85rem; }
+
+.upload-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+.upload-actions .btn-primary { margin: 0; }
+.upload-actions .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-secondary.small-btn { margin: 0; padding: 0.6rem 1.1rem; }
+.upload-actions .btn-secondary { margin: 0; padding: 0.65rem 1.2rem; }
+.btn-link { color: var(--primary); font-size: 0.9rem; text-decoration: underline; }
+
+/* Scanner animation */
+.scanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.scan-doc {
+  position: relative;
+  width: 260px;
+  height: 176px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scan-row { height: 10px; border-radius: 3px; background: var(--border); }
+.scan-row:nth-child(odd) { width: 88%; }
+.scan-row:nth-child(even) { width: 62%; }
+.scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(51, 102, 204, 0.35), transparent);
+  animation: scan-sweep 1.7s ease-in-out infinite;
+}
+@keyframes scan-sweep {
+  0% { top: -50px; }
+  50% { top: 160px; }
+  100% { top: -50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scan-beam { animation: none; top: 63px; opacity: 0.5; }
+}
+.scan-status { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+
+#results.results-loading { opacity: 0.4; }
+
+.empty-state {
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.batch-notice, .batch-warnings, .batch-error {
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.batch-notice { background: rgba(217, 154, 43, 0.12); color: #7a5716; border: 1px solid rgba(217, 154, 43, 0.35); }
+.batch-warnings { background: var(--surface); border: 1px solid var(--border); }
+.batch-warnings summary { cursor: pointer; font-weight: 600; }
+.batch-warnings ul { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+.batch-warnings li { margin-bottom: 0.3rem; }
+.batch-error { background: rgba(214, 69, 69, 0.1); color: #8f2f2f; border: 1px solid rgba(214, 69, 69, 0.3); }
+
+/* Dashboard */
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.stat-tile-risk { border-color: rgba(214, 69, 69, 0.4); }
+.stat-value { font-size: 1.6rem; font-weight: 700; }
+.stat-label { font-size: 0.8rem; color: var(--muted); }
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 760px) { .dashboard-grid { grid-template-columns: 1fr; } }
+
+.chart-card { padding: 1.1rem 1.25rem; }
+.chart-card h3 { margin: 0 0 0.9rem; font-size: 1rem; }
+
+.hbar-list { display: flex; flex-direction: column; gap: 0.55rem; }
+.hbar-row { display: grid; grid-template-columns: 110px 1fr 32px; align-items: center; gap: 0.6rem; }
+.hbar-label { font-size: 0.82rem; color: var(--muted); }
+.hbar-track { background: var(--bg); border-radius: 999px; height: 10px; overflow: hidden; }
+.hbar-fill { height: 100%; border-radius: 999px; }
+.hbar-fill-accent { background: var(--primary); }
+.hbar-count { font-size: 0.82rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+.at-risk-panel { padding: 1.1rem 1.25rem; margin-bottom: 1.5rem; }
+.at-risk-panel h3 { margin: 0 0 0.9rem; font-size: 1rem; }
+.at-risk-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.at-risk-list li {
+  display: grid;
+  grid-template-columns: 140px 60px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.at-risk-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.at-risk-name { font-weight: 600; font-size: 0.9rem; }
+.at-risk-note { font-size: 0.85rem; color: var(--muted); }
+
+.results-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.results-table th, .results-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.student-cell { display: flex; flex-direction: column; gap: 0.15rem; }
+.small { font-size: 0.78rem; }
+.tabular { font-variant-numeric: tabular-nums; font-weight: 600; }
+.note-cell { color: var(--muted); max-width: 320px; }
+
+.counsellor-note {
+  background: rgba(51, 102, 204, 0.06);
+  border: 1px solid rgba(51, 102, 204, 0.2);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.counsellor-note-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.counsellor-note p { margin: 0; }
+
+.disclaimer {
+  background: rgba(217, 154, 43, 0.1);
+  border: 1px solid rgba(217, 154, 43, 0.3);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.15rem;
+  font-size: 0.88rem;
+  color: #7a5716;
+  margin-bottom: 1.5rem;
 }

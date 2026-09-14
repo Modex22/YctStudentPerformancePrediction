@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Student Performance Prediction{% endblock %}</title>
+  <title>{% block title %}YABATECH Student Performance Predictor{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="{{ url_for('index') }}">🎓 Student Performance Predictor</a>
+    <a class="brand" href="{{ url_for('index') }}">🎓 YABATECH Performance Predictor</a>
     <nav>
-      <a href="{{ url_for('index') }}">Predict</a>
+      <a href="{{ url_for('index') }}">Batch Upload</a>
+      <a href="{{ url_for('quick_check') }}">Quick Check</a>
       <a href="{{ url_for('about') }}">Model Info</a>
     </nav>
   </header>
-  <main class="container">
+  <main class="container{% block container_class %}{% endblock %}">
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <p>Machine-learning demo — predictions are estimates, not guarantees.</p>
+    <p>Demo model trained on synthetic data, not real Yabatech records — predictions are illustrative, not an official assessment.</p>
   </footer>
+  {% block scripts %}{% endblock %}
 </body>
 </html>

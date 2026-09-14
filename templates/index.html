@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Predict — Student Performance Predictor{% endblock %}
+{% block title %}Quick Check — YABATECH Performance Predictor{% endblock %}
 {% block content %}
-  <h1>Predict a student's performance</h1>
-  <p class="subtitle">Fill in the details below to estimate a final exam score, letter grade and pass/fail risk.</p>
+  <h1>Quick check: one student</h1>
+  <p class="subtitle">For a single student. Have a whole class list? Use <a href="{{ url_for('index') }}">batch upload</a> instead.</p>
 
-  <form method="post" action="{{ url_for('predict') }}" class="predict-form">
+  <form method="post" action="{{ url_for('quick_check_predict') }}" class="predict-form">
     <div class="form-grid">
       {% for field in fields %}
         <div class="form-field">

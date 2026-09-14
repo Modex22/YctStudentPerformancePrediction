@@ -1,10 +1,15 @@
-# Student Performance Prediction System
+# YABATECH Student Performance Predictor
 
-A machine-learning system that predicts a student's likely final exam score,
-letter grade and pass/fail risk from academic and lifestyle factors
-(study time, attendance, prior grades, sleep, family background, etc.), and
-gives a small set of actionable recommendations. Includes a Flask web app
-for interactive predictions.
+A machine-learning system that predicts a student's likely final score, an
+ND/HND-style classification, and pass/fail risk from academic and lifestyle
+factors (study time, attendance, prior grades, sleep, family background,
+etc.) — built for a class-roster workflow: upload a spreadsheet of students,
+get a class report back.
+
+**Not yet trained on real Yabatech data.** The model is trained on a
+synthetic dataset (see below); the app is styled for Yabatech's context
+(Department, Level, ND/HND classification) but the predictions themselves
+are illustrative until it's retrained on real, anonymized records.
 
 ## How it works
 
@@ -28,11 +33,21 @@ for interactive predictions.
    plots.
 4. **Prediction** (`src/predict.py`) — loads the saved pipelines (training
    automatically on first use if they don't exist yet) and turns one
-   student's data into a score, grade, performance category, pass/fail call,
-   and rule-based recommendations.
-5. **Web app** (`app.py` + `templates/`) — a form to enter a student's
-   details, a result page with the prediction, and a model-info page showing
-   how each candidate model performed.
+   student's data into a score, grade, ND/HND classification, performance
+   category, pass/fail call, rule-based recommendations, and a short
+   "counsellor's note" (a one-line report-card-style remark naming the
+   biggest driving factor).
+5. **Batch upload** (`src/batch.py` + `/`) — the primary workflow: upload a
+   `.csv`/`.xlsx` class roster, every row is validated and scored in one
+   pass, and you get back a class dashboard (average score, pass rate,
+   classification breakdown, score histogram, a ranked at-risk list) plus a
+   full per-student results table. A scanning animation plays while the
+   file is processed. `/batch/template` downloads a ready-to-fill CSV.
+6. **Quick check** (`/quick-check`) — the original one-student form, for a
+   single ad-hoc lookup instead of a roster.
+7. **Model info** (`/about`) — how each candidate model performed, and the
+   caveats on the ND/HND classification cutoffs and the synthetic training
+   data.
 
 Current results on the synthetic dataset: best regressor is Gradient
 Boosting (test R² ≈ 0.76, MAE ≈ 5 points on a 0-100 scale); the pass/fail
@@ -42,19 +57,22 @@ numbers — see below.
 ## Project structure
 
 ```
-├── app.py                     # Flask web app
+├── app.py                     # Flask web app (batch upload is "/")
 ├── data/
 │   ├── generate_dataset.py    # synthetic dataset generator
 │   └── student_performance.csv
 ├── src/
-│   ├── config.py              # paths, feature/target column lists
+│   ├── config.py              # paths, feature/target columns, classification bins
 │   ├── data_preprocessing.py  # ColumnTransformer + data loading
 │   ├── train_model.py         # trains, compares, saves models + plots
-│   └── predict.py             # loads models, predicts one student
+│   ├── predict.py             # loads models, predicts one student
+│   ├── batch.py                # parses a roster spreadsheet, runs batch predictions
+│   ├── export_web_model.py    # exports trained trees to JSON for a client-side demo
+│   └── export_web_charts.py   # exports chart data for that demo
 ├── models/                    # saved pipelines + metrics.json (generated)
 ├── reports/figures/           # feature importance & actual-vs-predicted plots
-├── templates/, static/        # Flask views
-└── tests/test_pipeline.py     # pytest sanity checks
+├── templates/, static/        # Flask views (batch_upload, batch_results_fragment, ...)
+└── tests/                     # pytest sanity checks
 ```
 
 ## Setup
@@ -82,6 +100,25 @@ automatically the first time a prediction is requested.
 python app.py
 ```
 
+Then open http://localhost:5000 — the batch upload page is the home page.
+Click "Try an example roster" to see the full flow without your own file,
+or download the CSV template and fill in a real class list. `/quick-check`
+has the original single-student form, and `/about` has model metrics and
+charts.
+
+### Roster spreadsheet format
+
+A `.csv` or `.xlsx` with one row per student. Required columns are the 13
+feature columns in `src/config.py:FEATURE_COLUMNS` (age, study hours,
+attendance, previous grade, sleep hours, gender, school type, parental
+education, family income level, internet access, extracurriculars,
+part-time job, tutoring support). Optional identity columns — `name`,
+`matric_no`, `department`, `level` (aliases like `student_name` or `dept`
+are also recognized) — are carried through to the report for context but
+never fed to the model. Unrecognized categorical values or non-numeric
+cells are flagged as warnings; rows with an unparseable number are skipped
+rather than crashing the whole upload.
+
 ## Static client-side demo (no server)
 
 `src/export_web_model.py` walks the fitted scikit-learn pipelines (every
@@ -97,10 +134,8 @@ python -m src.export_web_model web_demo_model.json
 python -m src.export_web_charts web_demo_charts.json
 ```
 
-Used to build the "Grade Forecast" artifact demo.
-
-Then open http://localhost:5000, fill in the form, and submit to see the
-prediction. Visit `/about` for model comparison metrics and charts.
+Used to build the "Grade Forecast" artifact demo (single-student only —
+the batch upload workflow is Flask-only for now).
 
 ## Predict from the command line
 
@@ -111,7 +146,8 @@ python -m src.predict
 Edit the `example_student` dict at the bottom of `src/predict.py`, or import
 `predict_performance()` from your own script — it takes a dict with the keys
 listed in `src/config.py:FEATURE_COLUMNS` and returns the predicted score,
-grade, category, pass/fail call and recommendations.
+grade, ND/HND classification, category, pass/fail call, recommendations,
+and a counsellor's note.
 
 ## Tests
 
@@ -125,4 +161,7 @@ Replace `data/student_performance.csv` with real records that (a) keep the
 same column names as `FEATURE_COLUMNS` in `src/config.py` (or update that
 list) and (b) include a `final_score` (0-100) target and a `pass_fail`
 (`Pass`/`Fail`) target, then re-run `python -m src.train_model`. Everything
-downstream (preprocessing, training, the web app) works unchanged.
+downstream (preprocessing, training, the web app) works unchanged. The
+`CLASSIFICATION_BINS`/`CLASSIFICATION_LABELS` cutoffs in `src/config.py` are
+an illustrative default — update them to Yabatech's actual ND/HND grading
+policy once known.

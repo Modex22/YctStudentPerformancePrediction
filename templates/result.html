@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Result — Student Performance Predictor{% endblock %}
+{% block title %}Result — YABATECH Performance Predictor{% endblock %}
 {% block content %}
   <h1>Prediction result</h1>
 
@@ -9,6 +9,13 @@
       "Good": "badge-good",
       "Excellent": "badge-excellent"
   } %}
+  {% set classification_class = {
+      "Fail": "badge-risk",
+      "Pass": "badge-average",
+      "Lower Credit": "badge-average",
+      "Upper Credit": "badge-good",
+      "Distinction": "badge-excellent"
+  } %}
 
   <div class="result-card">
     <div class="score-circle">
@@ -16,7 +23,10 @@
       <span class="score-max">/ 100</span>
     </div>
     <div class="result-details">
-      <p><strong>Letter grade:</strong> {{ result.grade }}</p>
+      <p><strong>Classification:</strong>
+        <span class="badge {{ classification_class.get(result.classification, '') }}">{{ result.classification }}</span>
+        <span class="muted">(letter grade {{ result.grade }})</span>
+      </p>
       <p><strong>Performance category:</strong>
         <span class="badge {{ category_class.get(result.performance_category, '') }}">{{ result.performance_category }}</span>
       </p>
@@ -25,6 +35,11 @@
         ({{ result.pass_probability }}% probability of passing)
       </p>
     </div>
+  </div>
+
+  <div class="counsellor-note">
+    <span class="counsellor-note-label">Counsellor's note</span>
+    <p>{{ result.counsellor_note }}</p>
   </div>
 
   <h2>Recommendations</h2>
@@ -43,5 +58,5 @@
     </table>
   </details>
 
-  <a class="btn-secondary" href="{{ url_for('index') }}">&larr; Try another student</a>
+  <a class="btn-secondary" href="{{ url_for('quick_check') }}">&larr; Try another student</a>
 {% endblock %}

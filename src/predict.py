@@ -10,6 +10,8 @@ import pandas as pd
 from src.config import (
     CATEGORY_BINS,
     CATEGORY_LABELS,
+    CLASSIFICATION_BINS,
+    CLASSIFICATION_LABELS,
     CLASSIFIER_PATH,
     FEATURE_COLUMNS,
     GRADE_BINS,
@@ -20,17 +22,26 @@ from src.config import (
 _regressor = None
 _classifier = None
 
+# Each rule: (field, condition, recommendation message, short factor phrase).
+# The factor phrase feeds build_counsellor_note(); order sets priority when
+# more than one issue applies (attendance first, since it's the strongest
+# single lever in the trained model's feature importances).
 RECOMMENDATION_RULES = [
     ("attendance_percentage", lambda v: v < 75,
-     "Attendance is below 75%. Improving class attendance is one of the strongest levers for a better score."),
+     "Attendance is below 75%. Improving class attendance is one of the strongest levers for a better score.",
+     "attendance"),
     ("study_hours_per_week", lambda v: v < 8,
-     "Weekly study time is low. Aim for at least 8-10 focused hours per week."),
+     "Weekly study time is low. Aim for at least 8-10 focused hours per week.",
+     "study time"),
     ("sleep_hours", lambda v: v < 6 or v > 9,
-     "Sleep is outside the 6.5-8.5 hour range associated with the best academic performance."),
+     "Sleep is outside the 6.5-8.5 hour range associated with the best academic performance.",
+     "sleep habits"),
     ("part_time_job", lambda v: v == "Yes",
-     "A part-time job is competing with study time; consider reducing hours during exam periods."),
+     "A part-time job is competing with study time; consider reducing hours during exam periods.",
+     "a part-time job pulling focus away from study"),
     ("tutoring_support", lambda v: v == "No",
-     "No tutoring support in place. Extra tutoring correlates with meaningfully higher scores."),
+     "No tutoring support in place. Extra tutoring correlates with meaningfully higher scores.",
+     "the lack of tutoring support"),
 ]
 
 
@@ -59,7 +70,7 @@ def _to_dataframe(student: dict[str, Any]) -> pd.DataFrame:
 
 def build_recommendations(student: dict[str, Any]) -> list[str]:
     notes = []
-    for field, condition, message in RECOMMENDATION_RULES:
+    for field, condition, message, _phrase in RECOMMENDATION_RULES:
         try:
             if condition(student[field]):
                 notes.append(message)
@@ -68,6 +79,47 @@ def build_recommendations(student: dict[str, Any]) -> list[str]:
     if not notes:
         notes.append("All key indicators look healthy — keep up the current routine.")
     return notes
+
+
+def _active_factor_phrases(student: dict[str, Any]) -> list[str]:
+    phrases = []
+    for field, condition, _message, phrase in RECOMMENDATION_RULES:
+        try:
+            if condition(student[field]):
+                phrases.append(phrase)
+        except (TypeError, KeyError):
+            continue
+    return phrases
+
+
+def _join_phrases(phrases: list[str]) -> str:
+    if len(phrases) == 1:
+        return phrases[0]
+    if len(phrases) == 2:
+        return f"{phrases[0]} and {phrases[1]}"
+    return ", ".join(phrases[:-1]) + f", and {phrases[-1]}"
+
+
+def build_counsellor_note(student: dict[str, Any], category: str) -> str:
+    """A short, report-card-style remark combining the category with the
+    strongest driving factor(s), for a batch roster rather than a form of
+    bullet points per student."""
+    factors = _active_factor_phrases(student)
+
+    if category == "Excellent":
+        return "Outstanding trajectory — every key indicator is working in this student's favour."
+    if category == "Good":
+        if not factors:
+            return "Consistently solid performer with no red flags in the record."
+        return f"Good result overall, though {_join_phrases(factors)} is worth watching."
+    if category == "Average":
+        if not factors:
+            return "Middling result with no single standout issue — check in periodically."
+        return f"Middling result — addressing {_join_phrases(factors)} could lift this into the Good band."
+    # At Risk
+    if not factors:
+        return "At risk despite no single flagged factor — worth a closer manual review."
+    return f"At risk of failing — {_join_phrases(factors)} {'is' if len(factors) == 1 else 'are'} the biggest drag on this result."
 
 
 def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
@@ -81,8 +133,11 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
     predicted_score = float(regressor.predict(X)[0])
     predicted_score = max(0.0, min(100.0, predicted_score))
 
-    category = pd.cut([predicted_score], bins=CATEGORY_BINS, labels=CATEGORY_LABELS)[0]
+    category = str(pd.cut([predicted_score], bins=CATEGORY_BINS, labels=CATEGORY_LABELS)[0])
     grade = pd.cut([predicted_score], bins=GRADE_BINS, labels=GRADE_LABELS)[0]
+    classification = pd.cut(
+        [predicted_score], bins=CLASSIFICATION_BINS, labels=CLASSIFICATION_LABELS
+    )[0]
 
     pass_fail_pred = classifier.predict(X)[0]
     proba = classifier.predict_proba(X)[0]
@@ -92,10 +147,12 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
     return {
         "predicted_score": round(predicted_score, 1),
         "grade": str(grade),
-        "performance_category": str(category),
+        "classification": str(classification),
+        "performance_category": category,
         "pass_fail": pass_fail_pred,
         "pass_probability": round(pass_probability * 100, 1),
         "recommendations": build_recommendations(student),
+        "counsellor_note": build_counsellor_note(student, category),
     }
 
 
