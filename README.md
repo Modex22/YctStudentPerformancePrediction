@@ -2,9 +2,16 @@
 
 A machine-learning system that predicts a student's likely final score, an
 ND/HND-style classification, and pass/fail risk from academic and lifestyle
-factors (study time, attendance, prior grades, sleep, family background,
-etc.) — built for a class-roster workflow: upload a spreadsheet of students,
-get a class report back.
+factors (study time, prior grades, sleep, family background, etc.) — built
+for a class-roster workflow: upload a spreadsheet of students, get a class
+report back.
+
+Attendance is deliberately not one of the inputs — it's rarely reliably
+collectible in practice — so it's excluded from the feature set entirely.
+It's still modelled as a *latent* factor in the synthetic training data (see
+`data/generate_dataset.py`), which keeps the achievable accuracy honest:
+the model can't cheat by learning from a signal a real deployment wouldn't
+have either.
 
 **Not yet trained on real Yabatech data.** The model is trained on a
 synthetic dataset (see below); the app is styled for Yabatech's context
@@ -14,12 +21,15 @@ are illustrative until it's retrained on real, anonymized records.
 ## How it works
 
 1. **Dataset** (`data/generate_dataset.py`) — no labeled dataset was supplied,
-   so a realistic synthetic dataset (2,000 students, 13 features) is generated
+   so a realistic synthetic dataset (2,000 students, 12 features) is generated
    from sensible distributions, with the target score built from a weighted
    combination of the features plus noise, mirroring patterns reported in
-   education research (study time, attendance and prior grades are the
-   strongest predictors; sleep has a sweet spot around 7-8 hours; a part-time
-   job has a mild negative effect; etc.). Swap in a real dataset by replacing
+   education research (study time and prior grades are the strongest observed
+   predictors; sleep has a sweet spot around 7-8 hours; a part-time job has a
+   mild negative effect; etc.). Attendance is generated too and still shapes
+   the target score, but it's intentionally kept out of the feature columns
+   entirely — it isn't reliably collectible, so the model doesn't get to see
+   it, the same as a real deployment. Swap in a real dataset by replacing
    `data/student_performance.csv` with the same columns (see `src/config.py`).
 2. **Preprocessing** (`src/data_preprocessing.py`) — numeric features are
    standardized, categorical features are one-hot encoded, via a
@@ -50,9 +60,10 @@ are illustrative until it's retrained on real, anonymized records.
    data.
 
 Current results on the synthetic dataset: best regressor is Gradient
-Boosting (test R² ≈ 0.76, MAE ≈ 5 points on a 0-100 scale); the pass/fail
-classifier reaches ≈ 87% accuracy. Re-run training to regenerate these
-numbers — see below.
+Boosting (test R² ≈ 0.73, MAE ≈ 5.3 points on a 0-100 scale); the pass/fail
+classifier reaches ≈ 87% accuracy. (R² is lower than it would be with
+attendance included — expected, since a real predictor was deliberately
+removed.) Re-run training to regenerate these numbers — see below.
 
 ## Project structure
 
@@ -108,11 +119,11 @@ charts.
 
 ### Roster spreadsheet format
 
-A `.csv` or `.xlsx` with one row per student. Required columns are the 13
+A `.csv` or `.xlsx` with one row per student. Required columns are the 12
 feature columns in `src/config.py:FEATURE_COLUMNS` (age, study hours,
-attendance, previous grade, sleep hours, gender, school type, parental
-education, family income level, internet access, extracurriculars,
-part-time job, tutoring support). Optional identity columns — `name`,
+previous grade, sleep hours, gender, school type, parental education,
+family income level, internet access, extracurriculars, part-time job,
+tutoring support). Optional identity columns — `name`,
 `matric_no`, `department`, `level` (aliases like `student_name` or `dept`
 are also recognized) — are carried through to the report for context but
 never fed to the model. Unrecognized categorical values or non-numeric

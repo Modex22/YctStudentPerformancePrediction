@@ -35,7 +35,7 @@ def test_unsupported_file_type_raises_batch_error():
 
 
 def test_non_numeric_row_is_skipped_with_a_warning():
-    csv_text = build_template_csv().replace(",20,90,74,", ",not-a-number,90,74,")
+    csv_text = build_template_csv().replace(",20,74,", ",not-a-number,74,")
 
     parsed = parse_upload("roster.csv", csv_text.encode("utf-8"))
     parsed, identity_map, missing = validate_and_prepare(parsed)
@@ -62,11 +62,11 @@ def test_unrecognized_categorical_value_is_flagged_but_not_fatal():
 
 def test_counsellor_note_mentions_the_driving_factor_for_at_risk_students():
     student = {
-        "attendance_percentage": 50, "study_hours_per_week": 20, "sleep_hours": 7,
+        "study_hours_per_week": 2, "sleep_hours": 7,
         "part_time_job": "No", "tutoring_support": "Yes",
     }
     note = build_counsellor_note(student, "At Risk")
-    assert "attendance" in note.lower()
+    assert "study time" in note.lower()
 
 
 def test_counsellor_note_is_positive_for_excellent_category():

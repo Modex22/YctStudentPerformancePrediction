@@ -24,12 +24,10 @@ _classifier = None
 
 # Each rule: (field, condition, recommendation message, short factor phrase).
 # The factor phrase feeds build_counsellor_note(); order sets priority when
-# more than one issue applies (attendance first, since it's the strongest
-# single lever in the trained model's feature importances).
+# more than one issue applies (study time first, since it's the strongest
+# single lever in the trained model's feature importances — attendance
+# isn't collected, so it can't be a rule here).
 RECOMMENDATION_RULES = [
-    ("attendance_percentage", lambda v: v < 75,
-     "Attendance is below 75%. Improving class attendance is one of the strongest levers for a better score.",
-     "attendance"),
     ("study_hours_per_week", lambda v: v < 8,
      "Weekly study time is low. Aim for at least 8-10 focused hours per week.",
      "study time"),
@@ -162,7 +160,6 @@ if __name__ == "__main__":
         "gender": "Female",
         "school_type": "Public",
         "study_hours_per_week": 6,
-        "attendance_percentage": 68,
         "previous_grade": 55,
         "sleep_hours": 5.5,
         "parental_education": "High School",

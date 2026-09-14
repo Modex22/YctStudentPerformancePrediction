@@ -16,7 +16,6 @@ METRICS_PATH = os.path.join(MODELS_DIR, "metrics.json")
 NUMERIC_FEATURES = [
     "age",
     "study_hours_per_week",
-    "attendance_percentage",
     "previous_grade",
     "sleep_hours",
 ]

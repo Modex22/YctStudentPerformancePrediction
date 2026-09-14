@@ -27,7 +27,6 @@ SAMPLE_STUDENT = {
     "gender": "Male",
     "school_type": "Public",
     "study_hours_per_week": 20,
-    "attendance_percentage": 92,
     "previous_grade": 78,
     "sleep_hours": 7.5,
     "parental_education": "Bachelors",
@@ -52,7 +51,6 @@ def test_strong_profile_scores_higher_than_weak_profile():
     weak_student = dict(SAMPLE_STUDENT)
     weak_student.update(
         study_hours_per_week=2,
-        attendance_percentage=45,
         previous_grade=30,
         sleep_hours=3,
         part_time_job="Yes",

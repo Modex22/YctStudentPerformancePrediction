@@ -23,7 +23,6 @@ FRIENDLY_NAMES = {
     "study_hours_per_week": "Study hours / week",
     "previous_grade": "Previous term grade",
     "sleep_hours": "Sleep hours",
-    "attendance_percentage": "Attendance %",
     "family_income_level_Low": "Family income: Low",
     "internet_access_Yes": "Internet access: Yes",
     "parental_education_High School": "Parent education: High School",

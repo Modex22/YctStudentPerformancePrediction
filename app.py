@@ -17,7 +17,6 @@ FORM_FIELDS = [
     {"name": "gender", "label": "Gender", "type": "select", "options": ["Male", "Female"]},
     {"name": "school_type", "label": "School type", "type": "select", "options": ["Public", "Private"]},
     {"name": "study_hours_per_week", "label": "Study hours / week", "type": "number", "min": 0, "max": 40, "default": 15},
-    {"name": "attendance_percentage", "label": "Attendance (%)", "type": "number", "min": 0, "max": 100, "default": 80},
     {"name": "previous_grade", "label": "Previous term grade (0-100)", "type": "number", "min": 0, "max": 100, "default": 60},
     {"name": "sleep_hours", "label": "Average sleep hours / night", "type": "number", "min": 0, "max": 12, "default": 7, "step": "0.5"},
     {"name": "parental_education", "label": "Parental education", "type": "select",

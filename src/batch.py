@@ -185,21 +185,21 @@ def build_template_csv() -> str:
     rows = [
         {
             "name": "Adaeze Okafor", "matric_no": "ND/CS/23/0142", "department": "Computer Science", "level": "ND2",
-            "age": 19, "study_hours_per_week": 20, "attendance_percentage": 90, "previous_grade": 74,
+            "age": 19, "study_hours_per_week": 20, "previous_grade": 74,
             "sleep_hours": 7, "gender": "Female", "school_type": "Public", "parental_education": "Bachelors",
             "family_income_level": "Medium", "internet_access": "Yes", "extracurricular_activities": "Yes",
             "part_time_job": "No", "tutoring_support": "Yes",
         },
         {
             "name": "Emeka Chukwu", "matric_no": "HND/EEE/22/0088", "department": "Electrical Engineering", "level": "HND1",
-            "age": 22, "study_hours_per_week": 6, "attendance_percentage": 61, "previous_grade": 48,
+            "age": 22, "study_hours_per_week": 6, "previous_grade": 48,
             "sleep_hours": 5, "gender": "Male", "school_type": "Public", "parental_education": "High School",
             "family_income_level": "Low", "internet_access": "No", "extracurricular_activities": "No",
             "part_time_job": "Yes", "tutoring_support": "No",
         },
         {
             "name": "Fatima Bello", "matric_no": "ND/MC/23/0207", "department": "Mass Communication", "level": "ND1",
-            "age": 18, "study_hours_per_week": 14, "attendance_percentage": 78, "previous_grade": 63,
+            "age": 18, "study_hours_per_week": 14, "previous_grade": 63,
             "sleep_hours": 8, "gender": "Female", "school_type": "Private", "parental_education": "Masters",
             "family_income_level": "High", "internet_access": "Yes", "extracurricular_activities": "Yes",
             "part_time_job": "No", "tutoring_support": "No",

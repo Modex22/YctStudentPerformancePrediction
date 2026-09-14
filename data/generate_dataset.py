@@ -5,9 +5,18 @@ No public labeled dataset was supplied for this project, so this script
 builds a realistic synthetic one: features are sampled from sensible
 distributions and the target (final exam score) is produced from a
 weighted combination of those features plus random noise, mirroring
-patterns reported in education-research literature (study time,
-attendance and prior grades are the strongest predictors; sleep has a
-sweet spot; a part-time job has a mild negative effect; etc.).
+patterns reported in education-research literature (study time and prior
+grades are the strongest observed predictors; sleep has a sweet spot; a
+part-time job has a mild negative effect; etc.).
+
+Attendance is deliberately NOT collected as a feature (no reliable way to
+gather it in practice), but it still realistically affects a student's
+actual outcome — so it's kept as a *latent* contributor to the target
+score, generated and used to shape final_score but never written to the
+output columns. This is more honest than a model that pretends attendance
+has zero effect: it shows up as irreducible noise from the model's
+perspective, the same way it would in a real deployment that can't
+observe it either.
 
 Run directly to (re)write data/student_performance.csv:
     python data/generate_dataset.py
@@ -40,7 +49,10 @@ def generate_dataset(n_students: int = N_STUDENTS, seed: int = RANDOM_SEED) -> p
     school_type = rng.choice(["Public", "Private"], size=n_students, p=[0.65, 0.35])
 
     study_hours_per_week = np.clip(rng.normal(15, 7, n_students), 0, 40)
-    attendance_percentage = np.clip(rng.normal(80, 12, n_students), 30, 100)
+    # Latent / unobserved — affects final_score below but is intentionally
+    # excluded from the dataframe (and so from the model's features), since
+    # it isn't reliably collectible in practice.
+    latent_attendance_percentage = np.clip(rng.normal(80, 12, n_students), 30, 100)
     previous_grade = np.clip(rng.normal(62, 15, n_students), 0, 100)
     sleep_hours = np.clip(rng.normal(6.8, 1.3, n_students), 3, 10)
 
@@ -67,7 +79,7 @@ def generate_dataset(n_students: int = N_STUDENTS, seed: int = RANDOM_SEED) -> p
 
     final_score = (
         0.30 * previous_grade
-        + 0.22 * attendance_percentage
+        + 0.22 * latent_attendance_percentage
         + 1.15 * study_hours_per_week
         + parental_bonus
         + income_bonus
@@ -87,7 +99,6 @@ def generate_dataset(n_students: int = N_STUDENTS, seed: int = RANDOM_SEED) -> p
             "gender": gender,
             "school_type": school_type,
             "study_hours_per_week": study_hours_per_week.round(1),
-            "attendance_percentage": attendance_percentage.round(1),
             "previous_grade": previous_grade.round(1),
             "sleep_hours": sleep_hours.round(1),
             "parental_education": parental_education,
