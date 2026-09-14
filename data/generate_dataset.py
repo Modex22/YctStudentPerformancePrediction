@@ -2,111 +2,69 @@
 Synthetic student performance dataset generator.
 
 No public labeled dataset was supplied for this project, so this script
-builds a realistic synthetic one: features are sampled from sensible
-distributions and the target (final exam score) is produced from a
-weighted combination of those features plus random noise, mirroring
-patterns reported in education-research literature (study time and prior
-grades are the strongest observed predictors; sleep has a sweet spot; a
-part-time job has a mild negative effect; etc.).
+builds a realistic synthetic one, using only four inputs a department
+already has on record for every student — no self-reported or hard-to-
+collect data (attendance, lifestyle, family background, etc.):
 
-Attendance is deliberately NOT collected as a feature (no reliable way to
-gather it in practice), but it still realistically affects a student's
-actual outcome — so it's kept as a *latent* contributor to the target
-score, generated and used to shape final_score but never written to the
-output columns. This is more honest than a model that pretends attendance
-has zero effect: it shows up as irreducible noise from the model's
-perspective, the same way it would in a real deployment that can't
-observe it either.
+    exam_score, test_score, assignment_score, practical_score
+
+final_score is a weighted combination of those four components (see
+COMPONENT_WEIGHTS in src/config.py — illustrative, not confirmed against
+Yabatech's actual continuous-assessment policy) plus a small amount of
+noise, representing real-world effects a fixed formula wouldn't capture
+exactly (moderation, rounding, marker variation). The noise is what gives
+the model an actual job to do rather than just re-deriving a known
+formula.
 
 Run directly to (re)write data/student_performance.csv:
     python data/generate_dataset.py
 """
 from __future__ import annotations
 
+import os
+import sys
+
 import numpy as np
 import pandas as pd
 
+# Allow `python data/generate_dataset.py` to work directly (not just
+# `python -m data.generate_dataset`) by ensuring the project root is on
+# sys.path before importing the src package.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.config import COMPONENT_WEIGHTS  # noqa: E402
+
 RANDOM_SEED = 42
 N_STUDENTS = 2000
-
-PARENTAL_EDUCATION_LEVELS = ["No Formal Education", "High School", "Bachelors", "Masters", "PhD"]
-PARENTAL_EDUCATION_BONUS = {
-    "No Formal Education": -4,
-    "High School": -1,
-    "Bachelors": 2,
-    "Masters": 4,
-    "PhD": 6,
-}
-FAMILY_INCOME_LEVELS = ["Low", "Medium", "High"]
-FAMILY_INCOME_BONUS = {"Low": -3, "Medium": 0, "High": 3}
 
 
 def generate_dataset(n_students: int = N_STUDENTS, seed: int = RANDOM_SEED) -> pd.DataFrame:
     rng = np.random.default_rng(seed)
 
-    age = rng.integers(15, 23, size=n_students)
-    gender = rng.choice(["Male", "Female"], size=n_students)
-    school_type = rng.choice(["Public", "Private"], size=n_students, p=[0.65, 0.35])
+    # Distinct, realistic distributions per component: exams run harder and
+    # more spread out than coursework; assignments are the most forgiving.
+    exam_score = np.clip(rng.normal(58, 18, n_students), 0, 100)
+    test_score = np.clip(rng.normal(65, 15, n_students), 0, 100)
+    assignment_score = np.clip(rng.normal(72, 12, n_students), 0, 100)
+    practical_score = np.clip(rng.normal(68, 14, n_students), 0, 100)
 
-    study_hours_per_week = np.clip(rng.normal(15, 7, n_students), 0, 40)
-    # Latent / unobserved — affects final_score below but is intentionally
-    # excluded from the dataframe (and so from the model's features), since
-    # it isn't reliably collectible in practice.
-    latent_attendance_percentage = np.clip(rng.normal(80, 12, n_students), 30, 100)
-    previous_grade = np.clip(rng.normal(62, 15, n_students), 0, 100)
-    sleep_hours = np.clip(rng.normal(6.8, 1.3, n_students), 3, 10)
-
-    parental_education = rng.choice(
-        PARENTAL_EDUCATION_LEVELS, size=n_students, p=[0.1, 0.35, 0.3, 0.18, 0.07]
-    )
-    family_income = rng.choice(FAMILY_INCOME_LEVELS, size=n_students, p=[0.35, 0.45, 0.2])
-    internet_access = rng.choice(["Yes", "No"], size=n_students, p=[0.78, 0.22])
-    extracurricular = rng.choice(["Yes", "No"], size=n_students, p=[0.4, 0.6])
-    part_time_job = rng.choice(["Yes", "No"], size=n_students, p=[0.3, 0.7])
-    tutoring_support = rng.choice(["Yes", "No"], size=n_students, p=[0.25, 0.75])
-
-    # --- Build the target from a weighted combination of the features ---
-    parental_bonus = np.array([PARENTAL_EDUCATION_BONUS[p] for p in parental_education])
-    income_bonus = np.array([FAMILY_INCOME_BONUS[i] for i in family_income])
-    internet_bonus = np.where(internet_access == "Yes", 2.5, -2.5)
-    extracurricular_bonus = np.where(extracurricular == "Yes", 1.5, 0)
-    part_time_penalty = np.where(part_time_job == "Yes", -3.0, 0)
-    tutoring_bonus = np.where(tutoring_support == "Yes", 3.0, 0)
-    # Sleep has a sweet spot around 7-8 hours; deviating either way hurts.
-    sleep_penalty = -1.4 * (sleep_hours - 7.5) ** 2
-
-    noise = rng.normal(0, 6, n_students)
+    noise = rng.normal(0, 3, n_students)
 
     final_score = (
-        0.30 * previous_grade
-        + 0.22 * latent_attendance_percentage
-        + 1.15 * study_hours_per_week
-        + parental_bonus
-        + income_bonus
-        + internet_bonus
-        + extracurricular_bonus
-        + part_time_penalty
-        + tutoring_bonus
-        + sleep_penalty
+        COMPONENT_WEIGHTS["exam_score"] * exam_score
+        + COMPONENT_WEIGHTS["test_score"] * test_score
+        + COMPONENT_WEIGHTS["assignment_score"] * assignment_score
+        + COMPONENT_WEIGHTS["practical_score"] * practical_score
         + noise
-        + 12  # recentring constant so the mean lands near a realistic ~60-65
     )
     final_score = np.clip(final_score, 0, 100).round(1)
 
     df = pd.DataFrame(
         {
-            "age": age,
-            "gender": gender,
-            "school_type": school_type,
-            "study_hours_per_week": study_hours_per_week.round(1),
-            "previous_grade": previous_grade.round(1),
-            "sleep_hours": sleep_hours.round(1),
-            "parental_education": parental_education,
-            "family_income_level": family_income,
-            "internet_access": internet_access,
-            "extracurricular_activities": extracurricular,
-            "part_time_job": part_time_job,
-            "tutoring_support": tutoring_support,
+            "exam_score": exam_score.round(1),
+            "test_score": test_score.round(1),
+            "assignment_score": assignment_score.round(1),
+            "practical_score": practical_score.round(1),
             "final_score": final_score,
         }
     )

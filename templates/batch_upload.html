@@ -9,6 +9,13 @@
     counsellor's note per student, plus a class-wide risk breakdown.
   </p>
 
+  <a class="student-callout" href="{{ url_for('quick_check') }}">
+    <span class="student-callout-text">
+      <strong>Are you a student?</strong> Check your own predicted score in under a minute — no spreadsheet needed.
+    </span>
+    <span class="student-callout-arrow">&rarr;</span>
+  </a>
+
   <form id="upload-form" class="upload-form">
     <label class="dropzone" id="dropzone" for="roster-file">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0-11l-4 4m4-4l4 4M5 17v2a2 2 0 002 2h10a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -54,7 +61,7 @@
   const PHRASES = [
     "Reading rows…",
     "Scoring students…",
-    "Checking study patterns & background factors…",
+    "Weighing exam, test, assignment & practical scores…",
     "Compiling class report…",
   ];
 

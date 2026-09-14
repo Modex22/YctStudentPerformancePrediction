@@ -24,22 +24,21 @@ _classifier = None
 
 # Each rule: (field, condition, recommendation message, short factor phrase).
 # The factor phrase feeds build_counsellor_note(); order sets priority when
-# more than one issue applies (study time first, since it's the strongest
-# single lever in the trained model's feature importances — attendance
-# isn't collected, so it can't be a rule here).
+# more than one component is weak (exam first, since it's the highest-
+# weighted component — see COMPONENT_WEIGHTS in src/config.py).
 RECOMMENDATION_RULES = [
-    ("study_hours_per_week", lambda v: v < 8,
-     "Weekly study time is low. Aim for at least 8-10 focused hours per week.",
-     "study time"),
-    ("sleep_hours", lambda v: v < 6 or v > 9,
-     "Sleep is outside the 6.5-8.5 hour range associated with the best academic performance.",
-     "sleep habits"),
-    ("part_time_job", lambda v: v == "Yes",
-     "A part-time job is competing with study time; consider reducing hours during exam periods.",
-     "a part-time job pulling focus away from study"),
-    ("tutoring_support", lambda v: v == "No",
-     "No tutoring support in place. Extra tutoring correlates with meaningfully higher scores.",
-     "the lack of tutoring support"),
+    ("exam_score", lambda v: v < 45,
+     "Exam score is below 45 — this is the highest-weighted component, so it has the largest effect on the final result.",
+     "exam performance"),
+    ("test_score", lambda v: v < 45,
+     "Test/CA score is below 45. More consistent revision ahead of tests would help here.",
+     "test scores"),
+    ("practical_score", lambda v: v < 45,
+     "Practical score is below 45. More engagement in lab/practical sessions would help here.",
+     "practical scores"),
+    ("assignment_score", lambda v: v < 45,
+     "Assignment score is below 45. Check assignments are being submitted complete and on time.",
+     "assignment scores"),
 ]
 
 
@@ -156,18 +155,10 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
 
 if __name__ == "__main__":
     example_student = {
-        "age": 18,
-        "gender": "Female",
-        "school_type": "Public",
-        "study_hours_per_week": 6,
-        "previous_grade": 55,
-        "sleep_hours": 5.5,
-        "parental_education": "High School",
-        "family_income_level": "Low",
-        "internet_access": "No",
-        "extracurricular_activities": "No",
-        "part_time_job": "Yes",
-        "tutoring_support": "No",
+        "exam_score": 38,
+        "test_score": 52,
+        "assignment_score": 60,
+        "practical_score": 55,
     }
     result = predict_performance(example_student)
     print(result)

@@ -20,19 +20,10 @@ from src.data_preprocessing import get_features, load_data
 from src.train_model import RANDOM_STATE
 
 FRIENDLY_NAMES = {
-    "study_hours_per_week": "Study hours / week",
-    "previous_grade": "Previous term grade",
-    "sleep_hours": "Sleep hours",
-    "family_income_level_Low": "Family income: Low",
-    "internet_access_Yes": "Internet access: Yes",
-    "parental_education_High School": "Parent education: High School",
-    "parental_education_No Formal Education": "Parent education: None",
-    "family_income_level_High": "Family income: High",
-    "part_time_job_Yes": "Part-time job",
-    "internet_access_No": "No internet access",
-    "parental_education_Masters": "Parent education: Masters",
-    "tutoring_support_Yes": "Tutoring support",
-    "age": "Age",
+    "exam_score": "Exam score",
+    "test_score": "Test / CA score",
+    "assignment_score": "Assignment score",
+    "practical_score": "Practical score",
 }
 
 
@@ -48,7 +39,12 @@ def main(output_path: str = "web_demo_charts.json") -> None:
     model = pipeline.named_steps["model"]
     preprocessor = pipeline.named_steps["preprocessor"]
     feature_names = preprocessor.get_feature_names_out()
-    importances = model.feature_importances_
+    if hasattr(model, "feature_importances_"):
+        importances = model.feature_importances_
+    elif hasattr(model, "coef_"):
+        importances = np.abs(np.ravel(model.coef_))
+    else:
+        raise TypeError(f"{type(model).__name__} exposes neither feature_importances_ nor coef_")
 
     order = np.argsort(importances)[::-1][:8]
     feature_importance = [

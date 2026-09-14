@@ -13,19 +13,14 @@ from src.predict import predict_performance
 app = Flask(__name__)
 
 FORM_FIELDS = [
-    {"name": "age", "label": "Age", "type": "number", "min": 15, "max": 22, "default": 18},
-    {"name": "gender", "label": "Gender", "type": "select", "options": ["Male", "Female"]},
-    {"name": "school_type", "label": "School type", "type": "select", "options": ["Public", "Private"]},
-    {"name": "study_hours_per_week", "label": "Study hours / week", "type": "number", "min": 0, "max": 40, "default": 15},
-    {"name": "previous_grade", "label": "Previous term grade (0-100)", "type": "number", "min": 0, "max": 100, "default": 60},
-    {"name": "sleep_hours", "label": "Average sleep hours / night", "type": "number", "min": 0, "max": 12, "default": 7, "step": "0.5"},
-    {"name": "parental_education", "label": "Parental education", "type": "select",
-     "options": ["No Formal Education", "High School", "Bachelors", "Masters", "PhD"]},
-    {"name": "family_income_level", "label": "Family income level", "type": "select", "options": ["Low", "Medium", "High"]},
-    {"name": "internet_access", "label": "Internet access at home", "type": "select", "options": ["Yes", "No"]},
-    {"name": "extracurricular_activities", "label": "Extracurricular activities", "type": "select", "options": ["Yes", "No"]},
-    {"name": "part_time_job", "label": "Part-time job", "type": "select", "options": ["Yes", "No"]},
-    {"name": "tutoring_support", "label": "Tutoring support", "type": "select", "options": ["Yes", "No"]},
+    {"name": "exam_score", "label": "Exam score", "type": "number", "min": 0, "max": 100, "default": 60,
+     "help": "Out of 100."},
+    {"name": "test_score", "label": "Test / CA score", "type": "number", "min": 0, "max": 100, "default": 65,
+     "help": "Out of 100."},
+    {"name": "assignment_score", "label": "Assignment score", "type": "number", "min": 0, "max": 100, "default": 70,
+     "help": "Out of 100."},
+    {"name": "practical_score", "label": "Practical score", "type": "number", "min": 0, "max": 100, "default": 65,
+     "help": "Out of 100."},
 ]
 
 NUMERIC_FIELD_NAMES = {f["name"] for f in FORM_FIELDS if f["type"] == "number"}

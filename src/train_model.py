@@ -100,16 +100,29 @@ def train_classifier(X_train, X_test, y_train, y_test, preprocessor):
 
 
 def plot_feature_importance(pipeline: Pipeline, model_name: str) -> None:
+    """Plot per-feature importance for the winning model. Tree ensembles
+    expose feature_importances_ directly; linear models don't, so their
+    absolute standardized coefficients are used as the importance proxy
+    instead (features are standardized upstream, so coefficients are
+    already comparable). Either way this always (re)writes the file —
+    the previous version silently returned for a non-tree model, leaving
+    a stale plot from a prior model on disk."""
     model = pipeline.named_steps["model"]
-    if not hasattr(model, "feature_importances_"):
+    if hasattr(model, "feature_importances_"):
+        importances = model.feature_importances_
+        importance_label = "Importance"
+    elif hasattr(model, "coef_"):
+        importances = np.abs(np.ravel(model.coef_))
+        importance_label = "|Standardized coefficient|"
+    else:
         return
+
     feature_names = pipeline.named_steps["preprocessor"].get_feature_names_out()
-    importances = model.feature_importances_
     order = np.argsort(importances)[-12:]  # top 12
 
     plt.figure(figsize=(8, 6))
     plt.barh([feature_names[i] for i in order], importances[order], color="#3366cc")
-    plt.xlabel("Importance")
+    plt.xlabel(importance_label)
     plt.title(f"Top feature importances ({model_name})")
     plt.tight_layout()
     plt.savefig(os.path.join(FIGURES_DIR, "feature_importance.png"), dpi=120)

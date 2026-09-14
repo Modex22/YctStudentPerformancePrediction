@@ -13,41 +13,35 @@ REGRESSOR_PATH = os.path.join(MODELS_DIR, "score_regressor.joblib")
 CLASSIFIER_PATH = os.path.join(MODELS_DIR, "pass_fail_classifier.joblib")
 METRICS_PATH = os.path.join(MODELS_DIR, "metrics.json")
 
+# Just the four assessment components a department already records —
+# nothing that has to be guessed, self-reported, or separately collected.
 NUMERIC_FEATURES = [
-    "age",
-    "study_hours_per_week",
-    "previous_grade",
-    "sleep_hours",
+    "exam_score",
+    "test_score",
+    "assignment_score",
+    "practical_score",
 ]
 
-CATEGORICAL_FEATURES = [
-    "gender",
-    "school_type",
-    "parental_education",
-    "family_income_level",
-    "internet_access",
-    "extracurricular_activities",
-    "part_time_job",
-    "tutoring_support",
-]
+CATEGORICAL_FEATURES: list[str] = []
 
 FEATURE_COLUMNS = NUMERIC_FEATURES + CATEGORICAL_FEATURES
 REGRESSION_TARGET = "final_score"
 CLASSIFICATION_TARGET = "pass_fail"
 
-# The accepted value set for each categorical feature — used to validate
-# uploaded spreadsheets (an unrecognized value is still accepted by the
-# model's one-hot encoder, just treated as "unknown", so we flag it
-# instead of failing silently).
-CATEGORY_VALUES = {
-    "gender": ["Male", "Female"],
-    "school_type": ["Public", "Private"],
-    "parental_education": ["No Formal Education", "High School", "Bachelors", "Masters", "PhD"],
-    "family_income_level": ["Low", "Medium", "High"],
-    "internet_access": ["Yes", "No"],
-    "extracurricular_activities": ["Yes", "No"],
-    "part_time_job": ["Yes", "No"],
-    "tutoring_support": ["Yes", "No"],
+# No categorical features currently — kept as an empty dict (rather than
+# removed) so src/batch.py's validation loop stays generic if a
+# categorical feature is added back later.
+CATEGORY_VALUES: dict[str, list[str]] = {}
+
+# Illustrative default weighting of each component toward the final score
+# (must sum to 1.0) — matches the synthetic dataset's generative formula.
+# Not confirmed against Yabatech's actual continuous-assessment policy;
+# adjust here (and in data/generate_dataset.py) once known.
+COMPONENT_WEIGHTS = {
+    "exam_score": 0.50,
+    "test_score": 0.20,
+    "assignment_score": 0.15,
+    "practical_score": 0.15,
 }
 
 CATEGORY_BINS = [-0.1, 49.9, 64.9, 79.9, 100]

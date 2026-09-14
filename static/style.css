@@ -73,6 +73,12 @@ h1 { margin-bottom: 0.25rem; }
   margin-bottom: 0.35rem;
 }
 
+.field-help {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: -0.15rem;
+}
+
 .form-field input, .form-field select {
   padding: 0.55rem 0.7rem;
   border: 1px solid var(--border);
@@ -209,6 +215,24 @@ h1 { margin-bottom: 0.25rem; }
 /* ---- Batch upload workflow ---- */
 
 .container-wide { max-width: 1140px; }
+
+.student-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(51, 102, 204, 0.07);
+  border: 1px solid rgba(51, 102, 204, 0.25);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.2rem;
+  margin: 1.5rem 0 0;
+  text-decoration: none;
+  color: var(--text);
+}
+.student-callout:hover { border-color: var(--primary); }
+.student-callout-text { font-size: 0.92rem; }
+.student-callout-text strong { color: var(--primary-dark); }
+.student-callout-arrow { color: var(--primary); font-size: 1.1rem; flex-shrink: 0; }
 
 .upload-form {
   background: var(--surface);

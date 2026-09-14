@@ -1,14 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Quick Check — YABATECH Performance Predictor{% endblock %}
+{% block title %}Check My Score — YABATECH Performance Predictor{% endblock %}
 {% block content %}
-  <h1>Quick check: one student</h1>
-  <p class="subtitle">For a single student. Have a whole class list? Use <a href="{{ url_for('index') }}">batch upload</a> instead.</p>
+  <h1>Check your predicted score</h1>
+  <p class="subtitle">
+    Enter your four component scores (each out of 100) from your result sheet — exam counts
+    for the most. If you're a lecturer scoring a whole class instead, use
+    <a href="{{ url_for('index') }}">batch upload</a>.
+  </p>
 
   <form method="post" action="{{ url_for('quick_check_predict') }}" class="predict-form">
     <div class="form-grid">
       {% for field in fields %}
         <div class="form-field">
           <label for="{{ field.name }}">{{ field.label }}</label>
+          {% if field.help %}<span class="field-help">{{ field.help }}</span>{% endif %}
           {% if field.type == "select" %}
             <select id="{{ field.name }}" name="{{ field.name }}" required>
               {% for option in field.options %}
@@ -29,6 +34,6 @@
         </div>
       {% endfor %}
     </div>
-    <button type="submit" class="btn-primary">Predict performance</button>
+    <button type="submit" class="btn-primary">See my predicted score</button>
   </form>
 {% endblock %}

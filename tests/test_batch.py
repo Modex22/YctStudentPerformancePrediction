@@ -1,6 +1,3 @@
-import pandas as pd
-import pytest
-
 from src.batch import BatchError, build_template_csv, parse_upload, run_batch, validate_and_prepare
 from src.predict import build_counsellor_note
 
@@ -25,17 +22,20 @@ def test_template_csv_round_trips_through_the_full_pipeline():
 def test_missing_feature_columns_are_reported():
     df = parse_upload("bad.csv", b"name,age\nJohn,18\n")
     df, identity_map, missing = validate_and_prepare(df)
-    assert "study_hours_per_week" in missing
+    assert "exam_score" in missing
     assert len(missing) > 0
 
 
 def test_unsupported_file_type_raises_batch_error():
-    with pytest.raises(BatchError):
+    try:
         parse_upload("notes.txt", b"hello")
+        assert False, "expected BatchError"
+    except BatchError:
+        pass
 
 
 def test_non_numeric_row_is_skipped_with_a_warning():
-    csv_text = build_template_csv().replace(",20,74,", ",not-a-number,74,")
+    csv_text = build_template_csv().replace(",78,82,88,80", ",not-a-number,82,88,80")
 
     parsed = parse_upload("roster.csv", csv_text.encode("utf-8"))
     parsed, identity_map, missing = validate_and_prepare(parsed)
@@ -45,28 +45,10 @@ def test_non_numeric_row_is_skipped_with_a_warning():
     assert any("not-a-number" in w for w in outcome["warnings"])
 
 
-def test_unrecognized_categorical_value_is_flagged_but_not_fatal():
-    csv_text = build_template_csv()
-    df = pd.read_csv(__import__("io").StringIO(csv_text))
-    df.loc[0, "gender"] = "Other"
-    buf = __import__("io").StringIO()
-    df.to_csv(buf, index=False)
-
-    parsed = parse_upload("roster.csv", buf.getvalue().encode("utf-8"))
-    parsed, identity_map, missing = validate_and_prepare(parsed)
-    outcome = run_batch(parsed, identity_map)
-
-    assert outcome["summary"]["n_students"] == 3  # still processed
-    assert any("unrecognized 'gender'" in w for w in outcome["warnings"])
-
-
 def test_counsellor_note_mentions_the_driving_factor_for_at_risk_students():
-    student = {
-        "study_hours_per_week": 2, "sleep_hours": 7,
-        "part_time_job": "No", "tutoring_support": "Yes",
-    }
+    student = {"exam_score": 30, "test_score": 80, "assignment_score": 80, "practical_score": 80}
     note = build_counsellor_note(student, "At Risk")
-    assert "study time" in note.lower()
+    assert "exam performance" in note.lower()
 
 
 def test_counsellor_note_is_positive_for_excellent_category():

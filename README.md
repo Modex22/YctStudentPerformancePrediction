@@ -1,17 +1,18 @@
 # YABATECH Student Performance Predictor
 
 A machine-learning system that predicts a student's likely final score, an
-ND/HND-style classification, and pass/fail risk from academic and lifestyle
-factors (study time, prior grades, sleep, family background, etc.) — built
-for a class-roster workflow: upload a spreadsheet of students, get a class
-report back.
+ND/HND-style classification, and pass/fail risk from four assessment
+components a department already has on record for every student:
 
-Attendance is deliberately not one of the inputs — it's rarely reliably
-collectible in practice — so it's excluded from the feature set entirely.
-It's still modelled as a *latent* factor in the synthetic training data (see
-`data/generate_dataset.py`), which keeps the achievable accuracy honest:
-the model can't cheat by learning from a signal a real deployment wouldn't
-have either.
+- Exam score
+- Test / CA score
+- Assignment score
+- Practical score
+
+No lifestyle, demographic, or self-reported data (study habits, sleep,
+family background, attendance, etc.) — just the numbers already sitting in
+a results spreadsheet. Built for a class-roster workflow: upload that
+spreadsheet, get a class report back.
 
 **Not yet trained on real Yabatech data.** The model is trained on a
 synthetic dataset (see below); the app is styled for Yabatech's context
@@ -20,50 +21,54 @@ are illustrative until it's retrained on real, anonymized records.
 
 ## How it works
 
-1. **Dataset** (`data/generate_dataset.py`) — no labeled dataset was supplied,
-   so a realistic synthetic dataset (2,000 students, 12 features) is generated
-   from sensible distributions, with the target score built from a weighted
-   combination of the features plus noise, mirroring patterns reported in
-   education research (study time and prior grades are the strongest observed
-   predictors; sleep has a sweet spot around 7-8 hours; a part-time job has a
-   mild negative effect; etc.). Attendance is generated too and still shapes
-   the target score, but it's intentionally kept out of the feature columns
-   entirely — it isn't reliably collectible, so the model doesn't get to see
-   it, the same as a real deployment. Swap in a real dataset by replacing
-   `data/student_performance.csv` with the same columns (see `src/config.py`).
-2. **Preprocessing** (`src/data_preprocessing.py`) — numeric features are
-   standardized, categorical features are one-hot encoded, via a
-   `ColumnTransformer` that's part of the saved model pipeline (no separate
-   scaler file to keep in sync).
+1. **Dataset** (`data/generate_dataset.py`) — no labeled dataset was
+   supplied, so a synthetic one (2,000 students, 4 features) is generated:
+   each component score is sampled from its own realistic distribution
+   (exams run harder and more spread out than coursework; assignments are
+   the most forgiving), and `final_score` is a weighted combination of the
+   four (see `COMPONENT_WEIGHTS` in `src/config.py` — illustrative, not
+   confirmed against Yabatech's actual continuous-assessment policy) plus a
+   little noise, representing real-world effects a fixed formula wouldn't
+   capture exactly (moderation, rounding, marker variation). Swap in a real
+   dataset by replacing `data/student_performance.csv` with the same
+   columns (see `src/config.py`).
+2. **Preprocessing** (`src/data_preprocessing.py`) — the four scores are
+   standardized via a `ColumnTransformer` that's part of the saved model
+   pipeline (no separate scaler file to keep in sync). There are currently
+   no categorical features, but the pipeline still has an (empty)
+   categorical branch so one can be added back without restructuring
+   anything.
 3. **Training** (`src/train_model.py`) — trains and 5-fold cross-validates
    four regressors (Linear Regression, Ridge, Random Forest, Gradient
    Boosting) to predict the final score, keeps the best by test R², and
    separately trains a Random Forest classifier for pass/fail. Saves both
    pipelines, a `metrics.json`, and feature-importance / actual-vs-predicted
-   plots.
+   plots. (Feature importance is read from `feature_importances_` for a
+   tree ensemble or `|coefficient|` for a linear model — whichever type
+   wins a given retrain.)
 4. **Prediction** (`src/predict.py`) — loads the saved pipelines (training
    automatically on first use if they don't exist yet) and turns one
-   student's data into a score, grade, ND/HND classification, performance
-   category, pass/fail call, rule-based recommendations, and a short
-   "counsellor's note" (a one-line report-card-style remark naming the
-   biggest driving factor).
+   student's four scores into a final score, grade, ND/HND classification,
+   performance category, pass/fail call, rule-based recommendations, and a
+   short "counsellor's note" (a one-line report-card-style remark naming
+   the weakest component(s)).
 5. **Batch upload** (`src/batch.py` + `/`) — the primary workflow: upload a
    `.csv`/`.xlsx` class roster, every row is validated and scored in one
    pass, and you get back a class dashboard (average score, pass rate,
    classification breakdown, score histogram, a ranked at-risk list) plus a
    full per-student results table. A scanning animation plays while the
    file is processed. `/batch/template` downloads a ready-to-fill CSV.
-6. **Quick check** (`/quick-check`) — the original one-student form, for a
-   single ad-hoc lookup instead of a roster.
+6. **Check my score** (`/quick-check`) — the same prediction for one
+   student filling in their own four scores, instead of a roster.
 7. **Model info** (`/about`) — how each candidate model performed, and the
    caveats on the ND/HND classification cutoffs and the synthetic training
    data.
 
-Current results on the synthetic dataset: best regressor is Gradient
-Boosting (test R² ≈ 0.73, MAE ≈ 5.3 points on a 0-100 scale); the pass/fail
-classifier reaches ≈ 87% accuracy. (R² is lower than it would be with
-attendance included — expected, since a real predictor was deliberately
-removed.) Re-run training to regenerate these numbers — see below.
+Current results on the synthetic dataset: best regressor is Linear
+Regression (test R² ≈ 0.90, MAE ≈ 2.6 points on a 0-100 scale — high
+because `final_score` really is close to a weighted sum of the four inputs
+by construction); the pass/fail classifier reaches ≈ 95% accuracy. Re-run
+training to regenerate these numbers on real data — see below.
 
 ## Project structure
 
@@ -78,7 +83,7 @@ removed.) Re-run training to regenerate these numbers — see below.
 │   ├── train_model.py         # trains, compares, saves models + plots
 │   ├── predict.py             # loads models, predicts one student
 │   ├── batch.py                # parses a roster spreadsheet, runs batch predictions
-│   ├── export_web_model.py    # exports trained trees to JSON for a client-side demo
+│   ├── export_web_model.py    # exports the trained model to JSON for a client-side demo
 │   └── export_web_charts.py   # exports chart data for that demo
 ├── models/                    # saved pipelines + metrics.json (generated)
 ├── reports/figures/           # feature importance & actual-vs-predicted plots
@@ -114,31 +119,31 @@ python app.py
 Then open http://localhost:5000 — the batch upload page is the home page.
 Click "Try an example roster" to see the full flow without your own file,
 or download the CSV template and fill in a real class list. `/quick-check`
-has the original single-student form, and `/about` has model metrics and
+lets one student check their own score, and `/about` has model metrics and
 charts.
 
 ### Roster spreadsheet format
 
-A `.csv` or `.xlsx` with one row per student. Required columns are the 12
-feature columns in `src/config.py:FEATURE_COLUMNS` (age, study hours,
-previous grade, sleep hours, gender, school type, parental education,
-family income level, internet access, extracurriculars, part-time job,
-tutoring support). Optional identity columns — `name`,
-`matric_no`, `department`, `level` (aliases like `student_name` or `dept`
-are also recognized) — are carried through to the report for context but
-never fed to the model. Unrecognized categorical values or non-numeric
-cells are flagged as warnings; rows with an unparseable number are skipped
-rather than crashing the whole upload.
+A `.csv` or `.xlsx` with one row per student. Required columns are the 4
+feature columns in `src/config.py:FEATURE_COLUMNS` — `exam_score`,
+`test_score`, `assignment_score`, `practical_score`, each 0-100. Optional
+identity columns — `name`, `matric_no`, `department`, `level` (aliases like
+`student_name` or `dept` are also recognized) — are carried through to the
+report for context but never fed to the model. Non-numeric cells are
+flagged as warnings and that row is skipped rather than crashing the whole
+upload.
 
 ## Static client-side demo (no server)
 
-`src/export_web_model.py` walks the fitted scikit-learn pipelines (every
-tree's feature/threshold/children/value arrays, plus the scaler and one-hot
-encoder parameters) into a JSON file, and `src/export_web_charts.py` exports
-the feature-importance and actual-vs-predicted data used by the demo's
-charts. A small hand-written JS predictor walks those same trees, so
-predictions match the Python model bit-for-bit with nothing running
-server-side:
+`src/export_web_model.py` exports the fitted regressor + classifier
+pipelines to a JSON file a plain-JS predictor can walk with no Python/Flask
+backend required, and `src/export_web_charts.py` exports the
+feature-importance and actual-vs-predicted data used by the demo's charts.
+The regressor's shape depends on which model type won training — a tree
+ensemble is exported as its trees (feature/threshold/children/value per
+node), a linear model as its coefficients + intercept — so the exporter
+(and the JS that reads its output) branches on `payload.regressor.type`
+rather than assuming one shape:
 
 ```bash
 python -m src.export_web_model web_demo_model.json
@@ -156,7 +161,8 @@ python -m src.predict
 
 Edit the `example_student` dict at the bottom of `src/predict.py`, or import
 `predict_performance()` from your own script — it takes a dict with the keys
-listed in `src/config.py:FEATURE_COLUMNS` and returns the predicted score,
+listed in `src/config.py:FEATURE_COLUMNS` (`exam_score`, `test_score`,
+`assignment_score`, `practical_score`) and returns the predicted score,
 grade, ND/HND classification, category, pass/fail call, recommendations,
 and a counsellor's note.
 
@@ -170,7 +176,8 @@ pytest
 
 Replace `data/student_performance.csv` with real records that (a) keep the
 same column names as `FEATURE_COLUMNS` in `src/config.py` (or update that
-list) and (b) include a `final_score` (0-100) target and a `pass_fail`
+list, and `COMPONENT_WEIGHTS`, if the real assessment structure differs)
+and (b) include a `final_score` (0-100) target and a `pass_fail`
 (`Pass`/`Fail`) target, then re-run `python -m src.train_model`. Everything
 downstream (preprocessing, training, the web app) works unchanged. The
 `CLASSIFICATION_BINS`/`CLASSIFICATION_LABELS` cutoffs in `src/config.py` are
