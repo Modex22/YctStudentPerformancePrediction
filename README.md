@@ -122,6 +122,33 @@ or download the CSV template and fill in a real class list. `/quick-check`
 lets one student check their own score, and `/about` has model metrics and
 charts.
 
+## Deploying it publicly
+
+**Not Vercel** — this app's dependencies (numpy + pandas + scipy + scikit-learn)
+total ~283 MB uncompressed, over Vercel's ~250 MB serverless function limit,
+and batch upload needs a real running Python process (pandas parsing an
+uploaded file), not a stateless function. Vercel *is* a great fit for the
+"Grade Forecast" client-side demo (`src/export_web_model.py`) since that's
+pure static HTML/JS with no backend at all.
+
+For the full app (including batch upload), any host that runs a persistent
+Python process works — this repo is ready for **Render**
+(`render.yaml` + `Procfile`, both already here):
+
+1. Push this repo to your own GitHub account (or use this one directly if
+   you have push access).
+2. On [render.com](https://render.com): New → Blueprint → connect the repo.
+   It reads `render.yaml` automatically — free tier, no config needed.
+3. Or manually: New → Web Service → connect the repo → Render detects
+   Python, build command `pip install -r requirements.txt`, start command
+   `gunicorn app:app` (already set in `render.yaml`).
+
+Railway, Fly.io, PythonAnywhere, or a plain VM all work the same way — the
+only requirement is running `gunicorn app:app` (or equivalent) instead of
+`python app.py`'s development server. Verified locally before recommending
+this: `gunicorn app:app` serves every route (including a full predict
+request) identically to the dev server.
+
 ### Roster spreadsheet format
 
 A `.csv` or `.xlsx` with one row per student. Required columns are the 4
