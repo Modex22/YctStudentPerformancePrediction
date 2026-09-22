@@ -22,7 +22,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/><path d="M9.2 12.4l2 2 3.4-3.6"/></svg>
           Check My Score
         </a>
-        <a class="nav-item {% if request.endpoint in ['history_lookup', 'history_view'] %}active{% endif %}" href="{{ url_for('history_lookup') }}">
+        <a class="nav-item {% if request.endpoint in ['history_lookup', 'history_lookup_submit', 'history_delete'] %}active{% endif %}" href="{{ url_for('history_lookup') }}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.4 2.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3.5 2"/></svg>
           History
         </a>

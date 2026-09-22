@@ -67,11 +67,18 @@ are illustrative until it's retrained on real, anonymized records.
    learned adjustment) and a confidence range (predicted score ± the
    model's test MAE, so a single decimal doesn't read as more precise
    than it is). Optionally, ticking "save to history" (with a matric
-   number) stores that one result — see below; nothing is saved by default.
+   number **and a PIN**) stores that one result — see below; nothing is
+   saved by default.
 7. **History** (`/history`, `src/history.py`) — opt-in only: look up a
-   matric number to see every result explicitly saved for it, plus a trend
-   chart of predicted score over time. A student or lecturer can delete a
-   matric number's history entirely. Batch uploads are never saved here.
+   matric number *with its PIN* to see every result explicitly saved for
+   it, plus a trend chart of predicted score over time. The PIN is set on
+   the first save for a matric number and required for every later save,
+   view, or delete against it — a stranger who finds/guesses a matric
+   number alone can't read or add to someone else's saved history. It's a
+   lightweight, self-service gate (a salted-hash PIN check, no accounts),
+   not real authentication — a deployment handling actual student data
+   should sit behind proper institutional login instead. Batch uploads are
+   never saved here.
 8. **Model info** (`/about`) — how each candidate model performed, and the
    caveats on the ND/HND classification cutoffs and the synthetic training
    data.

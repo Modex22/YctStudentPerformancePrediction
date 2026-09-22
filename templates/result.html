@@ -19,7 +19,8 @@
 
   {% if saved %}
     <div class="disclaimer" style="background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong);">
-      Saved to history for <strong>{{ matric_no }}</strong> — <a href="{{ url_for('history_view', matric_no=matric_no) }}">view trend &rarr;</a>
+      Saved to history for <strong>{{ matric_no }}</strong>. Come back to
+      <a href="{{ url_for('history_lookup') }}">History</a> any time with this matric number and PIN to see it again.
     </div>
   {% elif save_error %}
     <div class="disclaimer">{{ save_error }} This result was not saved.</div>
@@ -52,6 +53,37 @@
     <span class="counsellor-note-label">Counsellor's note</span>
     <p>{{ result.counsellor_note }}</p>
   </div>
+
+  {% if saved and trend and trend.points|length > 1 %}
+    <div class="trend-card">
+      <h3>Your trend so far</h3>
+      <p class="trend-sub">{{ trend.points|length }} saved checks for {{ matric_no }}.</p>
+      <svg viewBox="0 0 {{ trend.width }} {{ trend.height }}" width="100%">
+        <defs>
+          <linearGradient id="trendLineGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#16a34a"/>
+            <stop offset="100%" stop-color="#4ade80"/>
+          </linearGradient>
+          <linearGradient id="trendAreaGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4ade80" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        {% for gridline in [0, 25, 50, 75, 100] %}
+          {% set gy = trend.baseline_y - (gridline / 100 * (trend.baseline_y - 18)) %}
+          <line class="grid-line" x1="20" y1="{{ gy }}" x2="{{ trend.width - 4 }}" y2="{{ gy }}" stroke-width="1"/>
+          <text x="2" y="{{ gy + 3 }}" font-size="9">{{ gridline }}</text>
+        {% endfor %}
+        <path class="trend-area" d="{{ trend.area_path }}"/>
+        <path class="trend-line" d="{{ trend.line_path }}"/>
+        {% for p in trend.points %}
+          <circle class="{{ 'trend-point-latest' if loop.last else 'trend-point' }}" cx="{{ p.cx }}" cy="{{ p.cy }}" r="{{ 5 if loop.last else 3.5 }}">
+            <title>{{ p.date }}: {{ p.score }}</title>
+          </circle>
+        {% endfor %}
+      </svg>
+    </div>
+  {% endif %}
 
   <div class="score-breakdown">
     <h2>Where the score comes from</h2>

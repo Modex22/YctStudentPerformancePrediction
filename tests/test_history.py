@@ -2,7 +2,15 @@ import os
 
 import pytest
 
-from src.history import build_trend_chart, delete_history, get_history, save_entry
+from src.history import (
+    WrongPin,
+    build_trend_chart,
+    delete_history,
+    get_history,
+    has_pin_set,
+    save_entry,
+    verify_pin,
+)
 from src.predict import predict_performance
 
 
@@ -19,45 +27,85 @@ def _isolated_history_db(tmp_path, monkeypatch):
     yield
 
 
-def test_save_and_get_history_round_trips():
-    student = {"exam_score": 36, "test_score": 6, "assignment_score": 7, "practical_score": 13}
-    result = predict_performance(student)
-    save_entry("ND/CS/23/0001", student, result)
+STUDENT = {"exam_score": 36, "test_score": 6, "assignment_score": 7, "practical_score": 13}
 
-    entries = get_history("ND/CS/23/0001")
+
+def test_save_and_get_history_round_trips():
+    result = predict_performance(STUDENT)
+    save_entry("ND/CS/23/0001", "1234", STUDENT, result)
+
+    entries = get_history("ND/CS/23/0001", "1234")
     assert len(entries) == 1
     assert entries[0]["exam_score"] == 36
     assert entries[0]["predicted_score"] == result["predicted_score"]
 
 
 def test_save_entry_requires_matric_no():
-    student = {"exam_score": 36, "test_score": 6, "assignment_score": 7, "practical_score": 13}
-    result = predict_performance(student)
+    result = predict_performance(STUDENT)
     with pytest.raises(ValueError):
-        save_entry("", student, result)
+        save_entry("", "1234", STUDENT, result)
+
+
+def test_save_entry_requires_a_real_pin():
+    result = predict_performance(STUDENT)
+    for bad_pin in ("", "12"):
+        with pytest.raises(ValueError):
+            save_entry("ND/CS/23/0001", bad_pin, STUDENT, result)
+
+
+def test_first_save_sets_the_pin_and_locks_out_a_different_one():
+    result = predict_performance(STUDENT)
+    save_entry("ND/CS/23/0002", "correct-pin", STUDENT, result)
+
+    assert has_pin_set("ND/CS/23/0002")
+    assert verify_pin("ND/CS/23/0002", "correct-pin")
+    assert not verify_pin("ND/CS/23/0002", "wrong-pin")
+
+    with pytest.raises(WrongPin):
+        save_entry("ND/CS/23/0002", "wrong-pin", STUDENT, result)
+
+    # The wrong-PIN attempt must not have appended anything.
+    assert len(get_history("ND/CS/23/0002", "correct-pin")) == 1
+
+
+def test_get_history_wrong_pin_raises_but_no_history_returns_empty():
+    result = predict_performance(STUDENT)
+    save_entry("ND/CS/23/0003", "secret", STUDENT, result)
+
+    with pytest.raises(WrongPin):
+        get_history("ND/CS/23/0003", "guess")
+
+    # A matric number with no saved history at all is just empty, not an error
+    # (nothing to unlock, so no PIN to get wrong).
+    assert get_history("ND/NEVER/SAVED", "anything") == []
 
 
 def test_different_matric_numbers_are_isolated():
-    student = {"exam_score": 20, "test_score": 4, "assignment_score": 4, "practical_score": 8}
-    result = predict_performance(student)
-    save_entry("ND/A/1", student, result)
-    save_entry("ND/B/1", student, result)
+    result = predict_performance({"exam_score": 20, "test_score": 4, "assignment_score": 4, "practical_score": 8})
+    save_entry("ND/A/1", "pin-a", STUDENT, result)
+    save_entry("ND/B/1", "pin-b", STUDENT, result)
 
-    assert len(get_history("ND/A/1")) == 1
-    assert len(get_history("ND/B/1")) == 1
-    assert get_history("ND/NOBODY/1") == []
+    assert len(get_history("ND/A/1", "pin-a")) == 1
+    assert len(get_history("ND/B/1", "pin-b")) == 1
+    # A's PIN doesn't unlock B's history.
+    with pytest.raises(WrongPin):
+        get_history("ND/B/1", "pin-a")
 
 
-def test_delete_history_removes_only_that_matric_no():
-    student = {"exam_score": 20, "test_score": 4, "assignment_score": 4, "practical_score": 8}
-    result = predict_performance(student)
-    save_entry("ND/A/1", student, result)
-    save_entry("ND/B/1", student, result)
+def test_delete_history_requires_correct_pin_and_removes_only_that_matric_no():
+    result = predict_performance(STUDENT)
+    save_entry("ND/A/1", "pin-a", STUDENT, result)
+    save_entry("ND/B/1", "pin-b", STUDENT, result)
 
-    deleted = delete_history("ND/A/1")
+    with pytest.raises(WrongPin):
+        delete_history("ND/A/1", "wrong")
+    assert len(get_history("ND/A/1", "pin-a")) == 1  # untouched
+
+    deleted = delete_history("ND/A/1", "pin-a")
     assert deleted == 1
-    assert get_history("ND/A/1") == []
-    assert len(get_history("ND/B/1")) == 1
+    assert get_history("ND/A/1", "pin-a") == []
+    assert not has_pin_set("ND/A/1")  # PIN cleared too, so the slot can be reused
+    assert len(get_history("ND/B/1", "pin-b")) == 1
 
 
 def test_build_trend_chart_none_when_empty():

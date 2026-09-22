@@ -3,11 +3,11 @@ from __future__ import annotations
 
 import json
 
-from flask import Flask, Response, redirect, render_template, request, send_from_directory, url_for
+from flask import Flask, Response, render_template, request, send_from_directory
 
 from src.batch import BatchError, build_template_csv, parse_upload, run_batch, validate_and_prepare
 from src.config import FEATURE_COLUMNS, FIGURES_DIR, METRICS_PATH
-from src.history import build_trend_chart, delete_history, get_history, save_entry
+from src.history import WrongPin, build_trend_chart, delete_history, get_history, save_entry
 from src.predict import predict_performance
 
 app = Flask(__name__)
@@ -88,14 +88,26 @@ def quick_check_predict():
 
     save_to_history = request.form.get("save_to_history") == "on"
     matric_no = (request.form.get("matric_no") or "").strip()
+    pin = request.form.get("pin") or ""
     saved = False
     save_error = None
+    trend = None
+
     if save_to_history:
-        if matric_no:
-            save_entry(matric_no, student, result)
-            saved = True
-        else:
+        if not matric_no:
             save_error = "Matric number is required to save to history."
+        elif not pin or len(pin) < 4:
+            save_error = "A PIN of at least 4 characters is required to save to history."
+        else:
+            try:
+                save_entry(matric_no, pin, student, result)
+                saved = True
+                trend = build_trend_chart(get_history(matric_no, pin))
+            except WrongPin:
+                save_error = (
+                    f"That PIN doesn't match the one already set for {matric_no}. "
+                    "If this is your first time saving, double-check the matric number for typos."
+                )
 
     return render_template(
         "result.html",
@@ -105,6 +117,7 @@ def quick_check_predict():
         matric_no=matric_no,
         saved=saved,
         save_error=save_error,
+        trend=trend,
     )
 
 
@@ -116,22 +129,37 @@ def history_lookup():
 @app.route("/history", methods=["POST"])
 def history_lookup_submit():
     matric_no = (request.form.get("matric_no") or "").strip()
-    if not matric_no:
-        return render_template("history_lookup.html", error="Enter a matric number.")
-    return redirect(url_for("history_view", matric_no=matric_no))
+    pin = request.form.get("pin") or ""
+    if not matric_no or not pin:
+        return render_template("history_lookup.html", error="Enter both a matric number and its PIN.")
 
+    try:
+        entries = get_history(matric_no, pin)
+    except WrongPin:
+        return render_template("history_lookup.html", error="Incorrect PIN for that matric number.")
 
-@app.route("/history/<path:matric_no>", methods=["GET"])
-def history_view(matric_no: str):
-    entries = get_history(matric_no)
+    if not entries:
+        return render_template(
+            "history_lookup.html",
+            error=f"No saved history for {matric_no} yet — nothing to unlock with a PIN.",
+        )
+
     trend = build_trend_chart(entries)
-    return render_template("history_view.html", matric_no=matric_no, entries=entries, trend=trend)
+    return render_template("history_view.html", matric_no=matric_no, pin=pin, entries=entries, trend=trend)
 
 
-@app.route("/history/<path:matric_no>/delete", methods=["POST"])
-def history_delete(matric_no: str):
-    delete_history(matric_no)
-    return redirect(url_for("history_view", matric_no=matric_no))
+@app.route("/history/delete", methods=["POST"])
+def history_delete():
+    matric_no = (request.form.get("matric_no") or "").strip()
+    pin = request.form.get("pin") or ""
+    try:
+        delete_history(matric_no, pin)
+        return render_template(
+            "history_lookup.html",
+            notice=f"History for {matric_no} was deleted.",
+        )
+    except WrongPin:
+        return render_template("history_lookup.html", error="Incorrect PIN — nothing was deleted.")
 
 
 @app.route("/about", methods=["GET"])

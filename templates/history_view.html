@@ -88,8 +88,10 @@
     </div>
 
     <div class="history-actions">
-      <form method="post" action="{{ url_for('history_delete', matric_no=matric_no) }}"
+      <form method="post" action="{{ url_for('history_delete') }}"
             onsubmit="return confirm('Delete all saved history for {{ matric_no }}? This cannot be undone.');">
+        <input type="hidden" name="matric_no" value="{{ matric_no }}">
+        <input type="hidden" name="pin" value="{{ pin }}">
         <button type="submit" class="btn-secondary">Delete this history</button>
       </form>
     </div>

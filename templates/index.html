@@ -36,16 +36,23 @@
       {% endfor %}
     </div>
 
-    <div class="form-field" style="max-width: 280px;">
-      <label for="matric_no">Matric number <span class="muted">(optional)</span></label>
-      <input type="text" id="matric_no" name="matric_no" placeholder="e.g. ND/CS/23/0142">
+    <div class="form-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 260px));">
+      <div class="form-field">
+        <label for="matric_no">Matric number <span class="muted">(optional)</span></label>
+        <input type="text" id="matric_no" name="matric_no" placeholder="e.g. ND/CS/23/0142">
+      </div>
+      <div class="form-field">
+        <label for="pin">PIN <span class="muted">(only needed to save)</span></label>
+        <input type="password" id="pin" name="pin" placeholder="4+ characters" minlength="4" autocomplete="off">
+        <span class="field-help">Choose one the first time you save this matric number; use the same one every time after — it's what keeps your history private. It can't be recovered if forgotten.</span>
+      </div>
     </div>
 
     <label class="checkbox-field">
       <input type="checkbox" name="save_to_history" id="save_to_history">
       <span>
         Save this result to my history
-        <span class="checkbox-help">Requires a matric number above. Nothing is saved unless this is checked — see the note below.</span>
+        <span class="checkbox-help">Requires the matric number and PIN above. Nothing is saved unless this is checked — see the note below.</span>
       </span>
     </label>
 
