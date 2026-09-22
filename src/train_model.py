@@ -99,6 +99,30 @@ def train_classifier(X_train, X_test, y_train, y_test, preprocessor):
     return pipeline, metrics
 
 
+# Matches the web app's dark/green theme (static/style.css --surface /
+# --accent-strong / --border / --text / --muted) so the embedded PNGs on
+# /about don't sit as a jarring white rectangle on a black page.
+_FIG_BG = "#121b16"
+_FIG_TEXT = "#eaf5ee"
+_FIG_MUTED = "#8ca897"
+_FIG_GRID = "#22322a"
+_FIG_ACCENT = "#4ade80"
+_FIG_RISK = "#f87171"
+
+
+def _apply_dark_theme(ax) -> None:
+    ax.set_facecolor(_FIG_BG)
+    ax.figure.set_facecolor(_FIG_BG)
+    ax.tick_params(colors=_FIG_MUTED, labelsize=9)
+    for spine in ax.spines.values():
+        spine.set_color(_FIG_GRID)
+    ax.title.set_color(_FIG_TEXT)
+    ax.xaxis.label.set_color(_FIG_MUTED)
+    ax.yaxis.label.set_color(_FIG_MUTED)
+    ax.grid(color=_FIG_GRID, linewidth=0.6, alpha=0.7)
+    ax.set_axisbelow(True)
+
+
 def plot_feature_importance(pipeline: Pipeline, model_name: str) -> None:
     """Plot per-feature importance for the winning model. Tree ensembles
     expose feature_importances_ directly; linear models don't, so their
@@ -120,26 +144,28 @@ def plot_feature_importance(pipeline: Pipeline, model_name: str) -> None:
     feature_names = pipeline.named_steps["preprocessor"].get_feature_names_out()
     order = np.argsort(importances)[-12:]  # top 12
 
-    plt.figure(figsize=(8, 6))
-    plt.barh([feature_names[i] for i in order], importances[order], color="#3366cc")
-    plt.xlabel(importance_label)
-    plt.title(f"Top feature importances ({model_name})")
-    plt.tight_layout()
-    plt.savefig(os.path.join(FIGURES_DIR, "feature_importance.png"), dpi=120)
-    plt.close()
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.barh([feature_names[i] for i in order], importances[order], color=_FIG_ACCENT)
+    ax.set_xlabel(importance_label)
+    ax.set_title(f"Top feature importances ({model_name})", color=_FIG_TEXT)
+    _apply_dark_theme(ax)
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIGURES_DIR, "feature_importance.png"), dpi=120, facecolor=_FIG_BG)
+    plt.close(fig)
 
 
 def plot_actual_vs_predicted(y_test, predictions, model_name: str) -> None:
-    plt.figure(figsize=(6, 6))
-    plt.scatter(y_test, predictions, alpha=0.4, color="#3366cc", edgecolor="none")
+    fig, ax = plt.subplots(figsize=(6, 6))
+    ax.scatter(y_test, predictions, alpha=0.55, color=_FIG_ACCENT, edgecolor="none", s=22)
     lims = [0, 100]
-    plt.plot(lims, lims, "r--", linewidth=1)
-    plt.xlabel("Actual final score")
-    plt.ylabel("Predicted final score")
-    plt.title(f"Actual vs. predicted ({model_name})")
-    plt.tight_layout()
-    plt.savefig(os.path.join(FIGURES_DIR, "actual_vs_predicted.png"), dpi=120)
-    plt.close()
+    ax.plot(lims, lims, color=_FIG_RISK, linestyle="--", linewidth=1.2)
+    ax.set_xlabel("Actual final score")
+    ax.set_ylabel("Predicted final score")
+    ax.set_title(f"Actual vs. predicted ({model_name})", color=_FIG_TEXT)
+    _apply_dark_theme(ax)
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIGURES_DIR, "actual_vs_predicted.png"), dpi=120, facecolor=_FIG_BG)
+    plt.close(fig)
 
 
 def main() -> None:

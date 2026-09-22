@@ -62,8 +62,17 @@ are illustrative until it's retrained on real, anonymized records.
    full per-student results table. A scanning animation plays while the
    file is processed. `/batch/template` downloads a ready-to-fill CSV.
 6. **Check my score** (`/quick-check`) — the same prediction for one
-   student filling in their own four scores, instead of a roster.
-7. **Model info** (`/about`) — how each candidate model performed, and the
+   student filling in their own four scores, instead of a roster. Shows a
+   score breakdown (each component's raw contribution vs. the model's
+   learned adjustment) and a confidence range (predicted score ± the
+   model's test MAE, so a single decimal doesn't read as more precise
+   than it is). Optionally, ticking "save to history" (with a matric
+   number) stores that one result — see below; nothing is saved by default.
+7. **History** (`/history`, `src/history.py`) — opt-in only: look up a
+   matric number to see every result explicitly saved for it, plus a trend
+   chart of predicted score over time. A student or lecturer can delete a
+   matric number's history entirely. Batch uploads are never saved here.
+8. **Model info** (`/about`) — how each candidate model performed, and the
    caveats on the ND/HND classification cutoffs and the synthetic training
    data.
 
@@ -77,6 +86,20 @@ recovered the actual relationship rather than memorizing anything); the
 pass/fail classifier reaches ≈ 96% accuracy. Re-run training to regenerate
 these numbers on real data — see below.
 
+## Design
+
+A dark, green-gradient sidebar layout (all in `static/style.css`, tokens at
+the top) — a deliberate departure from the earlier light "academic ledger"
+look, matching a dashboard reference the app was asked to be styled after.
+Status colors stay semantic regardless of the brand accent: red for
+Fail/At Risk, amber for Pass/Average, green for Good/Distinction — the
+brand being green never means "everything is green." The two matplotlib
+plots on `/about` are themed to match (`_apply_dark_theme()` in
+`src/train_model.py`) rather than sitting as a white rectangle on a black
+page. No JS charting library anywhere — the trend chart and the batch
+dashboard's bars are all plain inline SVG / CSS widths computed
+server-side, consistent with how the rest of the app already worked.
+
 ## Project structure
 
 ```
@@ -88,13 +111,15 @@ these numbers on real data — see below.
 │   ├── config.py              # paths, feature/target columns, classification bins
 │   ├── data_preprocessing.py  # ColumnTransformer + data loading
 │   ├── train_model.py         # trains, compares, saves models + plots
-│   ├── predict.py             # loads models, predicts one student
+│   ├── predict.py             # loads models, predicts one student (+ breakdown, MAE)
 │   ├── batch.py                # parses a roster spreadsheet, runs batch predictions
+│   ├── history.py             # opt-in save/lookup/delete + trend-chart math (SQLite)
 │   ├── export_web_model.py    # exports the trained model to JSON for a client-side demo
 │   └── export_web_charts.py   # exports chart data for that demo
 ├── models/                    # saved pipelines + metrics.json (generated)
-├── reports/figures/           # feature importance & actual-vs-predicted plots
-├── templates/, static/        # Flask views (batch_upload, batch_results_fragment, ...)
+├── reports/figures/           # feature importance & actual-vs-predicted plots (dark theme)
+├── instance/                  # history.db (generated, gitignored — see Deploying)
+├── templates/, static/        # Flask views: dark/green sidebar layout
 └── tests/                     # pytest sanity checks
 ```
 
@@ -155,6 +180,14 @@ only requirement is running `gunicorn app:app` (or equivalent) instead of
 `python app.py`'s development server. Verified locally before recommending
 this: `gunicorn app:app` serves every route (including a full predict
 request) identically to the dev server.
+
+**History persistence**: `instance/history.db` (SQLite) is created on first
+use and is a normal file on local disk — fine for a VM or a Render instance
+with a persistent disk attached. Render's **free** tier has no persistent
+disk, so that file resets on every redeploy or restart there; the
+save-to-history feature would appear to work but silently lose data over
+time. Either attach a paid persistent disk, or swap `src/history.py` for a
+real external database (Postgres, etc.) before relying on it in production.
 
 ### Roster spreadsheet format
 

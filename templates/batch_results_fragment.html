@@ -22,25 +22,29 @@
 
 <div class="stat-tiles">
   <div class="stat-tile">
+    <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
     <span class="stat-value">{{ s.n_students }}</span>
     <span class="stat-label">Students scored</span>
   </div>
   <div class="stat-tile">
+    <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>
     <span class="stat-value">{{ s.avg_score }}</span>
     <span class="stat-label">Average score</span>
   </div>
   <div class="stat-tile">
+    <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
     <span class="stat-value">{{ s.pass_rate }}%</span>
     <span class="stat-label">Predicted pass rate</span>
   </div>
   <div class="stat-tile stat-tile-risk">
+    <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></span>
     <span class="stat-value">{{ s.at_risk_count }}</span>
     <span class="stat-label">At risk</span>
   </div>
 </div>
 
 <div class="dashboard-grid">
-  <div class="panel chart-card">
+  <div class="chart-card">
     <h3>Classification breakdown</h3>
     {% set max_class = (s.classification_counts.values() | list | max) or 1 %}
     <div class="hbar-list">
@@ -54,7 +58,7 @@
     </div>
   </div>
 
-  <div class="panel chart-card">
+  <div class="chart-card">
     <h3>Score distribution</h3>
     {% set max_bucket = (s.histogram | map(attribute='count') | list | max) or 1 %}
     <div class="hbar-list">
@@ -70,7 +74,7 @@
 </div>
 
 {% if s.at_risk_list %}
-  <div class="panel at-risk-panel">
+  <div class="at-risk-panel">
     <h3>At-risk students <span class="muted">(lowest predicted score first)</span></h3>
     <ul class="at-risk-list">
       {% for r in s.at_risk_list %}
@@ -84,7 +88,14 @@
   </div>
 {% endif %}
 
-<div class="panel">
+<div class="results-panel">
+  <div class="results-panel-head">
+    <h3>Full class results</h3>
+    <button type="button" class="btn-ghost" id="export-csv-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download CSV
+    </button>
+  </div>
   <div class="table-wrap">
     <table class="results-table">
       <thead>

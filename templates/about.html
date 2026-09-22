@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Model Info — YABATECH Performance Predictor{% endblock %}
-{% block content %}
-  <h1>About the model</h1>
+{% block page_title %}About the model{% endblock %}
+{% block page_subtitle %}
   <p class="subtitle">
     Several regression models were trained on a synthetic student dataset (2,000 records) and
     compared with 5-fold cross-validation; the best performer was kept as the production model.
     A separate classifier predicts pass/fail risk directly.
   </p>
+{% endblock %}
+{% block content %}
   <div class="disclaimer">
     <strong>Not yet trained on real Yabatech data.</strong> This is a demo built for Yaba College
     of Technology's context (ND/HND classification, department &amp; level fields on the roster

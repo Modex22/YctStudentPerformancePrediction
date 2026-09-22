@@ -13,6 +13,12 @@ REGRESSOR_PATH = os.path.join(MODELS_DIR, "score_regressor.joblib")
 CLASSIFIER_PATH = os.path.join(MODELS_DIR, "pass_fail_classifier.joblib")
 METRICS_PATH = os.path.join(MODELS_DIR, "metrics.json")
 
+# Opt-in "save to history" storage (see src/history.py). On a host with an
+# ephemeral filesystem (e.g. Render free tier, no persistent disk) this
+# resets on every redeploy — not durable there without a paid disk or an
+# external database.
+HISTORY_DB_PATH = os.path.join(BASE_DIR, "instance", "history.db")
+
 # Just the four assessment components a department already records —
 # nothing that has to be guessed, self-reported, or separately collected.
 NUMERIC_FEATURES = [

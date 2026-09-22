@@ -1,6 +1,7 @@
 """Load the trained models and turn a single student's data into a prediction."""
 from __future__ import annotations
 
+import json
 import os
 from typing import Any
 
@@ -17,11 +18,13 @@ from src.config import (
     FEATURE_COLUMNS,
     GRADE_BINS,
     GRADE_LABELS,
+    METRICS_PATH,
     REGRESSOR_PATH,
 )
 
 _regressor = None
 _classifier = None
+_score_mae = None
 
 # A component is flagged when it falls below this fraction of its OWN max
 # mark (each component has a different max — see COMPONENT_MAX) rather
@@ -76,6 +79,42 @@ def load_models():
         _regressor = joblib.load(REGRESSOR_PATH)
         _classifier = joblib.load(CLASSIFIER_PATH)
     return _regressor, _classifier
+
+
+def _get_score_mae() -> float | None:
+    """The winning regressor's test MAE from the last training run, used as
+    a plain-language error margin ("62.0, typically ±1.7") instead of
+    presenting a single decimal as if it were exact. None if metrics.json
+    isn't available yet (e.g. models auto-trained but metrics not saved)."""
+    global _score_mae
+    if _score_mae is None:
+        try:
+            with open(METRICS_PATH) as f:
+                metrics = json.load(f)
+            best = metrics["best_regressor"]
+            _score_mae = metrics["regression_results"][best]["test_mae"]
+        except (FileNotFoundError, KeyError):
+            return None
+    return _score_mae
+
+
+def compute_score_breakdown(student: dict[str, Any], predicted_score: float) -> dict[str, Any]:
+    """How the predicted score relates to a plain sum of the raw component
+    marks. Deliberately model-agnostic (works whether the winning regressor
+    is linear or a tree ensemble) rather than exposing regression
+    coefficients, which would only make sense for a linear model and would
+    need real feature-attribution machinery (e.g. SHAP) to be meaningful
+    for a tree ensemble — not worth the dependency for four features."""
+    components = [
+        {"field": field, "value": student[field], "max": max_mark}
+        for field, max_mark in COMPONENT_MAX.items()
+    ]
+    raw_sum = sum(c["value"] for c in components)
+    return {
+        "components": components,
+        "raw_sum": round(raw_sum, 1),
+        "model_adjustment": round(predicted_score - raw_sum, 1),
+    }
 
 
 def _to_dataframe(student: dict[str, Any]) -> pd.DataFrame:
@@ -161,8 +200,11 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
     pass_index = list(classifier.classes_).index("Pass")
     pass_probability = float(proba[pass_index])
 
+    score_mae = _get_score_mae()
+
     return {
         "predicted_score": round(predicted_score, 1),
+        "score_mae": round(score_mae, 1) if score_mae is not None else None,
         "grade": str(grade),
         "classification": str(classification),
         "performance_category": category,
@@ -170,6 +212,7 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
         "pass_probability": round(pass_probability * 100, 1),
         "recommendations": build_recommendations(student),
         "counsellor_note": build_counsellor_note(student, category),
+        "score_breakdown": compute_score_breakdown(student, predicted_score),
     }
 
 

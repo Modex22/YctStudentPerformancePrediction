@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Result — YABATECH Performance Predictor{% endblock %}
+{% block page_title %}Prediction result{% endblock %}
 {% block content %}
-  <h1>Prediction result</h1>
 
   {% set category_class = {
       "At Risk": "badge-risk",
@@ -17,10 +17,21 @@
       "Distinction": "badge-excellent"
   } %}
 
+  {% if saved %}
+    <div class="disclaimer" style="background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent-strong);">
+      Saved to history for <strong>{{ matric_no }}</strong> — <a href="{{ url_for('history_view', matric_no=matric_no) }}">view trend &rarr;</a>
+    </div>
+  {% elif save_error %}
+    <div class="disclaimer">{{ save_error }} This result was not saved.</div>
+  {% endif %}
+
   <div class="result-card">
     <div class="score-circle">
-      <span class="score-value">{{ result.predicted_score }}</span>
-      <span class="score-max">/ 100</span>
+      <div class="score-circle-inner">
+        <span class="score-value">{{ result.predicted_score }}</span>
+        <span class="score-max">/ 100</span>
+        {% if result.score_mae %}<span class="score-mae">typically &plusmn;{{ result.score_mae }}</span>{% endif %}
+      </div>
     </div>
     <div class="result-details">
       <p><strong>Classification:</strong>
@@ -40,6 +51,26 @@
   <div class="counsellor-note">
     <span class="counsellor-note-label">Counsellor's note</span>
     <p>{{ result.counsellor_note }}</p>
+  </div>
+
+  <div class="score-breakdown">
+    <h2>Where the score comes from</h2>
+    <p class="breakdown-note">The raw sum of your four marks, plus a small model adjustment learned from training data.</p>
+    {% for c in result.score_breakdown.components %}
+      <div class="breakdown-row">
+        <span class="breakdown-label">{{ c.field.replace('_score', '').replace('_', ' ') | title }}</span>
+        <div class="breakdown-track"><div class="breakdown-fill" style="width: {{ (c.value / c.max * 100) if c.max else 0 }}%"></div></div>
+        <span class="breakdown-value">{{ c.value }}/{{ c.max }}</span>
+      </div>
+    {% endfor %}
+    <div class="breakdown-total">
+      <span>Raw sum</span>
+      <strong>{{ result.score_breakdown.raw_sum }}</strong>
+    </div>
+    <p class="breakdown-adjustment">
+      Model adjustment: {{ '+' if result.score_breakdown.model_adjustment >= 0 else '' }}{{ result.score_breakdown.model_adjustment }}
+      pts &rarr; predicted score {{ result.predicted_score }}
+    </p>
   </div>
 
   <h2>Recommendations</h2>

@@ -3,7 +3,7 @@ import pytest
 
 from data.generate_dataset import generate_dataset
 from src.config import COMPONENT_MAX, FEATURE_COLUMNS
-from src.predict import predict_performance
+from src.predict import compute_score_breakdown, predict_performance
 
 
 @pytest.fixture(scope="module")
@@ -80,3 +80,17 @@ def test_exam_score_has_the_largest_effect_on_predicted_score():
     assignment_drop_score = predict_performance(assignment_drop)["predicted_score"]
 
     assert (base_score - exam_drop_score) > (base_score - assignment_drop_score)
+
+
+def test_predict_performance_includes_score_mae_and_breakdown():
+    result = predict_performance(SAMPLE_STUDENT)
+    assert result["score_mae"] is not None and result["score_mae"] > 0
+    assert "score_breakdown" in result
+    assert result["score_breakdown"]["raw_sum"] == sum(SAMPLE_STUDENT.values())
+
+
+def test_score_breakdown_components_match_component_max():
+    breakdown = compute_score_breakdown(SAMPLE_STUDENT, predicted_score=83.0)
+    fields = {c["field"]: c["max"] for c in breakdown["components"]}
+    assert fields == COMPONENT_MAX
+    assert breakdown["model_adjustment"] == round(83.0 - sum(SAMPLE_STUDENT.values()), 1)

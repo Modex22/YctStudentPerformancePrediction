@@ -1,13 +1,13 @@
 """Flask web app for the Yabatech Student Performance Predictor."""
 from __future__ import annotations
 
-import io
 import json
 
-from flask import Flask, Response, render_template, request, send_from_directory
+from flask import Flask, Response, redirect, render_template, request, send_from_directory, url_for
 
 from src.batch import BatchError, build_template_csv, parse_upload, run_batch, validate_and_prepare
 from src.config import FEATURE_COLUMNS, FIGURES_DIR, METRICS_PATH
+from src.history import build_trend_chart, delete_history, get_history, save_entry
 from src.predict import predict_performance
 
 app = Flask(__name__)
@@ -85,7 +85,53 @@ def quick_check():
 def quick_check_predict():
     student = parse_form(request.form)
     result = predict_performance(student)
-    return render_template("result.html", student=student, fields=FORM_FIELDS, result=result)
+
+    save_to_history = request.form.get("save_to_history") == "on"
+    matric_no = (request.form.get("matric_no") or "").strip()
+    saved = False
+    save_error = None
+    if save_to_history:
+        if matric_no:
+            save_entry(matric_no, student, result)
+            saved = True
+        else:
+            save_error = "Matric number is required to save to history."
+
+    return render_template(
+        "result.html",
+        student=student,
+        fields=FORM_FIELDS,
+        result=result,
+        matric_no=matric_no,
+        saved=saved,
+        save_error=save_error,
+    )
+
+
+@app.route("/history", methods=["GET"])
+def history_lookup():
+    return render_template("history_lookup.html")
+
+
+@app.route("/history", methods=["POST"])
+def history_lookup_submit():
+    matric_no = (request.form.get("matric_no") or "").strip()
+    if not matric_no:
+        return render_template("history_lookup.html", error="Enter a matric number.")
+    return redirect(url_for("history_view", matric_no=matric_no))
+
+
+@app.route("/history/<path:matric_no>", methods=["GET"])
+def history_view(matric_no: str):
+    entries = get_history(matric_no)
+    trend = build_trend_chart(entries)
+    return render_template("history_view.html", matric_no=matric_no, entries=entries, trend=trend)
+
+
+@app.route("/history/<path:matric_no>/delete", methods=["POST"])
+def history_delete(matric_no: str):
+    delete_history(matric_no)
+    return redirect(url_for("history_view", matric_no=matric_no))
 
 
 @app.route("/about", methods=["GET"])
