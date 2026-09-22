@@ -2,7 +2,7 @@ import pandas as pd
 import pytest
 
 from data.generate_dataset import generate_dataset
-from src.config import FEATURE_COLUMNS
+from src.config import COMPONENT_MAX, FEATURE_COLUMNS
 from src.predict import predict_performance
 
 
@@ -22,11 +22,17 @@ def test_dataset_has_all_feature_columns(dataset):
         assert col in dataset.columns
 
 
+def test_dataset_components_stay_within_their_own_max(dataset):
+    for field, max_mark in COMPONENT_MAX.items():
+        assert dataset[field].between(0, max_mark).all()
+
+
+# Each on its own mark scheme (exam/60, test/10, assignment/10, practical/20).
 SAMPLE_STUDENT = {
-    "exam_score": 82,
-    "test_score": 85,
-    "assignment_score": 90,
-    "practical_score": 88,
+    "exam_score": 49,
+    "test_score": 8,
+    "assignment_score": 9,
+    "practical_score": 17,
 }
 
 
@@ -44,19 +50,30 @@ def test_predict_performance_returns_expected_keys():
 
 def test_strong_profile_scores_higher_than_weak_profile():
     weak_student = {
-        "exam_score": 20, "test_score": 30, "assignment_score": 35, "practical_score": 25,
+        "exam_score": 12, "test_score": 2, "assignment_score": 3, "practical_score": 5,
     }
     strong_result = predict_performance(SAMPLE_STUDENT)
     weak_result = predict_performance(weak_student)
     assert strong_result["predicted_score"] > weak_result["predicted_score"]
 
 
+def test_component_scores_sum_to_roughly_the_final_score():
+    """final_score is a straight sum of the four components (each pre-
+    weighted by its own max mark) plus a little noise — so the prediction
+    should land close to the raw sum, not just move in the same direction."""
+    student = {"exam_score": 30, "test_score": 5, "assignment_score": 5, "practical_score": 10}
+    raw_sum = sum(student.values())  # 50
+    predicted = predict_performance(student)["predicted_score"]
+    assert abs(predicted - raw_sum) < 5
+
+
 def test_exam_score_has_the_largest_effect_on_predicted_score():
-    """exam_score is weighted highest (COMPONENT_WEIGHTS) so a drop there
-    should move the prediction more than an equal drop in assignment_score."""
-    base = {"exam_score": 80, "test_score": 80, "assignment_score": 80, "practical_score": 80}
-    exam_drop = dict(base, exam_score=40)
-    assignment_drop = dict(base, assignment_score=40)
+    """exam_score carries the most marks (60 of 100) so a proportionally
+    equal fractional drop there should move the prediction more than the
+    same fractional drop in assignment_score (10 of 100)."""
+    base = {"exam_score": 48, "test_score": 8, "assignment_score": 8, "practical_score": 16}
+    exam_drop = dict(base, exam_score=24)  # -50% of its own max
+    assignment_drop = dict(base, assignment_score=4)  # -50% of its own max
 
     base_score = predict_performance(base)["predicted_score"]
     exam_drop_score = predict_performance(exam_drop)["predicted_score"]

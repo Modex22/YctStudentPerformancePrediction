@@ -33,15 +33,17 @@ CLASSIFICATION_TARGET = "pass_fail"
 # categorical feature is added back later.
 CATEGORY_VALUES: dict[str, list[str]] = {}
 
-# Illustrative default weighting of each component toward the final score
-# (must sum to 1.0) — matches the synthetic dataset's generative formula.
-# Not confirmed against Yabatech's actual continuous-assessment policy;
-# adjust here (and in data/generate_dataset.py) once known.
-COMPONENT_WEIGHTS = {
-    "exam_score": 0.50,
-    "test_score": 0.20,
-    "assignment_score": 0.15,
-    "practical_score": 0.15,
+# Each component's own maximum mark, matching a common Nigerian-polytechnic
+# continuous-assessment breakdown: Exam/60 + Test/10 + Assignment/10 +
+# Practical/20 sums straight to 100 — no extra weighting needed, since the
+# weighting is already built into each component's max. Not confirmed
+# against Yabatech's actual CA policy; adjust here (and in
+# data/generate_dataset.py) once known.
+COMPONENT_MAX = {
+    "exam_score": 60,
+    "test_score": 10,
+    "assignment_score": 10,
+    "practical_score": 20,
 }
 
 CATEGORY_BINS = [-0.1, 49.9, 64.9, 79.9, 100]

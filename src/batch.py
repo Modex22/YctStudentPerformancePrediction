@@ -13,6 +13,7 @@ import pandas as pd
 from src.config import (
     CATEGORY_VALUES,
     CLASSIFICATION_LABELS,
+    COMPONENT_MAX,
     FEATURE_COLUMNS,
     IDENTITY_COLUMN_ALIASES,
     MAX_BATCH_ROWS,
@@ -84,7 +85,14 @@ def _clean_row(row: pd.Series, row_num: int) -> tuple[dict[str, Any] | None, lis
         if pd.isna(value):
             warnings.append(f"Row {row_num}: '{field}' value '{raw}' is not a number — row skipped.")
             return None, warnings
-        student[field] = float(value)
+        value = float(value)
+        max_mark = COMPONENT_MAX.get(field)
+        if max_mark is not None and not (0 <= value <= max_mark):
+            warnings.append(
+                f"Row {row_num}: '{field}' value {value:g} is outside the expected 0-{max_mark} range "
+                "— check this wasn't entered on a different scale (e.g. out of 100). Still processed as given."
+            )
+        student[field] = value
 
     for field, allowed in CATEGORY_VALUES.items():
         raw = str(row.get(field, "")).strip()
@@ -184,16 +192,17 @@ def build_template_csv() -> str:
     columns = ["name", "matric_no", "department", "level"] + FEATURE_COLUMNS
     rows = [
         {
+            # exam_score /60, test_score /10, assignment_score /10, practical_score /20
             "name": "Adaeze Okafor", "matric_no": "ND/CS/23/0142", "department": "Computer Science", "level": "ND2",
-            "exam_score": 78, "test_score": 82, "assignment_score": 88, "practical_score": 80,
+            "exam_score": 47, "test_score": 8, "assignment_score": 9, "practical_score": 16,
         },
         {
             "name": "Emeka Chukwu", "matric_no": "HND/EEE/22/0088", "department": "Electrical Engineering", "level": "HND1",
-            "exam_score": 32, "test_score": 45, "assignment_score": 55, "practical_score": 40,
+            "exam_score": 19, "test_score": 4, "assignment_score": 5, "practical_score": 8,
         },
         {
             "name": "Fatima Bello", "matric_no": "ND/MC/23/0207", "department": "Mass Communication", "level": "ND1",
-            "exam_score": 61, "test_score": 68, "assignment_score": 74, "practical_score": 65,
+            "exam_score": 33, "test_score": 6, "assignment_score": 7, "practical_score": 13,
         },
     ]
     out = io.StringIO()

@@ -2,12 +2,15 @@
 
 A machine-learning system that predicts a student's likely final score, an
 ND/HND-style classification, and pass/fail risk from four assessment
-components a department already has on record for every student:
+components a department already has on record for every student, each on
+its own mark scheme (a common Nigerian-polytechnic CA breakdown that sums
+straight to 100 — not confirmed against Yabatech's actual policy, see
+`COMPONENT_MAX` in `src/config.py` to adjust):
 
-- Exam score
-- Test / CA score
-- Assignment score
-- Practical score
+- Exam score, out of 60
+- Test / CA score, out of 10
+- Assignment score, out of 10
+- Practical score, out of 20
 
 No lifestyle, demographic, or self-reported data (study habits, sleep,
 family background, attendance, etc.) — just the numbers already sitting in
@@ -23,15 +26,15 @@ are illustrative until it's retrained on real, anonymized records.
 
 1. **Dataset** (`data/generate_dataset.py`) — no labeled dataset was
    supplied, so a synthetic one (2,000 students, 4 features) is generated:
-   each component score is sampled from its own realistic distribution
-   (exams run harder and more spread out than coursework; assignments are
-   the most forgiving), and `final_score` is a weighted combination of the
-   four (see `COMPONENT_WEIGHTS` in `src/config.py` — illustrative, not
-   confirmed against Yabatech's actual continuous-assessment policy) plus a
-   little noise, representing real-world effects a fixed formula wouldn't
-   capture exactly (moderation, rounding, marker variation). Swap in a real
-   dataset by replacing `data/student_performance.csv` with the same
-   columns (see `src/config.py`).
+   each component score is sampled within its own max mark from a realistic
+   distribution (exams run harder and more spread out than coursework;
+   assignments are the most forgiving), and `final_score` is simply their
+   sum (each component's max already encodes its weight — 60+10+10+20=100,
+   so no extra weighting multiplier is needed) plus a little noise,
+   representing real-world effects a pure sum wouldn't capture exactly
+   (moderation, rounding, marker variation). Swap in a real dataset by
+   replacing `data/student_performance.csv` with the same columns (see
+   `src/config.py`).
 2. **Preprocessing** (`src/data_preprocessing.py`) — the four scores are
    standardized via a `ColumnTransformer` that's part of the saved model
    pipeline (no separate scaler file to keep in sync). There are currently
@@ -65,10 +68,14 @@ are illustrative until it's retrained on real, anonymized records.
    data.
 
 Current results on the synthetic dataset: best regressor is Linear
-Regression (test R² ≈ 0.90, MAE ≈ 2.6 points on a 0-100 scale — high
-because `final_score` really is close to a weighted sum of the four inputs
-by construction); the pass/fail classifier reaches ≈ 95% accuracy. Re-run
-training to regenerate these numbers on real data — see below.
+Regression (test R² ≈ 0.97, MAE ≈ 1.7 points on a 0-100 scale — very high
+because `final_score` really is the sum of the four inputs by
+construction; the model has to discover that on its own from noisy
+examples, though — it's never given the formula. Its learned per-point
+coefficients land within ~5% of 1.0 for every component, confirming it
+recovered the actual relationship rather than memorizing anything); the
+pass/fail classifier reaches ≈ 96% accuracy. Re-run training to regenerate
+these numbers on real data — see below.
 
 ## Project structure
 
@@ -152,13 +159,16 @@ request) identically to the dev server.
 ### Roster spreadsheet format
 
 A `.csv` or `.xlsx` with one row per student. Required columns are the 4
-feature columns in `src/config.py:FEATURE_COLUMNS` — `exam_score`,
-`test_score`, `assignment_score`, `practical_score`, each 0-100. Optional
-identity columns — `name`, `matric_no`, `department`, `level` (aliases like
-`student_name` or `dept` are also recognized) — are carried through to the
-report for context but never fed to the model. Non-numeric cells are
-flagged as warnings and that row is skipped rather than crashing the whole
-upload.
+feature columns in `src/config.py:FEATURE_COLUMNS` — `exam_score` (0-60),
+`test_score` (0-10), `assignment_score` (0-10), `practical_score` (0-20).
+Optional identity columns — `name`, `matric_no`, `department`, `level`
+(aliases like `student_name` or `dept` are also recognized) — are carried
+through to the report for context but never fed to the model. Non-numeric
+cells are flagged as warnings and that row is skipped rather than crashing
+the whole upload; a value outside its column's expected range (e.g. an
+exam score of 95 where the max is 60 — the likely mistake being entering
+it out of 100 instead) is flagged but still processed, in case it's
+legitimate.
 
 ## Static client-side demo (no server)
 
@@ -203,8 +213,8 @@ pytest
 
 Replace `data/student_performance.csv` with real records that (a) keep the
 same column names as `FEATURE_COLUMNS` in `src/config.py` (or update that
-list, and `COMPONENT_WEIGHTS`, if the real assessment structure differs)
-and (b) include a `final_score` (0-100) target and a `pass_fail`
+list, and `COMPONENT_MAX`, if the real assessment structure or mark scheme
+differs) and (b) include a `final_score` (0-100) target and a `pass_fail`
 (`Pass`/`Fail`) target, then re-run `python -m src.train_model`. Everything
 downstream (preprocessing, training, the web app) works unchanged. The
 `CLASSIFICATION_BINS`/`CLASSIFICATION_LABELS` cutoffs in `src/config.py` are

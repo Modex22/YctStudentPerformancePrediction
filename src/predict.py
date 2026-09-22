@@ -13,6 +13,7 @@ from src.config import (
     CLASSIFICATION_BINS,
     CLASSIFICATION_LABELS,
     CLASSIFIER_PATH,
+    COMPONENT_MAX,
     FEATURE_COLUMNS,
     GRADE_BINS,
     GRADE_LABELS,
@@ -22,23 +23,42 @@ from src.config import (
 _regressor = None
 _classifier = None
 
+# A component is flagged when it falls below this fraction of its OWN max
+# mark (each component has a different max — see COMPONENT_MAX) rather
+# than a single absolute threshold, since e.g. 4/10 and 24/60 represent
+# the same 40% shortfall but very different raw numbers.
+WEAK_THRESHOLD_FRACTION = 0.4
+
 # Each rule: (field, condition, recommendation message, short factor phrase).
 # The factor phrase feeds build_counsellor_note(); order sets priority when
-# more than one component is weak (exam first, since it's the highest-
-# weighted component — see COMPONENT_WEIGHTS in src/config.py).
+# more than one component is weak (exam first, since it carries the most
+# marks — see COMPONENT_MAX in src/config.py).
+_RULE_FIELDS = [
+    ("exam_score", "Exam", "exam performance",
+     "this carries the most marks of the four components, so it has the largest effect on the final result"),
+    ("test_score", "Test/CA", "test scores",
+     "more consistent revision ahead of tests would help here"),
+    ("practical_score", "Practical", "practical scores",
+     "more engagement in lab/practical sessions would help here"),
+    ("assignment_score", "Assignment", "assignment scores",
+     "check assignments are being submitted complete and on time"),
+]
+
+
+def _make_weak_condition(field: str):
+    threshold = WEAK_THRESHOLD_FRACTION * COMPONENT_MAX[field]
+    return lambda v: v < threshold
+
+
 RECOMMENDATION_RULES = [
-    ("exam_score", lambda v: v < 45,
-     "Exam score is below 45 — this is the highest-weighted component, so it has the largest effect on the final result.",
-     "exam performance"),
-    ("test_score", lambda v: v < 45,
-     "Test/CA score is below 45. More consistent revision ahead of tests would help here.",
-     "test scores"),
-    ("practical_score", lambda v: v < 45,
-     "Practical score is below 45. More engagement in lab/practical sessions would help here.",
-     "practical scores"),
-    ("assignment_score", lambda v: v < 45,
-     "Assignment score is below 45. Check assignments are being submitted complete and on time.",
-     "assignment scores"),
+    (
+        field,
+        _make_weak_condition(field),
+        f"{label} score is below {WEAK_THRESHOLD_FRACTION * COMPONENT_MAX[field]:.0f}/{COMPONENT_MAX[field]} "
+        f"({WEAK_THRESHOLD_FRACTION:.0%}) — {advice}.",
+        phrase,
+    )
+    for field, label, phrase, advice in _RULE_FIELDS
 ]
 
 
@@ -155,10 +175,10 @@ def predict_performance(student: dict[str, Any]) -> dict[str, Any]:
 
 if __name__ == "__main__":
     example_student = {
-        "exam_score": 38,
-        "test_score": 52,
-        "assignment_score": 60,
-        "practical_score": 55,
+        "exam_score": 18,   # out of 60
+        "test_score": 5,    # out of 10
+        "assignment_score": 6,  # out of 10
+        "practical_score": 9,   # out of 20
     }
     result = predict_performance(example_student)
     print(result)

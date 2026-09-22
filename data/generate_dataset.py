@@ -6,15 +6,17 @@ builds a realistic synthetic one, using only four inputs a department
 already has on record for every student — no self-reported or hard-to-
 collect data (attendance, lifestyle, family background, etc.):
 
-    exam_score, test_score, assignment_score, practical_score
+    exam_score (/60), test_score (/10), assignment_score (/10),
+    practical_score (/20)
 
-final_score is a weighted combination of those four components (see
-COMPONENT_WEIGHTS in src/config.py — illustrative, not confirmed against
-Yabatech's actual continuous-assessment policy) plus a small amount of
-noise, representing real-world effects a fixed formula wouldn't capture
-exactly (moderation, rounding, marker variation). The noise is what gives
-the model an actual job to do rather than just re-deriving a known
-formula.
+Each component is scored on its own maximum (see COMPONENT_MAX in
+src/config.py — a common Nigerian-polytechnic CA breakdown, not confirmed
+against Yabatech's actual policy), and the four maximums already sum to
+100 — so final_score is just their sum, no extra weighting needed; the
+weighting is baked into each component's max mark. A small amount of noise
+is added on top, representing real-world effects a pure sum wouldn't
+capture exactly (moderation, rounding, marker variation), which is what
+gives the model an actual job to do rather than just re-deriving addition.
 
 Run directly to (re)write data/student_performance.csv:
     python data/generate_dataset.py
@@ -32,42 +34,39 @@ import pandas as pd
 # sys.path before importing the src package.
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.config import COMPONENT_WEIGHTS  # noqa: E402
+from src.config import COMPONENT_MAX  # noqa: E402
 
 RANDOM_SEED = 42
 N_STUDENTS = 2000
+
+# (mean as a fraction of the component's max, std as a fraction of max) —
+# exams run harder and more spread out than coursework; assignments are
+# the most forgiving. Same shape as before the components moved to their
+# own maximums, just rescaled per component.
+_DISTRIBUTION_FRACTIONS = {
+    "exam_score": (0.58, 0.18),
+    "test_score": (0.65, 0.15),
+    "assignment_score": (0.72, 0.12),
+    "practical_score": (0.68, 0.14),
+}
 
 
 def generate_dataset(n_students: int = N_STUDENTS, seed: int = RANDOM_SEED) -> pd.DataFrame:
     rng = np.random.default_rng(seed)
 
-    # Distinct, realistic distributions per component: exams run harder and
-    # more spread out than coursework; assignments are the most forgiving.
-    exam_score = np.clip(rng.normal(58, 18, n_students), 0, 100)
-    test_score = np.clip(rng.normal(65, 15, n_students), 0, 100)
-    assignment_score = np.clip(rng.normal(72, 12, n_students), 0, 100)
-    practical_score = np.clip(rng.normal(68, 14, n_students), 0, 100)
+    components = {}
+    for field, max_mark in COMPONENT_MAX.items():
+        mean_frac, std_frac = _DISTRIBUTION_FRACTIONS[field]
+        components[field] = np.clip(
+            rng.normal(mean_frac * max_mark, std_frac * max_mark, n_students), 0, max_mark
+        )
 
-    noise = rng.normal(0, 3, n_students)
-
-    final_score = (
-        COMPONENT_WEIGHTS["exam_score"] * exam_score
-        + COMPONENT_WEIGHTS["test_score"] * test_score
-        + COMPONENT_WEIGHTS["assignment_score"] * assignment_score
-        + COMPONENT_WEIGHTS["practical_score"] * practical_score
-        + noise
-    )
+    noise = rng.normal(0, 2, n_students)
+    final_score = sum(components.values()) + noise
     final_score = np.clip(final_score, 0, 100).round(1)
 
-    df = pd.DataFrame(
-        {
-            "exam_score": exam_score.round(1),
-            "test_score": test_score.round(1),
-            "assignment_score": assignment_score.round(1),
-            "practical_score": practical_score.round(1),
-            "final_score": final_score,
-        }
-    )
+    df = pd.DataFrame({field: values.round(1) for field, values in components.items()})
+    df["final_score"] = final_score
 
     df["performance_category"] = pd.cut(
         df["final_score"],

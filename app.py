@@ -13,14 +13,14 @@ from src.predict import predict_performance
 app = Flask(__name__)
 
 FORM_FIELDS = [
-    {"name": "exam_score", "label": "Exam score", "type": "number", "min": 0, "max": 100, "default": 60,
-     "help": "Out of 100."},
-    {"name": "test_score", "label": "Test / CA score", "type": "number", "min": 0, "max": 100, "default": 65,
-     "help": "Out of 100."},
-    {"name": "assignment_score", "label": "Assignment score", "type": "number", "min": 0, "max": 100, "default": 70,
-     "help": "Out of 100."},
-    {"name": "practical_score", "label": "Practical score", "type": "number", "min": 0, "max": 100, "default": 65,
-     "help": "Out of 100."},
+    {"name": "exam_score", "label": "Exam score", "type": "number", "min": 0, "max": 60, "default": 36,
+     "help": "Out of 60."},
+    {"name": "test_score", "label": "Test / CA score", "type": "number", "min": 0, "max": 10, "default": 6,
+     "help": "Out of 10."},
+    {"name": "assignment_score", "label": "Assignment score", "type": "number", "min": 0, "max": 10, "default": 7,
+     "help": "Out of 10."},
+    {"name": "practical_score", "label": "Practical score", "type": "number", "min": 0, "max": 20, "default": 13,
+     "help": "Out of 20."},
 ]
 
 NUMERIC_FIELD_NAMES = {f["name"] for f in FORM_FIELDS if f["type"] == "number"}

@@ -35,7 +35,7 @@ def test_unsupported_file_type_raises_batch_error():
 
 
 def test_non_numeric_row_is_skipped_with_a_warning():
-    csv_text = build_template_csv().replace(",78,82,88,80", ",not-a-number,82,88,80")
+    csv_text = build_template_csv().replace(",47,8,9,16", ",not-a-number,8,9,16")
 
     parsed = parse_upload("roster.csv", csv_text.encode("utf-8"))
     parsed, identity_map, missing = validate_and_prepare(parsed)
@@ -45,8 +45,21 @@ def test_non_numeric_row_is_skipped_with_a_warning():
     assert any("not-a-number" in w for w in outcome["warnings"])
 
 
+def test_out_of_range_value_is_flagged_but_still_processed():
+    """Catches the likely real mistake: someone enters exam_score out of
+    100 instead of out of 60 (its actual max)."""
+    csv_text = build_template_csv().replace(",47,8,9,16", ",95,8,9,16")
+
+    parsed = parse_upload("roster.csv", csv_text.encode("utf-8"))
+    parsed, identity_map, missing = validate_and_prepare(parsed)
+    outcome = run_batch(parsed, identity_map)
+
+    assert outcome["summary"]["n_students"] == 3  # still processed, not skipped
+    assert any("outside the expected 0-60 range" in w for w in outcome["warnings"])
+
+
 def test_counsellor_note_mentions_the_driving_factor_for_at_risk_students():
-    student = {"exam_score": 30, "test_score": 80, "assignment_score": 80, "practical_score": 80}
+    student = {"exam_score": 10, "test_score": 8, "assignment_score": 8, "practical_score": 16}
     note = build_counsellor_note(student, "At Risk")
     assert "exam performance" in note.lower()
 
