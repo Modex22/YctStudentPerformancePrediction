@@ -304,7 +304,15 @@ h1 { margin-bottom: 0.25rem; }
 }
 .breakdown-label { color: var(--muted); }
 .breakdown-track { background: var(--surface-2); border-radius: 999px; height: 9px; overflow: hidden; }
-.breakdown-fill { height: 100%; border-radius: 999px; background: var(--accent-gradient); }
+.breakdown-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .breakdown-fill { transition: none; }
+}
 .breakdown-value { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
 .breakdown-total {
   display: flex;
